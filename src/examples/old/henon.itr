@@ -1,0 +1,122 @@
+<pulga-file>
+  <string>Compatibility Version</string>
+  <string>5</string>
+  <application>
+    <info>
+      <name>Unknown</name>
+      <description></description>
+      <authors></authors>
+    </info>
+    <image>
+      <width>600</width>
+      <height>600</height>
+    </image>
+    <backgroundColor>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+      <alpha>255</alpha>
+    </backgroundColor>
+    <clearBeforeDrawing>true</clearBeforeDrawing>
+    <codes>
+      <codes/>
+    </codes>
+    <dimensao>2</dimensao>
+    <grid>
+      <on>true</on>
+      <color>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+        <alpha>255</alpha>
+      </color>
+    </grid>
+    <intermediarios/>
+    <parameters>
+      <parameter>
+        <name>a</name>
+        <value>1.4</value>
+      </parameter>
+      <parameter>
+        <name>b</name>
+        <value>0.3</value>
+      </parameter>
+    </parameters>
+    <trashPoints>100</trashPoints>
+    <iteratedPoints>2000</iteratedPoints>
+    <valores>
+      <string>1 - a * x1 * x1 + b * x2</string>
+      <string>x1</string>
+    </valores>
+    <inicial>
+      <double>0.4</double>
+      <double>0.4</double>
+    </inicial>
+    <xScale>
+      <field>x1</field>
+      <max>1.5</max>
+      <min>-1.5</min>
+    </xScale>
+    <yScale>
+      <field>x2</field>
+      <max>1.5</max>
+      <min>-1.5</min>
+    </yScale>
+    <iterationPower>1</iterationPower>
+  </application>
+  <list>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.setiterator.InitialCurvePlugin</first>
+      <second class="br.usp.iterador.plugin.setiterator.CurveSet">
+        <curves/>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.manifold.StableManifoldPlugin</first>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.bacia.BasinPlugin</first>
+      <second class="br.usp.iterador.plugin.bacia.Basin">
+        <attractors/>
+        <averagesInfo>
+          <averageFunctions>
+            <x>x1</x>
+            <y>x2</y>
+          </averageFunctions>
+          <xScale>
+            <field>x1</field>
+            <max>2.0</max>
+            <min>0.0</min>
+          </xScale>
+          <yScale>
+            <field>x2</field>
+            <max>2.0</max>
+            <min>0.0</min>
+          </yScale>
+        </averagesInfo>
+        <sampleAverageColor>
+          <red>255</red>
+          <green>255</green>
+          <blue>0</blue>
+          <alpha>255</alpha>
+        </sampleAverageColor>
+        <earlyQuit>0</earlyQuit>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.bifurcationdiagram.DiagramPlugin</first>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.zoom.ZoomPlugin</first>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.initialcondition.InitialConditionPlugin</first>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.export.ExportImagePlugin</first>
+      <second class="br.usp.iterador.plugin.export.ExportImageData">
+        <filename>/export.png</filename>
+      </second>
+    </pair>
+  </list>
+</pulga-file>

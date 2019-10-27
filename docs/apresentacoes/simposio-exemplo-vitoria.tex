@@ -1,0 +1,438 @@
+\documentclass[12pt]{article}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%% pacotes adicionais (se necessario) %%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx,psfrag}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{teor}{Teorema}[subsubsection]
+\newtheorem{Teo}{Teorema}[subsection]
+\newtheorem{defin}{Definição}[section]
+\newtheorem{prop}{Proposição}[section]
+\newtheorem{lem}{Lema}[section]
+\newtheorem{obs}{Observação}[section]
+\newtheorem{Obs}{Observação}[subsection]
+\newtheorem{cor}{Corolário}[section]
+\newtheorem{Cor}{Corolário}[subsection]
+\renewcommand{\theequation}{\thesection .\arabic{equation}}
+
+%%%%%%%%%%%%%%%%%%% (uso da secretaria) CORTE  DAQUI PARA CIMA %%%%%%%%%%%%%%%%%%%
+
+\setcounter{footnote}{0}
+\setcounter{section}{0}
+
+
+\mbox{}
+
+\vspace{1cm}
+
+\centerline{\Large SIMULAÇÃO NUMÉRICA DE SISTEMAS DINÂMICOS}
+
+\vspace{1cm} 
+
+
+
+\centerline{\bf Guilherme de Azevedo Silveira}
+\centerline{Instituto de Matemática e Estatística - Universidade de São Paulo}
+\centerline{R. do Matão, 1010 - Cidade Universitária - CEP 05508-090 - São Paulo}
+\centerline{gas@linux.ime.usp.br}
+
+\vspace{.1cm} 
+
+\centerline{\bf Eduardo Colli\footnote{Parcialmente financiado pela FAPESP.}}
+\centerline{Instituto de Matemática e Estatística - Universidade de São Paulo}
+\centerline{R. do Matão, 1010 - Cidade Universitária - CEP 05508-090 - São Paulo}
+\centerline{colli@ime.usp.br}
+
+\vspace{.5cm} 
+
+\begin{abstract}
+Este artigo descreve o processo de
+idealiza\c{c}\~ao e realiza\c{c}\~ao de um software para uso de alunos
+na \'area de matem\'atica aplicada com \^enfase em sistemas iterados.
+Tamb\'em ser\'a tratada a id\'eia de ajudar pesquisas que estudam
+bacias de atra\c{c}\~ao. O mais importante \'e que o estudante de
+matem\'atica, professor ou pesquisador n\~ao deve ser obrigado a
+aprender detalhes de uma linguagem de programa\c{c}\~ao para executar
+simulações num\'ericas clássicas podendo, ent\~ao, focar em
+suas habilidades matem\'aticas. Palavras-chave: sistemas dinâmicos, java e matemática, simulação numérica.
+\end{abstract}
+
+\begin{abstract}
+This paper describes the process of brainstorming, developing and using an open source software in order to help mathematics students dealing with iterated systems. It also aims at helping researchs which are based on watching those system's iterations and attractors basins, giving the feeling of what is going on. The main idea is that the math student, teacher or researcher should not need to learn advanced topics of a programming language in order to make some numeric simulations, so he can focus on his mathematical analysis and skills. Keywords: dynamical systems, java and mathematics, numerical simulations.
+\end{abstract}
+
+
+
+\section{Introdução}
+\setcounter{equation}{0}
+
+À medida que crescemos e aprendemos matem\'atica na escola ficamos cada
+vez mais encantados com a m\'agica de analisar equa\c{c}\~oes complexas
+e de vivenciar as mais belas propriedades num\'ericas. Tudo isso muda
+uma vez que nos tornamos intelectualmente mais adultos e entramos na
+faculdade, onde encontramos algumas dificuldades.\par
+
+A maior parte dos alunos n\~ao lida t\~ao bem com programa\c{c}\~ao,
+ferramenta que j\'a se provou extramente \'util em diversas \'areas da
+matem\'atica aplicada. Mais grave ainda, isso n\~ao acontece somente
+com alunos mas tamb\'em com diversos professores e pesquisadores que
+t\^em o mesmo receio de programar.\par
+
+A sala de aula seria um ambiente mais descontra\'ido e vivo se os
+alunos fossem capazes de focar em suas t\'ecnicas matem\'aticas em vez
+de ter que aprender os detalhes de shift de bits em C ou qualquer outra
+linguagem de programa\c{c}\~ao: n\~ao importa se na pesquisa ou na
+aula, muitas vezes o foco principal \'e na parte matem\'atica mas os
+alunos e professores precisam gastar muito tempo extra para aprender
+uma linguagem que talvez n\~ao seja o foco do mesmo naquele momento.\par
+
+Dessas complica\c{c}\~oes nasce a necessidade de uma ferramenta que
+torne opcional o conhecimento aprofundado de alguma linguagem de
+programa\c{c}\~ao, sendo que ela ainda seria capaz de simular alguns
+sistemas durante a aula, deixando a mesma mais interessante e os
+exemplos mais pr\'aticos, possivelmente diminuindo o n\'umero de alunos
+desinteressados.\par
+
+\vspace{3mm}
+
+O Iterador (Pulga)~\cite{kn:IT1,kn:IT2} 
+é um projeto desenvolvido em Java com o foco de tornar possível tudo 
+que foi mencionado até esse instante.\par
+
+
+
+\section{Simula\c{c}\~ao de sistemas din\^amicos}
+\setcounter{equation}{0}
+
+\subsection{O problema}
+
+Um exemplo pr\'atico de uso desse software escrito em Java \'e a
+simula\c{c}\~ao num\'erica de sistemas din\^amicos cont\'inuos ou
+discretos atrav\'es de resultados gr\'aficos.\par
+
+\vspace{3mm}
+
+Um estudante que deseja ver o que acontece para determinada
+condi\c{c}\~ao inicial do sistema com determinados par\^ametros pode
+faz\^e{}-lo facilmente sem se preocupar com detalhes de como um
+gr\'afico deve ser mostrado em uma tela, como por exemplo t\'ecnicas de
+double buffering etc.\par
+
+Outro exemplo \'e o professor enriquecer uma aula mostrando para alunos
+n\~ao somente na lousa os resultados n\'umericos de uma itera\c{c}\~ao
+mas tamb\'em graficamente a \'orbita percorrida, facilitando aos alunos
+``digerir'' tudo aquilo que fora explicado na aula.\par
+
+\subsection{A solu\c{c}\~ao}
+
+Com a simples entrada da f\'ormula de itera\c{c}\~ao e a escolha do
+espa\c{c}o a ser plotado na tela podemos simular a itera\c{c}\~ao de um
+sistema.\par
+
+Por exemplo, come\c{c}amos com o atrator de Hénon~\cite{kn:HE} (com $a = 1.4$ e $b =
+0.3$) e configurando x1 para \textbf{1 {--} 1.4 * x1 * x1 {--} 0.3 * x2}
+e x2 para \textbf{x1}\textmd{. Escolhendo o espa\c{c}o
+\ }\textbf{{}-1.5 {\textless} x1 {\textless} 1.5 }\textmd{e
+}\textbf{{}-1.5 {\textless} x2 {\textless} 1.5 }\textmd{temos o
+resultado da Figura~\ref{Fig:henon}.}\par
+
+\begin{figure}[ht]
+\begin{center}
+\mbox{\includegraphics[width=7cm]{ime-img1.png}}
+\caption{Atrator de Hénon ($a = 1.4$, $b = 0.3$)}
+\label{Fig:henon}
+\end{center}
+\end{figure}
+
+Portanto o único conhecimento que se faz necessário é o de saber a equação do mapa. Uma vez que o programa compila todas as equações em código Java, ele permite que o usuário avançado aprenda a linguagem e evolua para sistemas mais complexos.\par
+
+Resumindo, existem dois caminhos: usar os recursos básicos simulando iterações sem precisar 
+conhecer uma linguagem ou se aprofundar e obter resultados avançados.
+
+\section{Diagramas de bifurcação}
+\setcounter{equation}{0}
+É possível simular um diagrama de bifurcação utilizando uma funcionalidade bem 
+simples do Iterador: basta configurar o tamanho do intervalo após o qual a condição 
+inicial e os parâmetros devem ser alterados.\par
+Por exemplo, supondo a existência de um parâmetro $a$ e $x$ sendo o espaço de 
+configuração: após o número desejado de iterações para um determinado valor 
+de $a$, este último deve ser incrementado e $x$ deve voltar ao valor inicial para 
+ir à próxima coluna e continuar com o diagrama, sem nenhuma complexidade extra:\par
+\vspace{3mm}
+\ $\mathit a = a + 0.1; $\par
+\ $\mathit x = x_{inicial}; $\par
+\vspace{3mm}
+Um exemplo prático é a família unidimensional cuja seqüência de iterados apresenta 
+comportamento semelhante ao da seqüência de intervalos entre bolhas~\cite{kn:BB}, 
+quando uma mangueira de ar é injetada na base de um líqüido viscoso. 
+O parâmetro "horizontal" (fi) corresponde à mudança da vazão do ar. 
+Mudar os valores de $l$ corresponde a mudar o comprimento da mangueira que 
+injeta o ar (por incrível que pareça esse parâmetro afeta bastante o resultado).\par
+
+No cálculo de $x_{k+1}$ em função de $x_{k}$ aparece uma função cúbica que 
+depende deste último. É necessário calcular a maior raiz desta função, portanto foi 
+criada uma {\it expressão intermediária} ($t_{0}$) que serve para escolher 
+uma condição inicial para o método de Newton, e a outra (``raiz'') 
+acha a raíz propriamente dita iterando algumas vezes esse método.\par
+
+\vspace{3mm}
+
+A seguir, o exemplo do método newton feito de maneira programática na Figura~\ref{Fig:diagrama} encontra-se o resultado desse diagrama.\par
+\vspace{3mm}
+ raiz = $t_{0}$;\par
+ for (int i = 0; i {\textless} 20; i++)\par
+  \ \ \ \ raiz = (2*m*raiz*raiz*raiz {}- x1)/(3*m*raiz*raiz {--} l);
+
+\begin{figure}[ht]
+\begin{center}
+\mbox{\includegraphics[width=12cm]{ime-img3.png}}
+\caption{Diagrama de bifurcação do sistema das bolhas}
+\label{Fig:diagrama}
+\end{center}
+\end{figure}
+
+\section{Plugins e flexibilidade}
+\setcounter{equation}{0}
+
+A arquitetura foi montada com a idéia de utilizar a tecnologia Java chamada Reflection,
+que permite a adição de diversas extensões ao programa.\par
+
+Por exemplo, um professor pode criar um plugin onde é 
+possível configurar padrões de exportação e disponibilizar 
+tais plugins para os alunos que, por sua vez, ficam com duas opções: 
+escrever o código java eles mesmos ou utilizar algo que o professor criou.\par
+
+O programa também pode ser usado de certas maneiras que não foram pensadas 
+anteriormente pelos autores, ainda assim sem ter de programar. 
+Por exemplo, é possível desenhar um conjunto de Mandelbrot, 
+onde um espaço de parâmetros é explorado para uma condição inicial fixa e 
+pintado de acordo com sua órbita. O truque é ``fingir'' que os parâmetros
+são variáveis e plotar o conjunto de Mandelbrot como se fosse uma bacia
+de atração.\par
+
+Um plugin simples que facilita o uso do programa é o de condição inicial, 
+que permite selecionar diversos pontos que serão utilizados para analisar 
+suas órbitas em uma única imagem. 
+Na Figura~\ref{Fig:ragazzo} podemos ver o resultado desse plugin para 
+diversas condições iniciais em um mapa citado por Ragazzo-Zanata:\par
+
+\begin{figure}[ht]
+\begin{center}
+\mbox{\includegraphics[width=7cm]{ime-img2.png}}
+\caption{Ragazzo{}-Zanata}
+\label{Fig:ragazzo}
+\end{center}
+\end{figure}
+
+\section{Bacia de atração}
+\setcounter{equation}{0}
+
+\subsection{O problema}
+
+Diversas questões podem surgir sobre um sistema: como uma condição inicial 
+reage após $n$ iterações? Para qual atrator a órbita de uma determinada condição inicial 
+converge? Será que é para uma órbita periódica? 
+Quantos atratores existem? Como lidar com o infinito? 
+Um simples processo de iteração não resolveria tais perguntas.
+
+\subsection{A solução}
+
+Com o plugin de bacia de atração, o usuário começa configurando o sistema como 
+de costume. Em um segundo passo é iniciado o Average Picker, que escolhe 
+aleatoriamente condições iniciais contidas no retângulo  definido previamente e itera por eles. 
+Usando um par de funções customizáveis, ele calcula médias dos pontos que compõem 
+a órbita a partir da condição inicial.\par
+
+Os resultados dessas médias são mostrados em um canvas que representa o espaço das médias, 
+que também é configurável (inclusive durante o processo). 
+A partir desse momento o usuário pode selecionar, através de polígonos, 
+áreas que chamamos de {\it nuvens} e identificam diferentes atratores 
+marcados com cores únicas.\par
+
+Se a iteração de um ponto inicial tem como resultado uma média dentro 
+de uma {\it nuvem}, o programa conclui que tal órbita foi capturada pelo 
+atrator e pinta esse ponto com a cor pré-determinada. Um polígono que contém 
+todos os outros pode ser desenhado e define um "atrator no infinito".
+
+\subsection{O desafio}
+
+O plugin demora muito para mostrar o resultado final devido ao número de iterações que são feitas para analisar a convergência da órbita de um ponto. Sendo assim foi utilizado um algoritmo iterativo capaz de mostrar rapidamente resultados parciais da análise para que o usuário tenha a opção de abortar o processo.
+
+\subsection{Exemplo prático}
+
+O programa foi testado com o mapa de Hénon, parâmetros $a = 1.2$, $b = 0.2$, 
+e executando duas iterações por vez para que atratores de período par se dividissem
+em dois atratores com metade do período (aumentando assim o número de atratores). 
+Configurando duas funções de média, o sistema desenha a bacia de atração, 
+ajudando ao aluno identificar quais condições iniciais levam à convergência da
+órbita para quais atratores.\par
+\vspace{3mm}
+$\mathit{Average}_{1}=\sum {(\left|{x_{1}}\right|\ast\left|{x_{2}}\right|)}$\par
+\ \ \ \ {\em (código java: Math.abs(x1) * Math.abs(x2))}\par
+\vspace{3mm}
+$\mathit{Average}_{2}=\sum {(x_{1}\ast x_{1}+x_{2}\ast x_{2})}$\par
+\ \ \ \ {\em (código java: x1 * x1 + x2 * x2)}\par
+\vspace{3mm}
+A Figura~\ref{Fig:medias} mostra o resultado das médias e o desenho de Hénon nesse caso.
+
+\begin{figure}[ht]
+\begin{center}
+\mbox{\includegraphics[width=6cm]{ime-img6.png}}\mbox{\includegraphics[width=6cm]{ime-img5.png}}
+\caption{M\'edias de dois atratores e os atratores em seu espaço}
+\label{Fig:medias}
+\end{center}
+\end{figure}
+
+Já a bacia de Hénon utilizando para $a = 1.2$ e $b = 0.2$
+e definidas três cores: cinza escuro para uma nuvem, 
+cinza claro para a outra, branco para o infinito e preto para algo desconhecido resulta na imagem
+Figura~\ref{Fig:bhenon}.\par
+
+Portanto o próprio programa acaba incentivando o aluno a descobrir o que 
+são esses pontos pretos, para onde vão as órbitas dos mesmos e o que eles representam.\par
+
+\begin{figure}[ht]
+\begin{center}
+\mbox{\includegraphics[width=6cm]{ime-img4.png}}
+\caption{Bacia de H\'enon ($a=1.2$, $b=0.2$)}
+\label{Fig:bhenon}
+\end{center}
+\end{figure}
+
+\subsection{Conjunto de Mandelbrot}
+\setcounter{equation}{0}
+
+Apesar de não ser uma das idéias principais desse programa, podemos utilizá-lo para
+gerar um conjunto de Mandelbrot utilizando o plugin da bacia de atração.
+A Figura~\ref{Fig:mandelbrot} mostra o resultado da bacia de atração adaptada para tal necessidade.\par
+
+Todo plugin implementa um método chamado getIterationCode que retorna qualquer código Java que
+será executado entre iterações. Sendo assim fica fácil criar um plugin capaz de parar as iterações
+quando x1 e x2 se tornarem infinito:\par
+
+\begin{figure}[ht]
+\begin{center}
+\mbox{\includegraphics[width=6cm]{ime-img7.png}}
+\caption{Conjunto de mandelbrot}
+\label{Fig:mandelbrot}
+\end{center}
+\end{figure}
+\par
+\vspace{3mm}
+public String getIterationCode() \{\par
+	return "if(x1==Double.POSITIVE\_INFINITY && x2==Double.POSITIVE\_INFINITY) return false;";\par
+\}
+\vspace{3mm}
+
+
+\subsection{Tecnologias e padrões utilizados}
+\setcounter{equation}{0}
+
+Diversas tecnologias e padrões são utilizados para garantir a flexibilidade necessária 
+para esse software.\par
+
+A primeira idéia foi a de utilizar Java devido à natureza do programa: existe uma 
+necessidade de executar um pedaço de código milhões de vezes e o just-in-time 
+compiler~\cite{kn:JIT} das máquinas virtuais (VM) que suportam a linguagem e 
+tecnologia Java otimizam esse código.\par
+
+Já os arquivos são guardados em formato xml através da Xstream,
+capaz de transformar objetos em xml através 
+de um mapeamento de classes para tags e, em conjunto com 
+Reflection, é possível armazenar nesses arquivos informações sobre 
+a própria estrutura das classes que eram utilizadas como 
+plugins ativos no momento de salvar o trabalho.\par
+
+Ainda baseado em Reflection, mas usando Beanshell~\cite{kn:BS},
+foi criada uma estrutura extremamente 
+dinâmica de controle de lógicas simples para os menus do sistema 
+e com o uso da primeira tornou-se possível gerar diversas janelas 
+através de arquivos de configuração simples uma vez que a maior 
+parte das tecnologias disponíveis para criar janelas 
+(como thinlet por exemplo) foram feitas para grandes sistemas 
+comerciais, que não é exatamente o tipo de software de que estamos tratando.\par
+
+Janino~\cite{kn:JA} foi utilizado para compilar as expressões 
+escritas pelo usuário, dando suporte a diversas estruturas da 
+linguagem Java em sua versão 1.4. Classes são criadas em tempo 
+de execução e embutidas no sistema através de classloaders 
+também gerados dinâmicamente pelo Janino que então passam a ser 
+otimizados pela VM como explicado anteriormente, tirando proveito 
+de todas as otimizações possíveis em tempo de execução: a grande 
+vantagem de não compilar nosso código estaticamente e usar uma 
+linguagem dinâmica.\par
+
+Outra idéia interessante de grande valia para o usuário final 
+é a do Big Fat Jar,
+que permite criar um único arquivo .jar, que é o único arquivo 
+necessário para a execução do programa, fazendo com que o usuário 
+leigo na computação não sofra com as complicações típicas de um 
+processo de instalação mais complexo.\par
+
+Por fim, diversos design patterns~\cite{kn:DP} e boas práticas 
+foram aplicados ao sistema, desde o Singleton para controle de 
+instâncias únicas, Service Locator e Command para controle das 
+lógicas de negócio, preferência a composição em vez de herança, 
+Builder para criação de determinados objetos em diversos passos 
+como no caso da criação de uma nuvem no plugin de bacia de atração e 
+no momento de gerar a classe dinâmica.
+
+\section{Conclusão}
+\setcounter{equation}{0}
+
+Existe uma necessidade em universidades para ferramentas que permitam aos alunos focar no lado matemático da matéria sem obrigar, mas possibilitando aprender programação para resolver seus problemas. 
+
+Existe sempre a esperança de que professores se adaptem a esse mundo novo e utilizem tais ferramentas não só para manter os alunos acordados durante a aula mas também para incentivar o aprendizado e facilitar a compreensão de determinados assuntos.
+
+
+
+\begin{thebibliography}{99}
+ 
+\bibitem{kn:IT1} {\sc Silveira, G. \& Colli, E.}, 
+An open source program for studying iterated dynamical systems, 
+{\em Anais do VI Workshop de Software Livre}, 108-190 (2005).
+\bibitem{kn:IT2} {\sc Silveira, G.}, Iterador, \\
+http://www.linux.ime.usp.br/\~{}gas/iterador
+\bibitem{kn:HE} {\sc Hénon, M.}, A two-dimensional map with a strange attractor, 
+{\em Comm. Math. Phys.} {\bf 50}, 69-77 (1976).
+\bibitem{kn:BB} {\sc Colli, E., Piassi, V., Tufaile A. \& Sartorelli, J. C.}, 
+Bistability in bubble formation, {\em Physical Review E}, {\bf 70} (2004).
+\bibitem{kn:JIT} {\sc Suganuma, T., Ogasawara, T., Takeuchi, M., Yasue, T., Kawahito, M., Ishizaki, K., 
+Komatsu, H. et al}, Overview of the IBM Java Just-In-Time Compiler, {\em IBM Systems Journal} 
+{\bf 39, 1}, http://www.research.ibm.com/journal/sj/391/suganuma (2000).
+\bibitem{kn:BS} {\sc Niemeyer P.}, Beanshell, http://www.beanshell.org
+\bibitem{kn:JA} {\sc Unkrig, A.}, Janino, http://www.janino.net/
+\bibitem{kn:DP} {\sc Gamma, E., Helm, R., Johnson, R. \& Vlissides J.}, 
+Design Patterns, Elements of Reusable Object-Oriented Software, Addison-Wesley (1994).
+
+
+\end{thebibliography}
+
+
+
+%%%%%%%%%%%%%%%% (uso da secretaria)  CORTE DAQUI PARA BAIXO %%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
+
+
+
+
+
+
+
+<hr><b>Timeout.  This is only a partial webpage</b><hr></body></html><hr><b>Timeout.  This is only a partial webpage</b><hr></body></html>

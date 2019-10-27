@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# *Very* simple script to run Writer2LaTeX (unix version)
+# Created by Henrik Just, october 2003
+# Modified december 2003 as suggested by Juan Julian Merelo Guervos
+# Modified may 2004 as suggested by J. Wolfgang Kaltz
+# Please edit the following line to contain the full path to Writer2LaTeX:
+
+W2LPATH="$HOME/writer2latex04"
+
+# If the Java executable is not in your path, please edit the following
+# line to contain the full path and file name
+
+JAVAEXE="java"
+
+startw2l()
+{
+  $JAVAEXE -jar $W2LPATH/writer2latex.jar -latex -config $W2LPATH/$W2LCONFIG $W2LFILE $W2LOUT  
+}
+
+if [ "$1" = "-clean" ]
+then
+  W2LFILE=$2; W2LOUT=$3; W2LCONFIG="clean.xml"; startw2l
+
+elif [ "$1" = "-ultraclean" ]
+then
+  W2LFILE=$2; W2LOUT=$3; W2LCONFIG="ultraclean.xml"; startw2l
+
+elif [ "$1" = "-pdfscreen" ]
+then
+  W2LFILE=$2; W2LOUT=$3; W2LCONFIG="pdfscreen.xml"; startw2l
+
+elif [ "$1" = "-pdfprint" ]
+then
+  W2LFILE=$2; W2LOUT=$3; W2LCONFIG="pdfprint.xml"; startw2l
+
+elif [ "$1" = "-article" ]
+then
+  W2LFILE=$2; W2LOUT=$3; W2LCONFIG="article.xml"; startw2l
+
+elif [ "$1" = "-cleanxhtml" ]
+then
+  $JAVAEXE -jar $W2LPATH/writer2latex.jar -xhtml -config $W2LPATH/cleanxhtml.xml $2 $3  
+
+else
+  $JAVAEXE -jar $W2LPATH/writer2latex.jar $1 $2 $3 $4 $5
+
+fi

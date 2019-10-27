@@ -1,0 +1,32 @@
+UglyMap - Colli 1990
+
+This is an updated version of Colli's attractor, which has been changed in order
+to display it in the four quadrants.
+
+
+dimension: 2
+intial values: (0.3, 0.1)
+points count: (100, 15000)
+
+piece of code:
+iterations: 1
+level: 1
+code:if(iteration.intValue()%4==0) { a=m;b=n;x1=a;x2=b; } if(iteration.intValue()%4==1) {x1=-a;x2=b; } if(iteration.intValue()%4==2) {x1=-a;x2=-b;} if(iteration.intValue()%4==3) {x1=a;x2=-b;}
+
+final expression
+(x1,x2) = (x1,x2)
+
+param
+c=1.3
+
+intermediate
+
+1. m
+Math.sqrt(Math.abs(b-a))
+2. n
+c*a*a
+3. a
+if(iteration.intValue()<=1) a=0.3;
+4. b
+if(iteration.intValue()<=1) b=0.3;
+

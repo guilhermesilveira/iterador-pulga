@@ -1,0 +1,46 @@
+The need for a tool
+
+	As we grow up learning math at school we face the joy of dealing with loads
+	of numbers and their pretty properties but as soon as we start to study the
+	real thing in a university we face our first problem.
+	
+	
+	Although we love to write complex formulas most of us have not that much
+	fun dealing with computer programming, which has proved to be useful and 
+	sometimes even essential for some researchs. And that does not only happens 
+	with students as there are some teachers and researchers who have exactly 
+	the same fear of facing some code.
+	
+	
+	The classes could be funier and more dynamic, the students would be able 
+	to analyse intricate dynamical systems and researchers would not have to 
+	worry to learn the newest trend on computer programming in order to get what
+	they need: whether it is for researching, teaching, simulating or studying,
+	there is a need for an open source tool that should be capable of taking the 
+	computer code' out of their way.
+
+Install
+
+	[[1]] You need to install java5 compiler (SDK), so go and {{{http://www.java.com}download it}}.
+
+	[[2]] {{{http://sourceforge.net/project/showfiles.php?group_id=163650}Download pulga!}}
+
+Run
+
+	<<Windows only>>
+	
+		Double click the .jar file
+		
+	<<Any platform>>
+	
+		Run on the command line:
+		
++---------------------------
+java -jar pulga-1.1.4.jar
++---------------------------
+
+	For debug mode add the -d option to the command line:
+
++---------------------------
+java -jar pulga-1.1.4.jar -d
++---------------------------

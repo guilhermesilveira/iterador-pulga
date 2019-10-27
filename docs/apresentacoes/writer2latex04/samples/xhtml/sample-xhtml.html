@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+  <!-- This file was converted to xhtml by Writer2xhtml ver. 0.4. See http://www.hj-gym.dk/~hj/writer2latex for more info. -->
+  <head profile="http://dublincore.org/documents/dcq-html/">
+    <title>sample-xhtml.html</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="DC.date" content="2004-01-04T14:16:13" />
+    <meta name="DC.language" content="en-US" />
+    <link rel="stylesheet" type="text/css" media="all" href="(put url to your own stylesheet here)" />
+  </head>
+  <body>
+    <h1 id="heading1">Creating XHTML content with OpenOffice.org and Writer2xhtml</h1>
+    <p>The default behavior of Writer2xhtml is to export content <i>and</i> formatting. Alternatively you can export content only; this can be controlled with a configuration file. The configuration file <code>cleanxhtml.xml</code> uses some built-in text- and paragraph styles in OpenOffice.org to create well-structured XHTML documents, using most of the semantic tags offered by XHTML.</p>
+    <h2 id="heading2">Paragraph styles</h2>
+    <p>For your paragraphs, the style <b>Text body</b> is used for ordinary paragraphs: <code>&lt;p&gt;...&lt;/p&gt;</code>.</p>
+    <address>The style <b>Sender</b> is used to produce <code>&lt;address&gt;...&lt;/address&gt;</code>.</address>
+    <blockquote>
+      <p>The style <b>Quotations</b> is used to produce blockquotes.</p>
+      <p>Several paragraphs with this style are collected to a single blockquote: <code>&lt;blockquote&gt;&lt;p&gt;...&lt;/p&gt;&lt;p&gt;...&lt;/p&gt;&lt;/blockquote&gt;</code>.</p>
+    </blockquote>
+    <pre>The style <b>preformatted text</b> is used to produce <code>&lt;pre&gt;...&lt;/pre&gt;</code>.</pre>
+    <p>The style <b>Horizontal line</b> is used to produce <code>&lt;hr&gt;</code>.</p>
+    <h2 id="heading3">Other paragraph styles</h2>
+    <p class="MyOwnStyle">If you format paragraphs with other styles, they will be exported as ordinary paragraphs (<code>&lt;p&gt;</code>) with a class attribute. For example this paragraph has style <b>My Own Style</b>, which will be exported as <code>&lt;p class=”MyOwnStyle”&gt;...&lt;/p&gt;</code>.</p>
+    <h2 id="heading4">Definition lists</h2>
+    <p>OpenOffice.org does not support definition lists directly. Instead you can use two paragraph styles:</p>
+    <ul>
+      <li>The style <b>List Heading</b> is used to produce the definition term <code>&lt;dt&gt;...&lt;/dt&gt;</code>.</li>
+      <li>The style <b>List Contents</b> is used to produce the definition <code>&lt;dd&gt;...&lt;/dd&gt;</code>.</li>
+    </ul>
+    <p>Any sequence of these are wrapped in a single <code>&lt;dl&gt;...&lt;/dl&gt;</code>, like this:</p>
+    <dl>
+      <dt>This is a term.</dt>
+      <dd>This is the definition of the term.</dd>
+      <dt>This is another term.</dt>
+      <dd>This is the definition of the other term.</dd>
+    </dl>
+    <h2 id="heading5">Text styles</h2>
+    <p>A number of text styles maps to XHTML elements as well: Use the text styles <cite>Citation</cite> – <dfn>Definition</dfn> – <em>Emphasis</em> – <samp>Example</samp> – <code>Source Text</code> – <strong>Strong Emphasis</strong> – <tt>Teletype</tt> – User entry – <var>Variable</var> to produce <code>&lt;cite&gt;</code>, <code>&lt;dfn&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;samp&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;tt&gt;</code>, <code>&lt;kbd&gt;</code>, <code>&lt;var&gt;</code>.</p>
+    <h2 id="heading6">Hard character formatting</h2>
+    <p>If you export content only, hard character formatting is ignored in general. An exception to this rule is <b>bold</b>, <i>italics</i>, <sup>superscript</sup>, <sub>subscript</sub> and <tt>fixed pitch fonts</tt>, which are exported to <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;sup&gt;</code>, <code>&lt;sub&gt;</code> and <code>&lt;tt&gt;</code> respectively.</p>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+'hiperboloid'
+
+dimension: 2
+parameter: c = 0.6 (varies from 0.6 to 0.82)
+final expressions: (x1,x2) = (y, c*(1-x1*x1+y2*y2))
+scale:
+	x1 : [-1.5, +2.0]
+	x2 : [-1.5, +2.0]
+points: (100, 40000)

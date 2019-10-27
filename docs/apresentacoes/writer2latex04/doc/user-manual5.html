@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+  <!-- This file was converted to xhtml by Writer2xhtml ver. 0.4. See http://www.hj-gym.dk/~hj/writer2latex for more info. -->
+  <head>
+    <title>user-manual5.html</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style media="all" type="text/css">
+      body {font-family:Thorndale,serif;font-size:19.2px;color:#000000}
+      h1 {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;font-family:Albany,sans-serif;font-weight:bold;font-size:25.76px;clear:left}
+      h2 {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;font-family:Albany,sans-serif;font-weight:bold;font-size:22.4px;clear:left}
+      h3 {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;font-family:Albany,sans-serif;font-weight:bold;font-size:19.2px;clear:left}
+      p.TableContents {margin-left:0;margin-right:0;margin-top:4.580788px;margin-bottom:9.524408px;border:none;text-align:justify;font-size:19.2px}
+      p.Standard {margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;border:none;font-size:19.2px}
+      p.Contents1 {margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;border:none;text-indent:0;font-size:19.2px}
+      p.ContentsHeading {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;text-indent:0;font-family:Albany,sans-serif;font-weight:bold;font-size:25.600002px}
+      p.TableHeading {margin-left:0;margin-right:0;margin-top:4.580788px;margin-bottom:9.524408px;border:none;text-align:center;font-style:italic;font-weight:bold;font-size:19.2px}
+      p.Textbody {margin-left:0;margin-right:0;margin-top:4.580788px;margin-bottom:9.524408px;border:none;text-align:justify;font-size:19.2px}
+      p.Footnote {margin-left:22.631811px;margin-right:0;margin-top:0;margin-bottom:0;border:none;text-indent:-22.631811px;font-size:16.0px}
+      p.PreformattedText {margin-left:45.354332px;margin-right:0;margin-top:0;margin-bottom:4.580788px;border:none;background-color:#e6e6e6;text-indent:0;font-family:Cumberland,monospace;font-size:19.2px}
+      span.SourceText {font-family:Cumberland,monospace}
+      span.Footnoteanchor {font-size:58%;vertical-align:super}
+      span.FootnoteSymbol {}
+      span.UserEntry {font-family:Cumberland,monospace}
+      span.Teletype {font-family:Cumberland,monospace}
+    </style>
+  </head>
+  <body dir="ltr">
+    <div id="header">[<a href="user-manual.html">First</a>] [<a href="user-manual4.html">Previous</a>] [<a href="user-manual6.html">Next</a>] [<a href="user-manual6.html">Last</a>] [<a href="user-manual1.html">Contents</a>] <hr /></div>
+    <div id="content">
+      <h1 id="heading31">4 Using Writer2xhtml and Calc2xhtml</h1>
+      <p class="Textbody">Writer2xhtml is producing standards compliant XHTML files, in particular it can be used to put math on the web using the XHTML + MathML combination. Thus Writer2xhtml can convert into any of these XHTML variants:</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">XHTML 1.0 strict, which follows the guidelines for HTML compatibility, so that the output should be viewable with any browser that supports HTML 4.</p>
+        </li>
+        <li>
+          <p class="Textbody">XHTML 1.1 + MathML 2.0, which currently is viewable with the Mozilla and Amaya browsers only.</p>
+        </li>
+        <li>
+          <p class="Textbody">XHTML 1.1 + MathML 2.0 using <a href="http://www.w3.org/Math/XSL/">XSL transformations from the W3C Math Working Group</a> to make the file viewable also in some browsers that needs a plugin to display MathML, eg. Internet Explorer with MathPlayer plugin.</p>
+          <p class="Textbody">This is how W3C&#39;s Math Working Group recommends to put ”math on the web”.</p>
+        </li>
+      </ul>
+      <p class="Textbody">Note that the default file extension and the recommended MIME types varies with the output format:</p>
+      <table id="Tabel37Ctable" cellspacing="0" style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;border:none;border-collapse:separate;border-spacing:0">
+        <col style="width:257.02298px" />
+        <col style="width:257.02298px" />
+        <col style="width:257.02298px" />
+        <thead>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:1.0px solid #000000;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableHeading">Output format</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:1.0px solid #000000;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableHeading">Default file extenstion</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableHeading">MIME type</p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">XHTML 1.0</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">.html</span>
+              </p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">text/html</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">XHTML 1.1 + MathML 2.0</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">.xhtml</span>
+              </p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">application/xhtml+xml</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">XHTML 1.1 + MathML 2.0 (with xsl transformation)</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">.xml</span>
+              </p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">application/xml</span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="Textbody">Writer2xhtml is quite flexible; in particular with respect to the handling of formatting:</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">You can let Writer2xhtml convert the style information in the source document and thus get an xhtml document that has the same general appearance as the original, but with an online look and feel.</p>
+        </li>
+        <li>
+          <p class="Textbody">You can use your own style sheet and let Writer2xhtml convert the content only. You can map styles in OOo to xhtml elements and css classes, see sections <a href="#refxhtmlconfig">4.3</a> and <a href="#refxhtmlfrontend">4.4</a></p>
+        </li>
+      </ul>
+      <p class="Textbody">Calc2xhtml is a companion to Writer2xhtml that produces XHTML 1.0 strict from your Calc documents.</p>
+      <h2 id="heading32">4.1 Converting to XHTML from the command line</h2>
+      <p class="Textbody">To convert a file to XHTML use the command line</p>
+      <p class="PreformattedText">w2l -xhtml|-xhtml+mathml|-xhtml+mathml+xsl [-config &lt;configfile&gt;] &lt;document to convert&gt; [&lt;output path and/or file name&gt;]</p>
+      <p class="Textbody">The parts in square brackets are optional.</p>
+      <p class="Textbody">This will produce an XHTML file with the specified name. If no output file is specified, Writer2xhtml will use the same name as the original document, but a different file extension.</p>
+      <p class="Textbody">The option <span class="UserEntry">-xhtml+mathml</span> is used to produce XHTML 1.1 + MathML 2.0, the option <span class="UserEntry">-xhtml+mathml+xsl</span> produces the variant using XSL transformations.</p>
+      <p class="Textbody">Examples:</p>
+      <p class="PreformattedText">w2l -xhtml+mathml+xsl mydocument.sxw</p>
+      <p class="Textbody">or</p>
+      <p class="PreformattedText">w2l -xhtml -config myconfig.xml mydocument.sxw</p>
+      <p class="Textbody">If you specify the <span class="Teletype">-config</span> option, Writer2xhtml will load this configuration file before converting your document. You can read more about configuration in section <a href="#refxhtmlconfig">4.3</a>.</p>
+      <p class="Textbody">The script <span class="SourceText">w2l</span> also provides a shorthand notation to use the sample configuration file included in <span class="SourceText">writer2latex04.zip</span>. The command line is</p>
+      <p class="PreformattedText">w2l -cleanxhtml &lt;writer document to convert&gt; [&lt;output path and/or file name&gt;]</p>
+      <p class="Textbody">This configuration file produces a ”clean” xhtml file (see section <a href="#refxhtmlfrontend">4.4</a>), for example:</p>
+      <p class="PreformattedText">w2l -cleanxhtml mydocument.sxw mypath/myoutputdoc.html</p>
+      <p class="Textbody">It is recommended that you extend <span class="SourceText">w2l</span> / <span class="SourceText">w2l.bat</span> to support your own configuration files.</p>
+      <h2 id="heading33">4.2 Using Writer2xhtml as an export filter</h2>
+      <p class="Textbody">If you choose <span style="font-weight:bold">File – Export</span> in Writer you should be able to choose <span style="font-weight:bold">XHTML 1.0 strict</span>, <span style="font-weight:bold">XHTML 1.1 + MathML 2.0</span> or <span style="font-weight:bold">XHTML 1.1 + MathML 2.0 (xsl)</span> as file type. Using Calc2xhtml as an export filter is not yet supported.</p>
+      <p class="Textbody"><span style="font-weight:bold">Note:</span> You have to use the export menu because Writer2xhtml does not provide an import filter for XHTML. You should always save in the native format of OOo as well!</p>
+      <p class="Textbody">Note: Currently embedded graphics are not converted when Writer2xhtml is used as an export filter. Also splitting at headings/sheets only works from the command line. This is because of an issue with the xmerge framework. A fix for this is planned for a later version of Writer2xhtml.</p>
+      <h2 id="heading34">4.3 <a id="refxhtmlconfig"></a>Configuration</h2>
+      <p class="Textbody">XHTML export can be configured with a configuration file. The configuration is read from several sources:</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">First Writer2xhtml/Calc2xhtml reads the file <span class="Teletype">writer2latex.xml</span> in the same directory as <span class="Teletype">writer2latex.jar</span>. This file is supposed to contain installation-wide configuration.</p>
+        </li>
+        <li>
+          <p class="Textbody">Then it reads the file <span class="SourceText">writer2latex.xml</span> in your home directory (unix, eg. <span class="SourceText">/home/username</span>) or user profile (windows, eg. <span class="SourceText">c:\documents and settings\username</span>). This file is supposed to contain user-specific configuration. The installation-wide configuration may specify, that this file should be generated automatically.</p>
+        </li>
+        <li>
+          <p class="Textbody">Finally the configuration file you specify on the command line is read.</p>
+        </li>
+      </ul>
+      <p class="Textbody">The configuration file is an xml file, here are the default contents:</p>
+      <p class="PreformattedText">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</p>
+      <p class="PreformattedText">&lt;config&gt;</p>
+      <p class="PreformattedText">  &lt;option name=”create_user_config” value=”true” /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;xhtml_no_doctype&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;xhtml_custom_stylesheet&quot; value=&quot;&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;xhtml_ignore_styles&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;xhtml_use_dublin_core&quot; value=&quot;true&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;xhtml_convert_to_px&quot; value=&quot;true&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;xhtml_scaling&quot; value=&quot;100%&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;xhtml_column_scaling&quot; value=&quot;100%&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;xhtml_split_level&quot; value=&quot;0&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;xhtml_calc_split&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;ignore_hard_line_breaks&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;ignore_empty_paragraphs&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;ignore_double_spaces&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">&lt;/config&gt;</p>
+      <h3 id="heading35">Options</h3>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">If the option<span class="UserEntry"> create_user_config </span>if set to <span class="UserEntry">true</span>, the user specific configuration file mentioned above will be created if it does not exist.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="Teletype">xhtml_no_doctype</span> can have the values <span class="SourceText">true</span> or <span class="SourceText">false</span> (default). When this option is <span class="SourceText">true</span>, Writer2xhtml will not include the !DOCTYPE declaration in the converted document. The !DOCTYPE is required for a valid xhtml document; this option should only be used if you need to process the document further.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="UserEntry">xhtml_custom_stylesheet</span> is used to specify an URL to your own, external stylesheet. If the value is empty or the option is not specified, no external stylesheet will be used.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="UserEntry">xhtml_ignore_styles </span>is used to specify if formatting should be exported. If the value is true, no style information will be exported (in this case you should specify a custom style sheet!).</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="UserEntry">xhtml_use_dublin_core </span>is used to specify if Dublin Core Meta data should be exported (the format will be as specified in <a href="http://dublincore.org/documents/dcq-html/">http://dublincore.org/documents/dcq-html/</a>). If the value is <span class="UserEntry">false</span>, it will not be exported.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="Teletype">xhtml_convert_to_px</span> can have the values <span class="SourceText">true</span> (default) or <span class="SourceText">false</span>. When this option is <span class="SourceText">true</span>, Writer2xhtml will convert all units to <span class="Teletype">px</span>, otherwise the original units are used. The resolution is assumed to be 96ppi, you can change this with the <span class="Teletype">xhtml_scaling</span> option. Eg. a scaling <span class="Teletype">75%</span> will change the resolution to 72ppi.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option  <span class="UserEntry">xhtml_scaling </span>is used to specify a scaling of all formatting, ie. to get a different text size than the original document. The value must be a percentage.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option  <span class="UserEntry">xhtml_column_scaling </span>is used to specify an additional scaling for table colums. The value must be a percentage.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option  <span class="UserEntry">xhtml_split_level </span>is used to specify that the Writer documents should be split in several documents and the outline level at which the splitting should happen (the default 0 means no split). This is convenient for long documents. Each output document will get a simple navigation panel in the header and the footer.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option  <span class="UserEntry">xhtml_calc_split </span>is used to specify that the Calc documents should be split in several documents, one for each sheet. This is convenient for large spreadsheets. Each output document will get a simple navigation panel in the header and the footer.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">ignore_double_spaces</span> can have the values <span class="SourceText">true</span> (default) or <span class="SourceText">false</span>. Setting the option to <span class="SourceText">true</span> will instruct Writer2xhtml to ignore double spaces, otherwise they are converted to non-breaking spaces.</p>
+        </li>
+      </ul>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">The option <span class="SourceText">ignore_empty_paragraphs</span> can have the values <span class="SourceText">true</span> (default) or <span class="SourceText">false</span>. Setting the option to <span class="SourceText">true</span> will instruct Writer2xhtml to ignore empty paragraphs..</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">ignore_hard_line_breaks</span> can have the values <span class="SourceText">true</span> or <span class="SourceText">false</span> (default).  Setting the option to <span class="SourceText">true</span> will instruct Writer2xhtml to ignore hard line breaks (shift-Enter).</p>
+        </li>
+      </ul>
+      <h3 id="heading36">Style maps</h3>
+      <p class="Textbody">In addition to the options, you can specify that certain styles in Writer should be mapped to specific XHTML elements and CSS style classes. Here are some examples showing how to use some of the built-in Writer styles to create XHTML elements:</p>
+      <p class="PreformattedText">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</p>
+      <p class="PreformattedText">&lt;config&gt;</p>
+      <p class="PreformattedText">  &lt;!-- map OOo paragraph styles to xhtml elements --&gt;</p>
+      <p class="PreformattedText">  &lt;xhtml-style-map name=&quot;Text body&quot; class=&quot;paragraph&quot;   </p>
+      <p class="PreformattedText">           element=&quot;p&quot; css=&quot;(none)&quot; /&gt;  </p>
+      <p class="PreformattedText">  &lt;xhtml-style-map name=&quot;Sender&quot; class=&quot;paragraph&quot;</p>
+      <p class="PreformattedText">           element=&quot;address&quot; css=&quot;(none)&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;xhtml-style-map name=&quot;Quotations&quot; class=&quot;paragraph&quot;</p>
+      <p class="PreformattedText">           block-element=&quot;blockquote&quot; block-css=&quot;(none)&quot;</p>
+      <p class="PreformattedText">           element=&quot;p&quot; css=&quot;(none)&quot; /&gt;</p>
+      <p class="PreformattedText"> </p>
+      <p class="PreformattedText">  &lt;!-- map OOo text styles to xhtml elements --&gt;</p>
+      <p class="PreformattedText">  &lt;xhtml-style-map name=&quot;Citation&quot; class=&quot;text&quot;</p>
+      <p class="PreformattedText">           element=&quot;cite&quot; css=&quot;(none)&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;xhtml-style-map name=&quot;Emphasis&quot; class=&quot;text&quot;</p>
+      <p class="PreformattedText">           element=&quot;em&quot; css=&quot;(none)&quot; /&gt;</p>
+      <p class="PreformattedText">  </p>
+      <p class="PreformattedText">  &lt;!-- map hard formatting attributes to xhtml elements --&gt;</p>
+      <p class="PreformattedText">  &lt;xhtml-style-map name=&quot;bold&quot; class=&quot;attribute&quot;</p>
+      <p class="PreformattedText">           element=&quot;b&quot; css=&quot;(none)&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;xhtml-style-map name=&quot;italics&quot; class=&quot;attribute&quot;</p>
+      <p class="PreformattedText">           element=&quot;i&quot; css=&quot;(none)&quot; /&gt;</p>
+      <p class="PreformattedText">&lt;/config&gt;</p>
+      <p class="Textbody">An extended version of this is distributed with Writer2LaTeX, please see the file <span class="SourceText">cleanxhtml.xml</span>.</p>
+      <p class="Textbody">The attributes of the <span class="UserEntry">xhtml-style-map</span> element are used as follows:</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody"><span class="UserEntry">name</span> specifies the name of the Writer style.</p>
+        </li>
+        <li>
+          <p class="Textbody"><span class="UserEntry">class</span> specifies the styles class in Writer; this can either be <span class="UserEntry">text</span>, <span class="UserEntry">paragraph</span>, <span class="UserEntry">frame</span>, <span class="UserEntry">list</span> or <span class="UserEntry">attribute</span>. The last value does not specify a real style, but refers to hard formatting attributes. The possible names in this case are <span class="UserEntry">bold</span>, <span class="UserEntry">italics</span>, <span class="UserEntry">fixed</span> (for fixed pitch fonts), <span class="UserEntry">superscript</span> and <span class="UserEntry">subscript</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody"><span class="UserEntry">element</span> specifies the XHTML element to use when converting this style. This is not used for frame and list styles.</p>
+        </li>
+        <li>
+          <p class="Textbody"><span class="UserEntry">css</span> specifies the CSS style class to use when converting this style. If it is not specified or the value is <span class="UserEntry">“(none)”</span>, no CSS class will be used.</p>
+        </li>
+        <li>
+          <p class="Textbody"><span class="UserEntry">block-element</span> only has effect for paragraph styles. It is used to specify a block XHTML element, that should surround several exported paragraphs with this style.</p>
+        </li>
+        <li>
+          <p class="Textbody"><span class="UserEntry">block-css</span> specifies the CSS style class to be used for this block element. If it is not specified or the value is <span class="UserEntry">“(none)”</span>, no CSS class will be used.</p>
+        </li>
+      </ul>
+      <p class="Textbody">For example the rules above produces code like this:</p>
+      <p class="PreformattedText">&lt;p&gt;This paragraph is Text body&lt;/p&gt;</p>
+      <p class="PreformattedText">&lt;address&gt;This paragraph is Sender&lt;/address&gt;</p>
+      <p class="PreformattedText">&lt;blockquote&gt;</p>
+      <p class="PreformattedText">  &lt;p&gt;This paragraph is Quotations&lt;/p&gt;</p>
+      <p class="PreformattedText">  &lt;p&gt;This paragraph is also Quotations&lt;/p&gt;</p>
+      <p class="PreformattedText">&lt;/blockquote&gt;</p>
+      <p class="PreformattedText">&lt;p&gt;This paragraph is also Text body and has some &lt;em&gt;text with emphasis style&lt;/em&gt; and uses some &lt;b&gt;hard formatting&lt;/b&gt;.&lt;/p&gt;</p>
+      <p class="Textbody">You can use your own Writer styles together with your own CSS style sheet to create further style mappings, for example:</p>
+      <p class="PreformattedText">&lt;xhtml-style-map name=&quot;Some OOo style&quot; class=&quot;paragraph&quot;</p>
+      <p class="PreformattedText">           block-element=&quot;div&quot; block-css=&quot;block_style&quot;</p>
+      <p class="PreformattedText">           element=&quot;p&quot; css=&quot;par_style&quot; /&gt;</p>
+      <p class="Textbody">to produce output like this:</p>
+      <p class="PreformattedText">&lt;div class=”block_style”&gt;</p>
+      <p class="PreformattedText">  &lt;p class=”par_style”&gt;Paragraph with Some OOo style&lt;/p&gt;</p>
+      <p class="PreformattedText">  &lt;p class=”par_style”&gt;Yet another&lt;/p&gt;</p>
+      <p class="PreformattedText">&lt;/div&gt;</p>
+      <p class="Textbody">Note that the rules for hard formatting are only used when <span class="UserEntry">xhtml_ignore_styles</span> is set to <span class="UserEntry">true</span>. It is not recommended to rely on these rules, using real text styles is preferable. They are included because the use of hard character formatting is very common even in otherwise well-structured documents.</p>
+      <h2 id="heading37">4.4 <a id="refxhtmlfrontend"></a>Using OpenOffice.org to create XHTML documents</h2>
+      <p class="Textbody">The configuration file <span class="UserEntry">cleanxhtml.xml</span> that is distributed with Writer2LaTeX, can be used to create semantically rich XHTML content, which can be formatted with your own stylesheet (you should edit the file to add the URL to the stylesheet you want to use).</p>
+      <p class="Textbody">A subset of the built-in styles in Writer are mapped to XHTML elements (note that the style names are localized, so this is for the english version of OpenOffice.org):</p>
+      <table id="Tabel17Ctable" cellspacing="0" style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:9.025512px;border:none;border-collapse:separate;border-spacing:0">
+        <col style="width:256.97766px" />
+        <col style="width:256.97766px" />
+        <col style="width:257.02298px" />
+        <thead>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:1.0px solid #000000;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableHeading">OOo Writer style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:1.0px solid #000000;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableHeading">OOo Writer class</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableHeading">XHTML element</p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Text body</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">p</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Sender</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">address</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Quotations</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">blockquote</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Preformatted Text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">pre</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">List Heading</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">dt</span> (in <span class="SourceText">dl</span>)</p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">List Contents</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">dd</span> (in <span class="SourceText">dl</span>)</p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Horizontal Rule</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">hr</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Citation</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">cite</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Definition</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">dfn</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Emphasis</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">em</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Example</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">samp</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Source Text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">code</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Strong Emphasis</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">strong</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Teletype</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">tt</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">User entry</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">kbd</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Variable</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">var</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">bold</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">hard formatting attribute</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">b</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">italics</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">hard formatting attribute</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">i</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">fixed pitch font</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">hard formatting attribute</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">tt</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">superscript</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">hard formatting attribute</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">sup</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="height:30.886301px">
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">subscript</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">hard formatting attribute</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">sub</span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="Textbody">So by using these styles only, you will create well-structured XHTML documents. See the document <span class="SourceText">sample-xhtml.sxw</span> for an example of how to use this.</p>
+      <p class="Textbody">Warning: Some elements are not allowed inside <span class="SourceText">pre</span>, so this might in some cases lead to invalid documents. This will be fixed in a later version of Writer2xhtml.</p>
+    </div>
+    <div id="footer"><hr />[<a href="user-manual.html">First</a>] [<a href="user-manual4.html">Previous</a>] [<a href="user-manual6.html">Next</a>] [<a href="user-manual6.html">Last</a>] [<a href="user-manual1.html">Contents</a>] </div>
+  </body>
+</html>

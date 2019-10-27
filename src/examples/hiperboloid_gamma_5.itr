@@ -1,0 +1,155 @@
+<pulga-file>
+  <string>Compatibility Version</string>
+  <string>5</string>
+  <application>
+    <info>
+      <name>Hiperboloide</name>
+      <description>Hiperboloid analysis</description>
+      <authors>Guilherme Silveira</authors>
+    </info>
+    <image>
+      <width>200</width>
+      <height>200</height>
+    </image>
+    <backgroundColor>
+      <red>255</red>
+      <green>255</green>
+      <blue>255</blue>
+      <alpha>255</alpha>
+    </backgroundColor>
+    <clearBeforeDrawing>true</clearBeforeDrawing>
+    <codes>
+      <codes/>
+    </codes>
+    <grid>
+      <on>false</on>
+      <color>
+        <red>51</red>
+        <green>51</green>
+        <blue>255</blue>
+        <alpha>255</alpha>
+      </color>
+      <showAxis>true</showAxis>
+    </grid>
+    <intermediateExpressions/>
+    <parameters>
+      <parameter>
+        <name>c</name>
+        <value>0.79</value>
+        <min>0.6</min>
+        <max>0.82</max>
+      </parameter>
+    </parameters>
+    <trashPoints>1</trashPoints>
+    <iteratedPoints>1000</iteratedPoints>
+    <variables>
+      <br.usp.iterador.model.Variable>
+        <initialValue>0.55</initialValue>
+        <code>x2</code>
+      </br.usp.iterador.model.Variable>
+      <br.usp.iterador.model.Variable>
+        <initialValue>0.55</initialValue>
+        <code>c*(1-x1*x1+x2*x2)</code>
+      </br.usp.iterador.model.Variable>
+    </variables>
+    <xScale>
+      <field>c</field>
+      <min>0.0</min>
+      <max>1.0</max>
+    </xScale>
+    <yScale>
+      <field>x1</field>
+      <min>-0.9</min>
+      <max>1.6</max>
+    </yScale>
+    <iterationPower>1</iterationPower>
+  </application>
+  <list>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.cor.ColorPlugin</first>
+      <second class="br.usp.iterador.plugin.cor.ColorData">
+        <nIterations>10000</nIterations>
+        <colors>
+          <awt-color>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </awt-color>
+        </colors>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.initialcondition.InitialConditionPlugin</first>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.bacia.BasinPlugin</first>
+      <second class="br.usp.iterador.plugin.bacia.Basin">
+        <attractors/>
+        <averagesInfo>
+          <averageFunctions>
+            <x>x1</x>
+            <y>x2</y>
+          </averageFunctions>
+          <xScale>
+            <field>x1</field>
+            <min>0.0</min>
+            <max>2.0</max>
+          </xScale>
+          <yScale>
+            <field>x2</field>
+            <min>0.0</min>
+            <max>2.0</max>
+          </yScale>
+        </averagesInfo>
+        <sampleAverageColor>
+          <red>255</red>
+          <green>255</green>
+          <blue>0</blue>
+          <alpha>255</alpha>
+        </sampleAverageColor>
+        <earlyQuit>0</earlyQuit>
+        <maxIterationsInside>1</maxIterationsInside>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.manifold.StableManifoldPlugin</first>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.export.ExportImagePlugin</first>
+      <second class="br.usp.iterador.plugin.export.ExportImageData">
+        <filename>/apps/workspace/guilherme-iniciacao/images/dispersao_079.png</filename>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.zoom.ZoomPlugin</first>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.cor.BufferedColorChange</first>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.setiterator.InitialCurvePlugin</first>
+      <second class="br.usp.iterador.plugin.setiterator.CurveSet">
+        <curves>
+          <br.usp.iterador.plugin.setiterator.Curve>
+            <expressions>
+              <string>0</string>
+              <string>-c+2*c*t</string>
+            </expressions>
+            <points>0</points>
+          </br.usp.iterador.plugin.setiterator.Curve>
+        </curves>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.edo.euler.EulerPlugin</first>
+      <second class="br.usp.iterador.plugin.edo.euler.EulerData">
+        <t0>0.0</t0>
+        <t1>0.0</t1>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.bifurcationdiagram.DiagramPlugin</first>
+    </pair>
+  </list>
+</pulga-file>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="vraptor2">
+
+  <bannerLeft>
+    <name>Pulga</name>
+    <href>http://www.linux.ime.usp.br/~gas/iterador</href>
+    <alt>Pulga</alt>
+  </bannerLeft>
+  
+  <bannerRight>
+    <name>Arca</name>
+    <src>arca_logo.jpg</src>
+    <href>http://arca.ime.usp.br</href>
+    <alt>Arca</alt>
+  </bannerRight>
+  
+  <body>
+
+    <menu name="Pulga">
+      <item name="Introduction" href="index.html"/>
+      <item name="News" href="news.html"/>
+      <item name="Advanced" href="advanced.html" />
+      <item name="Roadmap" href="roadmap.html" />
+      <item name="Issue tracking" href="http://www.lumpa.com.br:8080/jira" />
+    </menu>
+    
+    <menu name="Examples">
+      <item name="Basic" href="examples.html" />
+      <item name="Basin of Attraction" href="boa.html" />
+    </menu>
+
+    <menu name="Information">
+      <item name="Contact" href="contact.html"/>
+    </menu>
+
+    ${reports}
+
+  </body>
+</project>

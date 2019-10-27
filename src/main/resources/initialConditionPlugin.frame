@@ -1,0 +1,14 @@
+# title, lines, columns
+title = initialConditions
+forEach = parameters
+edit = name,slider
+showHeader = false
+
+# logic to be called on update
+onUpdate = redraw
+
+# status button
+statusBar = 
+
+# right side button
+rightSide = 

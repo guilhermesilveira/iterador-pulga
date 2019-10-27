@@ -1,0 +1,48 @@
+Examples
+
+	Here you find a simple tutorial on how to create some simple dynamical system's and iterate them on pulga.
+
+Henon
+
+      	[[*]] The Henon's Map is the following R^2 --> R^2 application:
+
++----------------------------
+      	f(x1, x2) = (1 - 1.4 * x1 * x1 + 0.3 * x2, x1)
++----------------------------
+
+      	[[*]] Which can be translated to a simple iterated function:
+
++----------------------------
+      	x1_k+1 = 1 - 1.4 * x1_k * x1_k + 0.3 * x2_k
+      	
+    	x2_k+1 = x1_k
++----------------------------
+
+      	[[*]] Set the number of trash points to 100 and generated points to 20000.
+
+	Different initial conditions (x1,x2) will have different orbits. For example, try studying the starting point (0.3, 0.1).
+      	
+    What happens with this initial condition?
+      	
+    Try looking at x1 and x2 inside [-1.5,1.5]
+
+Finding fixed points
+
+      	[[*]] Setup the Henon example.
+      	
+      	[[*]] Activate the plugin called ConnectPoints, it connects each two points between iterations.
+      	
+      	[[*]] Make the number of iterated points something smaller, like 50.
+      	
+      	[[*]] Activate the initial condition plugin, it displays the Initial Condition tool on the tool bar.
+      	
+      	[[*]] Whenever you select this tool you are able to pick diferent initial conditions which you want to iterate.
+      	
+      	[[*]] Pick this tool and choose some random point, do you see the iteration "path"?
+      	
+      	[[*]] Now try picking points closer to (-1.131354477,-1.131354477).
+      	
+      	[[*]] Do you see that it <<might>> tend to a fixed point?
+      	
+	You <<cannot>> be sure that there will be a fixed point somewhere in this region just by using this idea,
+	but with some math intuition you will be able to isolate some areas which might have fixed points.

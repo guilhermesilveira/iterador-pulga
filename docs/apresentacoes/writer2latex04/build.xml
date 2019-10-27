@@ -1,0 +1,121 @@
+<!-- 
+  ############################################################################
+  # This is the Ant build file for writer2latex
+  # Sep 2004 (mgn)
+  ############################################################################
+-->
+<project name="w2l" default="help" basedir=".">
+
+    <description>writer2latex - build file</description>
+
+    <target name="help" description="Displays usage information">
+        <echo>Usage: ant &lt;target&gt;
+          The following targets are supported:
+          all
+              Build nearly everything
+          compile
+              Compile all file except the tests.        
+          jar
+              Create the jar file.
+          javadoc
+              Create the javadoc documentation in target/javadoc. 
+          clean
+        </echo>
+    </target>
+
+    <!-- configure the directories -->
+    <property name="jarfile" value="writer2latex"/>
+    <property name="src" location="source"/>
+    <property name="classes" location="target/classes"/>
+    <property name="javadoc" location="target/javadoc"/>
+    <property name="tmp" location="target/tmp"/>
+    <property name="target" location="target"/>
+    <property name="target.lib" location="target/lib"/>
+    <!-- classpath for the application -->
+    <path id="main.class.path">
+        <fileset dir="lib">
+            <include name="xmergefix.jar"/>
+        </fileset>
+    </path>
+
+    <target name="all"
+            description="Build nearly everything"
+            depends="javadoc,jar" />
+
+    <target name="compile"
+            description="Compile the Java files (without tests)">
+        <!-- create empty output directory for classes if not present -->
+        <mkdir dir="${classes}"/>
+        <!-- compile the application code -->
+        <javac srcdir="${src}" 
+               destdir="${classes}"
+               debug="on">
+            <classpath refid="main.class.path"/>
+        </javac>
+        <copy todir="${classes}">
+            <fileset dir="source">
+                <include name="**/*.xml"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="jar"
+            depends="compile"
+            description="Create writer2latex jar file containing all compiled classes except test cases.">
+    <!-- make a jar from the classes not matching magic testcase identifiers-->
+        <mkdir dir="${target.lib}"/>
+      <!-- do *not* include xmerge.jar -->
+    	<!--<unjar src="lib/xmergefix.jar" dest="${classes}" overwrite="yes"/>-->
+        <jar jarfile="${target.lib}/${jarfile}.jar">
+            <fileset dir="${classes}">
+                <patternset>
+                    <exclude name="**/*Test.class"/>
+                    <exclude name="**/AllTests.class"/>
+		    		<include name="**/*.xml"/>
+                	<include name="**/*.class"/>
+                	<include name="org/**/*"/>
+                </patternset>
+            </fileset>
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Main-Class" value="writer2latex.Application"/>
+<!-- xmerge.jar in classpath, because we don't include it -->
+                <attribute name="Class-Path" value="jaxp.jar parser.jar xmergefix.jar"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="clean"
+            description="Remove unneccesary files and directories.">
+        <delete dir="${classes}"/>
+        <delete dir="${javadoc}"/>
+		<delete dir="${target.lib}" />
+        <delete file="${tmp}" />
+        </target>
+
+    <target name="javadoc"
+            description="Create JavaDoc HTML pages.">
+        <mkdir dir="${javadoc}" />
+        <javadoc 
+             destdir="${javadoc}"
+             author="true"
+             version="true"
+             use="true"
+             splitindex="true"
+             notree="false"
+             nonavbar="false"
+             noindex="false"
+             nodeprecatedlist="false"
+             nodeprecated="false">
+            <classpath refid="main.class.path"/>
+            <packageset dir="${src}" defaultexcludes="yes" />
+        </javadoc>
+        <copy todir="${javadoc}">
+            <fileset dir="${src}">
+                <include name="**/*.gif"/>
+                <include name="**/*.png"/>
+            </fileset>
+        </copy>
+    </target>
+
+</project>

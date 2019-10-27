@@ -1,0 +1,25 @@
+Bifurcation Diagram Example
+Based on the quadratic family
+
+Dimension: 2
+
+Initial values: (x1,x2) = (0.3, 0)
+
+Final expressions:
+(x1,x2) = (4 * x2 * x1 * (1-x1), x2)
+
+Scale:
+x2 from 0 to 1
+x1 from 0 to 1
+
+Point count: (100, 1000000)
+
+Piece of Code (1,1000)
+x1=0.3; x2 += 0.001;
+
+color: 200
+	black (but still visible so we can see what is being dropped)
+	red
+	red
+	red
+	red

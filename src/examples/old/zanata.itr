@@ -1,0 +1,169 @@
+<pulga-file>
+  <string>Compatibility Version</string>
+  <string>4</string>
+  <application>
+    <info>
+      <name>Unknown</name>
+      <description></description>
+      <authors></authors>
+    </info>
+    <image>
+      <width>800</width>
+      <height>600</height>
+    </image>
+    <backgroundColor>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+      <alpha>255</alpha>
+    </backgroundColor>
+    <clearBeforeDrawing>true</clearBeforeDrawing>
+    <codes>
+      <codes/>
+    </codes>
+    <dimensao>2</dimensao>
+    <grid>
+      <on>false</on>
+      <color>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+        <alpha>255</alpha>
+      </color>
+    </grid>
+    <inicial>
+      <double>3.1145625</double>
+      <double>2.9085</double>
+    </inicial>
+    <intermediarios>
+      <intermediate>
+        <nome>j</nome>
+        <valor>alpha * alpha * Math.cos(x1) * Math.cos(x1) + Math.pow(alpha, -2) * Math.sin(x1) * Math.sin(x1)</valor>
+      </intermediate>
+      <intermediate>
+        <nome>t</nome>
+        <valor>br.usp.iterador.internal.logic.MathNew.modd(x2 + gamma * Math.log(j), Math.PI)</valor>
+      </intermediate>
+      <intermediate>
+        <nome>mi</nome>
+        <valor>Math.atan(Math.tan(x1) / (alpha*alpha))</valor>
+      </intermediate>
+      <intermediate>
+        <nome>fi</nome>
+        <valor>br.usp.iterador.internal.logic.MathNew.modd(mi + t, Math.PI)</valor>
+      </intermediate>
+    </intermediarios>
+    <parameters>
+      <parameter>
+        <name>alpha</name>
+        <value>1.14</value>
+      </parameter>
+      <parameter>
+        <name>gamma</name>
+        <value>2.0</value>
+      </parameter>
+    </parameters>
+    <trashPoints>100</trashPoints>
+    <iteratedPoints>2000</iteratedPoints>
+    <valores>
+      <string>fi</string>
+      <string>t</string>
+    </valores>
+    <xScale>
+      <field>x1</field>
+      <max>3.15</max>
+      <min>0.0</min>
+    </xScale>
+    <yScale>
+      <field>x2</field>
+      <max>3.15</max>
+      <min>0.0</min>
+    </yScale>
+  </application>
+  <map>
+    <entry>
+      <string>average-functions</string>
+      <java-class>br.usp.iterador.plugin.bacia.AverageFunctions</java-class>
+    </entry>
+    <entry>
+      <string>basin</string>
+      <java-class>br.usp.iterador.plugin.bacia.Basin</java-class>
+    </entry>
+    <entry>
+      <string>initial-condition-plugin</string>
+      <java-class>br.usp.iterador.plugin.initialcondition.InitialConditionData</java-class>
+    </entry>
+    <entry>
+      <string>export-image-plugin</string>
+      <java-class>br.usp.iterador.plugin.export.ExportImageData</java-class>
+    </entry>
+    <entry>
+      <string>color-plugin</string>
+      <java-class>br.usp.iterador.plugin.cor.ColorData</java-class>
+    </entry>
+    <entry>
+      <string>cloud</string>
+      <java-class>br.usp.iterador.plugin.bacia.model.Cloud</java-class>
+    </entry>
+  </map>
+  <list>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.zoom.ZoomPlugin</first>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.initialcondition.InitialConditionPlugin</first>
+      <second class="initial-condition-plugin">
+        <clear>false</clear>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.export.ExportImagePlugin</first>
+      <second class="export-image-plugin">
+        <filename>\export.png</filename>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.cor.ColorPlugin</first>
+      <second class="color-plugin">
+        <nIterations>10000</nIterations>
+        <colors>
+          <awt-color>
+            <red>0</red>
+            <green>0</green>
+            <blue>255</blue>
+            <alpha>255</alpha>
+          </awt-color>
+        </colors>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.bacia.BasinPlugin</first>
+      <second class="basin">
+        <attractors/>
+        <averageFunctions>
+          <x>Math.abs(x1) * Math.abs(x2)</x>
+          <y>x1 * x1 + x2 * x2</y>
+        </averageFunctions>
+        <sampleAverageColor>
+          <red>255</red>
+          <green>255</green>
+          <blue>0</blue>
+          <alpha>255</alpha>
+        </sampleAverageColor>
+        <earlyQuit>1000</earlyQuit>
+        <averageScales>
+          <scale>
+            <field>x1</field>
+            <max>2.0</max>
+            <min>0.0</min>
+          </scale>
+          <scale>
+            <field>x2</field>
+            <max>2.0</max>
+            <min>0.0</min>
+          </scale>
+        </averageScales>
+      </second>
+    </pair>
+  </list>
+</pulga-file>

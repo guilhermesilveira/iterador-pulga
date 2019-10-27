@@ -1,0 +1,8 @@
+Julia Set
+
+Dimension: 2
+Fixed parameters: (c1, c2) = (0.3, 0.1)
+
+Final expressions:
+x1 = (x1 * x1 + x2 * x2) + c1
+x2 = 2 * x1 * x2 + c2

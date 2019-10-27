@@ -1,0 +1,3394 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 0.4
+% see http://www.hj-gym.dk/~hj/writer2latex for more info
+\documentclass[12pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[geometry,weather,misc,clock]{ifsym}
+\usepackage{pifont}
+\usepackage{eurosym}
+\usepackage{amsmath,wasysym,amssymb,amsfonts,textcomp}
+\usepackage{color}
+\usepackage{longtable}
+\usepackage{hyperref}
+\hypersetup{pdftex, colorlinks=true, linkcolor=blue, filecolor=blue, pagecolor=blue, urlcolor=blue, pdfauthor=Henrik Just}
+\usepackage[pdftex]{graphicx}
+% Text styles
+\newcommand\textstyleBulletSymbols[1]{{\fontsize{9pt}{10.8pt}\selectfont \textrm{#1}}}
+\newcommand\textstyleTeletype[1]{\texttt{#1}}
+\newcommand\textstyleNumberingSymbols[1]{#1}
+\newcommand\textstyleSourceText[1]{\texttt{#1}}
+\newcommand\textstyleUserEntry[1]{\texttt{#1}}
+\newcommand\textstyleFootnoteanchor[1]{\textsuperscript{#1}}
+\raggedbottom
+% Headings and outline numbering
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0cm}{0.423cm}{0.212cm}{\clearpage\normalfont\normalsize\normalcolor\fontsize{16.1pt}{19.32pt}\selectfont\sffamily\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{0cm}{0.423cm}{0.212cm}{\normalfont\normalsize\normalcolor\fontsize{14pt}{16.8pt}\selectfont\sffamily\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{0cm}{0.423cm}{0.212cm}{\normalfont\normalsize\normalcolor\fontsize{12pt}{14.4pt}\selectfont\sffamily\bfseries}}
+\renewcommand\@seccntformat[1]{\csname @textstyle#1\endcsname{\csname the#1\endcsname}\csname @distance#1\endcsname}
+\setcounter{secnumdepth}{2}
+\newcommand\@distancesection{}
+\newcommand\@textstylesection[1]{#1}
+\renewcommand\thesection{\arabic{section} }
+\newcommand\@distancesubsection{}
+\newcommand\@textstylesubsection[1]{#1}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection} }
+\newcommand\@distancesubsubsection{}
+\newcommand\@textstylesubsubsection[1]{#1}
+\makeatother
+% Paragraph styles
+\renewcommand\familydefault{\rmdefault}
+\renewcommand\normalcolor{\color{black}}
+\newenvironment{stylePi}{\clearpage\setlength\leftskip{0cm plus 1fil}\setlength\rightskip{0cm plus 1fil}\setlength\parindent{0cm}\setlength\parfillskip{0pt}\setlength\parskip{0cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\fontsize{18pt}{21.6pt}\selectfont\sffamily\bfseries\writerlistlabel\ignorespaces}{\unskip\vspace{0.199cm}\par}
+\newenvironment{stylePii}{\setlength\leftskip{0cm plus 1fil}\setlength\rightskip{0cm plus 1fil}\setlength\parindent{0cm}\setlength\parfillskip{0pt}\setlength\parskip{0cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\fontsize{20pt}{24.0pt}\selectfont\sffamily\bfseries\writerlistlabel\ignorespaces}{\unskip\vspace{0.3cm}\par}
+\newenvironment{stylePiii}{\setlength\leftskip{0cm plus 1fil}\setlength\rightskip{0cm plus 1fil}\setlength\parindent{0cm}\setlength\parfillskip{0pt}\setlength\parskip{0cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\fontsize{18pt}{21.6pt}\selectfont\sffamily\bfseries\writerlistlabel\ignorespaces}{\unskip\vspace{0.3cm}\par}
+\newenvironment{stylePiv}{\setlength\leftskip{0cm plus 1fil}\setlength\rightskip{0cm plus 1fil}\setlength\parindent{0cm}\setlength\parfillskip{0pt}\setlength\parskip{0.499cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\fontsize{14pt}{16.8pt}\selectfont\sffamily\bfseries\writerlistlabel\ignorespaces}{\unskip\vspace{0cm}\par}
+\newenvironment{stylePv}{\setlength\leftskip{0cm plus 1fil}\setlength\rightskip{0cm plus 1fil}\setlength\parindent{0cm}\setlength\parfillskip{0pt}\setlength\parskip{0.199cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\fontsize{14pt}{16.8pt}\selectfont\sffamily\bfseries\writerlistlabel\ignorespaces}{\unskip\vspace{0cm}\par\clearpage}
+\newenvironment{styleTextbody}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePvii}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePviii}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePix}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePx}{\setlength\leftskip{1cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\ttfamily\writerlistlabel\ignorespaces}{\unskip\vspace{0.101cm}\par}
+\newenvironment{stylePxi}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxii}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxiii}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxiv}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxv}{\setlength\leftskip{1cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\ttfamily\writerlistlabel\ignorespaces}{\unskip\vspace{0.101cm}\par}
+\newenvironment{stylePxvi}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxvii}{\setlength\leftskip{1cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\ttfamily\writerlistlabel\ignorespaces}{\unskip\vspace{0.101cm}\par}
+\newenvironment{stylePxviii}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePreformattedText}{\setlength\leftskip{1cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\ttfamily\writerlistlabel\ignorespaces}{\unskip\vspace{0.101cm}\par}
+\newenvironment{stylePxix}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxx}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxxi}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxxii}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxxiii}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxxiv}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxxv}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxxvi}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{styleTableHeading}{\setlength\leftskip{0cm plus 1fil}\setlength\rightskip{0cm plus 1fil}\setlength\parindent{0cm}\setlength\parfillskip{0pt}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\bfseries\itshape\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{styleTableContents}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxxvii}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\itshape\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxxviii}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxxix}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+\newenvironment{stylePxxx}{\setlength\leftskip{0cm}\setlength\rightskip{0cm}\setlength\parindent{0cm}\setlength\parfillskip{0pt plus 1fil}\setlength\parskip{0.101cm}\writerlistparindent\writerlistleftskip\leavevmode\normalfont\normalsize\normalcolor\writerlistlabel\ignorespaces}{\unskip\vspace{0.21cm}\par}
+% List styles
+\newcommand\writerlistleftskip{}
+\newcommand\writerlistparindent{}
+\newcommand\writerlistlabel{}
+\newcommand\writerlistremovelabel{\aftergroup\let\aftergroup\writerlistparindent\aftergroup\relax\aftergroup\let\aftergroup\writerlistlabel\aftergroup\relax}
+\newcommand\labellistLileveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLilevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLileveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLileveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLiileveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLiilevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLiileveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLiileveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLiileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLiileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLiilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLiilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLiileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLiileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLiileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLiileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcounter{listLiiileveli}
+\newcounter{listLiiilevelii}[listLiiileveli]
+\newcounter{listLiiileveliii}[listLiiilevelii]
+\newcounter{listLiiileveliv}[listLiiileveliii]
+\renewcommand\thelistLiiileveli{\arabic{listLiiileveli}}
+\renewcommand\thelistLiiilevelii{\arabic{listLiiilevelii}}
+\renewcommand\thelistLiiileveliii{\arabic{listLiiileveliii}}
+\renewcommand\thelistLiiileveliv{\arabic{listLiiileveliv}}
+\newcommand\labellistLiiileveli{\textstyleNumberingSymbols{\thelistLiiileveli.}}
+\newcommand\labellistLiiilevelii{\textstyleNumberingSymbols{\thelistLiiilevelii.}}
+\newcommand\labellistLiiileveliii{\textstyleNumberingSymbols{\thelistLiiileveliii.}}
+\newcommand\labellistLiiileveliv{\textstyleNumberingSymbols{\thelistLiiileveliv.}}
+\newenvironment{listLiiileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLiiileveli}\labellistLiiileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLiiilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLiiilevelii}\labellistLiiilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLiiileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLiiileveliii}\labellistLiiileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLiiileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLiiileveliv}\labellistLiiileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcounter{listLivleveli}
+\newcounter{listLivlevelii}[listLivleveli]
+\newcounter{listLivleveliii}[listLivlevelii]
+\newcounter{listLivleveliv}[listLivleveliii]
+\renewcommand\thelistLivleveli{\arabic{listLivleveli}}
+\renewcommand\thelistLivlevelii{\arabic{listLivlevelii}}
+\renewcommand\thelistLivleveliii{\arabic{listLivleveliii}}
+\renewcommand\thelistLivleveliv{\arabic{listLivleveliv}}
+\newcommand\labellistLivleveli{\textstyleNumberingSymbols{\thelistLivleveli.}}
+\newcommand\labellistLivlevelii{\textstyleNumberingSymbols{\thelistLivlevelii.}}
+\newcommand\labellistLivleveliii{\textstyleNumberingSymbols{\thelistLivleveliii.}}
+\newcommand\labellistLivleveliv{\textstyleNumberingSymbols{\thelistLivleveliv.}}
+\newenvironment{listLivleveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLivleveli}\labellistLivleveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLivlevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLivlevelii}\labellistLivlevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLivleveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLivleveliii}\labellistLivleveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLivleveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLivleveliv}\labellistLivleveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLvleveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLvlevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLvleveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLvleveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLvleveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLvleveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLvlevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLvlevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLvleveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLvleveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLvleveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLvleveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLvileveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLvilevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLvileveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLvileveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLvileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLvileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLvilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLvilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLvileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLvileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLvileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLvileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcounter{listLviileveli}
+\newcounter{listLviilevelii}[listLviileveli]
+\newcounter{listLviileveliii}[listLviilevelii]
+\newcounter{listLviileveliv}[listLviileveliii]
+\renewcommand\thelistLviileveli{\arabic{listLviileveli}}
+\renewcommand\thelistLviilevelii{\arabic{listLviilevelii}}
+\renewcommand\thelistLviileveliii{\arabic{listLviileveliii}}
+\renewcommand\thelistLviileveliv{\arabic{listLviileveliv}}
+\newcommand\labellistLviileveli{\textstyleNumberingSymbols{\thelistLviileveli.}}
+\newcommand\labellistLviilevelii{\textstyleNumberingSymbols{\thelistLviilevelii.}}
+\newcommand\labellistLviileveliii{\textstyleNumberingSymbols{\thelistLviileveliii.}}
+\newcommand\labellistLviileveliv{\textstyleNumberingSymbols{\thelistLviileveliv.}}
+\newenvironment{listLviileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLviileveli}\labellistLviileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLviilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLviilevelii}\labellistLviilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLviileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLviileveliii}\labellistLviileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLviileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLviileveliv}\labellistLviileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcounter{listLviiileveli}
+\newcounter{listLviiilevelii}[listLviiileveli]
+\newcounter{listLviiileveliii}[listLviiilevelii]
+\newcounter{listLviiileveliv}[listLviiileveliii]
+\renewcommand\thelistLviiileveli{\arabic{listLviiileveli}}
+\renewcommand\thelistLviiilevelii{\arabic{listLviiilevelii}}
+\renewcommand\thelistLviiileveliii{\arabic{listLviiileveliii}}
+\renewcommand\thelistLviiileveliv{\arabic{listLviiileveliv}}
+\newcommand\labellistLviiileveli{\textstyleNumberingSymbols{\thelistLviiileveli.}}
+\newcommand\labellistLviiilevelii{\textstyleNumberingSymbols{\thelistLviiilevelii.}}
+\newcommand\labellistLviiileveliii{\textstyleNumberingSymbols{\thelistLviiileveliii.}}
+\newcommand\labellistLviiileveliv{\textstyleNumberingSymbols{\thelistLviiileveliv.}}
+\newenvironment{listLviiileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLviiileveli}\labellistLviiileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLviiilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLviiilevelii}\labellistLviiilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLviiileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLviiileveliii}\labellistLviiileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLviiileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\stepcounter{listLviiileveliv}\labellistLviiileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLixleveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLixlevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLixleveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLixleveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLixleveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLixleveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLixlevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLixlevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLixleveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLixleveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLixleveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLixleveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxleveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxlevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxleveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxleveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxleveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxleveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxlevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxlevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxleveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxleveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxleveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxleveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxileveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxilevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxileveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxileveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxiileveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxiilevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxiileveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxiileveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxiileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxiileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxiilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxiilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxiileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxiileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxiileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxiileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxiiileveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxiiilevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxiiileveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxiiileveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxiiileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxiiileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxiiilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxiiilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxiiileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxiiileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxiiileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxiiileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxivleveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxivlevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxivleveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxivleveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxivleveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxivleveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxivlevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxivlevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxivleveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxivleveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxivleveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxivleveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxvleveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxvlevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxvleveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxvleveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxvleveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxvleveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxvlevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxvlevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxvleveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxvleveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxvleveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxvleveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxvileveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxvilevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxvileveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxvileveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxvileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxvileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxvilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxvilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxvileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxvileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxvileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxvileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxviileveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxviilevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxviileveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxviileveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxviileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxviileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxviilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxviilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxviileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxviileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxviileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxviileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxviiileveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxviiilevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxviiileveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxviiileveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxviiileveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxviiileveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxviiilevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxviiilevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxviiileveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxviiileveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxviiileveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxviiileveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxixleveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxixlevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxixleveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxixleveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxixleveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxixleveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxixlevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxixlevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxixleveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxixleveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxixleveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxixleveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\newcommand\labellistLxxleveli{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxxlevelii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxxleveliii{\textstyleBulletSymbols{{\textbullet}}}
+\newcommand\labellistLxxleveliv{\textstyleBulletSymbols{{\textbullet}}}
+\newenvironment{listLxxleveli}{\def\writerlistleftskip{\addtolength\leftskip{0.499cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxxleveli\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxxlevelii}{\def\writerlistleftskip{\addtolength\leftskip{1.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxxlevelii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxxleveliii}{\def\writerlistleftskip{\addtolength\leftskip{1.4990001cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxxleveliii\hspace{0cm}\writerlistremovelabel}}}{}
+\newenvironment{listLxxleveliv}{\def\writerlistleftskip{\addtolength\leftskip{2.0cm}}\def\writerlistparindent{}\def\writerlistlabel{}\def\item{\def\writerlistparindent{\setlength\parindent{-0.499cm}}\def\writerlistlabel{\labellistLxxleveliv\hspace{0cm}\writerlistremovelabel}}}{}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+% footnotes configuration
+\makeatletter
+\renewcommand\thefootnote{\arabic{footnote}}
+\renewcommand\@makefnmark{\mbox{\textstyleFootnoteanchor{\@thefnmark}}}
+\makeatother
+\usepackage{palatino}
+\usepackage[bluelace,screen,nopanel,sectionbreak]{pdfscreen}
+%\hypersetup{pdfpagemode={FullScreen}}
+\margins{0.5in}{0.5in}{0.5in}{0.5in}
+\screensize{6in}{8in}
+\sloppy
+\begin{document}
+\begin{stylePi}
+User{\textquotesingle}s manual for
+\end{stylePi}
+
+\begin{stylePii}
+ \includegraphics[width=10.98cm,height=2.064cm]{w2llogo.png} 
+\end{stylePii}
+
+\begin{stylePiii}
+Writer2LaTeX, Writer2BibTeX, Writer2xhtml and Calc2xhtml
+\end{stylePiii}
+
+\begin{stylePiv}
+version 0.4
+\end{stylePiv}
+
+\begin{stylePv}
+{\textcopyright} 2002{--}2005 Henrik Just
+\end{stylePv}
+
+\setcounter{tocdepth}{1}
+\renewcommand\contentsname{Table of Contents}
+\tableofcontents
+\section{Introduction}
+\subsection{What is Writer2LaTeX?}
+\begin{styleTextbody}
+Writer2LaTeX is a utility to convert OpenOffice.org (or StarOffice 6/7)
+Writer and Calc documents\footnote{The new OASIS OpenDocument format is
+not yet supported. This is planned for the next version of
+Writer2LaTeX.} {--} in particular documents containing formulas {--}
+into other formats, Actually it is 4 converters in one:
+\end{styleTextbody}
+
+\begin{listLileveli}
+\item 
+\begin{stylePvii}
+\textbf{Writer2LaTeX} converts Writer documents to LaTeX 2e.
+\end{stylePvii}
+\item 
+\begin{stylePvii}
+\textbf{Writer2BibTeX} extracts bibliographic data from a Writer
+document and converts it to BibTeX format.
+\end{stylePvii}
+\item 
+\begin{stylePvii}
+\textbf{Writer2xhtml} converts Writer documents to XHTML 1.0 strict or
+XHTML 1.1 + MathML 2.0, using CSS2 to convert style information.
+\end{stylePvii}
+\item 
+\begin{stylePvii}
+\textbf{Calc2xhtml} converts Calc documents to XHTML 1.0 strict, using
+CSS2 to convert style information.
+\end{stylePvii}
+\end{listLileveli}
+\begin{styleTextbody}
+You can use Writer2LaTeX
+\end{styleTextbody}
+
+\begin{listLiileveli}
+\item 
+\begin{stylePviii}
+...as a command line utility, independent of OpenOffice.org/StarOffice. 
+\end{stylePviii}
+\item 
+\begin{stylePviii}
+...as an export filter for OpenOffice.org 1.1 or StarOffice 7.
+\end{stylePviii}
+\item 
+\begin{stylePviii}
+...from another Java program.
+\end{stylePviii}
+\end{listLiileveli}
+\begin{styleTextbody}
+This user{\textquotesingle}s manual will explain how to install and use
+Writer2LaTeX.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Writer2LaTeX is a Java application, and thus should work on any platform
+that supports Java. You need Sun{\textquotesingle}s Java 2 Virtual
+Machine (Runtime Environment), \textbf{version 1.4} or \textbf{1.5}.
+You can download this from
+\textstyleTeletype{http://java.sun.com/getjava/download.html}. AFAIK
+Writer2LaTeX doesn{\textquotesingle}t run (unmodified) under any other
+Java interpreter.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+\textit{Note}: In this manual OOo is used as an abbreviation of
+OpenOffice.org/StarOffice.
+\end{styleTextbody}
+
+\section{Installation}
+\subsection{How to install Writer2LaTeX for command line usage}
+\begin{styleTextbody}
+Writer2LaTeX can work as a standalone command line utility (that is
+without OOo).
+\end{styleTextbody}
+
+\subsubsection{Installation for Microsoft Windows}
+\begin{styleTextbody}
+To install Writer2LaTeX under Microsoft Windows follow these
+instructions:
+\end{styleTextbody}
+
+\setcounter{listLiiileveli}{0}
+\begin{listLiiileveli}
+\item 
+\begin{stylePix}
+Unzip \textstyleSourceText{writer2latex04.zip} into some directory. This
+will create a subdirectory \textstyleSourceText{writer2latex04}.
+\end{stylePix}
+\item 
+\begin{stylePix}
+Add this directory to your PATH environment variable.
+\end{stylePix}
+\item 
+\begin{stylePix}
+Open the file \textstyleSourceText{w2l.bat} with a text editor and
+replace the path at the top of the file with the full path to
+Writer2LaTeX, for example
+\end{stylePix}
+
+\begin{stylePx}
+\textstyleSourceText{set
+W2LPATH={\textquotedbl}c:{\textbackslash}writer2latex04{\textquotedbl}}
+\end{stylePx}
+
+\begin{stylePix}
+(If you have extracted to the root of drive C, you
+don{\textquotesingle}t have to edit this line.)
+\end{stylePix}
+
+\begin{stylePix}
+At a command line type \textstyleUserEntry{java {}-version} to verify
+that the Java executable is in your path. If this is not the case or
+you have several Java versions installed you should edit the next line
+to contain the full path to the Java executable, eg.
+\end{stylePix}
+
+\begin{stylePx}
+set
+JAVAEXE={\textquotedbl}C:{\textbackslash}j2sdk1.4.0\_01{\textbackslash}bin{\textbackslash}java''
+\end{stylePx}
+\end{listLiiileveli}
+\subsubsection{Installation for Unix and friends}
+\setcounter{listLivleveli}{0}
+\begin{listLivleveli}
+\item 
+\begin{stylePxi}
+Unzip \textstyleSourceText{writer2latex04.zip} into some directory. This
+will create a subdirectory \textstyleSourceText{writer2latex04}.
+\end{stylePxi}
+\item 
+\begin{stylePxi}
+Add this directory to your PATH environment variable or create a
+symbolic link to the file \textstyleSourceText{w2l} from some directory
+in yout PATH.
+\end{stylePxi}
+\item 
+\begin{stylePxi}
+Open the fle \textstyleSourceText{w2l} with a text editor and replace
+the path at the top of the file with the full path to Writer2LaTeX, eg.
+\end{stylePxi}
+\end{listLivleveli}
+\begin{listLiiileveli}
+\begin{stylePx}
+\textstyleSourceText{W2LPATH={\textquotedbl}/home/username/writer2latex04{\textquotedbl}}
+\end{stylePx}
+
+\begin{stylePix}
+(If you have extracted into your home directory, you
+don{\textquotesingle}t have to edit this line.)
+\end{stylePix}
+
+\begin{stylePix}
+Open a command shell and type \textstyleUserEntry{java {}-version} to
+verify that the Java executable is in your path. If this is not the
+case or you have several Java versions installed you should edit the
+next line to contain the full path to the Java executable, ie.
+\end{stylePix}
+
+\begin{stylePx}
+\textstyleSourceText{set
+JAVAEXE={\textquotedbl}/path/to/java/executable/''}
+\end{stylePx}
+\item 
+\begin{stylePix}
+Add execute permissions to \textstyleSourceText{w2l} as follows:
+\end{stylePix}
+
+\begin{stylePx}
+chmod +x w2l
+\end{stylePx}
+\end{listLiiileveli}
+\subsection{How to install Writer2LaTeX as an export filter}
+\begin{styleTextbody}
+Writer2LaTeX can work as an export filter for OOo Writer. This requires
+OpenOffice.org 1.1 or StarOffice 7. It does \textit{not} work with
+OpenOffice.org 1.0 or StarOffice 6.0.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+You can also use Writer2LaTeX as an export filter in OOo 1.9.x (should
+work with recent versions).
+\end{styleTextbody}
+
+\begin{styleTextbody}
+The following instructions covers all operating systems.
+\end{styleTextbody}
+
+\subsubsection{Uninstalling previous versions of Writer2LaTeX}
+\begin{styleTextbody}
+If you have installed a version of Writer2LaTeX \textit{prior to} 0.3.2,
+you will have to undo the changes you made to the file
+\textstyleSourceText{TypeDetection.xcu}:
+\end{styleTextbody}
+
+\begin{listLvleveli}
+\item 
+\begin{stylePxii}
+If you \textit{copied} \textstyleSourceText{TypeDetection.xcu} into your
+user settings you can delete or (to be safe) rename the file.
+\end{stylePxii}
+\item 
+\begin{stylePxii}
+If you \textit{edited} an existing version of
+\textstyleSourceText{TypeDetection.xcu} you should restore the backup
+copy of the file. If you forgot to take a backup, you will have to
+delete the additions by hand (take a backup copy this time!).
+\end{stylePxii}
+\end{listLvleveli}
+\begin{styleTextbody}
+When you restart OOo, the filters should have disappeared from the
+\textbf{File {--} Export} menu.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+See the section below for information on how to uninstall Writer2LaTeX
+0.3.2 and later.
+\end{styleTextbody}
+
+\subsubsection{Installation for OOo 1.1.x}
+\begin{styleTextbody}
+\textit{Note:} If you have made a \textstyleTeletype{{}-net} (multiuser)
+installation of OOo, you will normally need to log in as
+root/administrator to install Writer2LaTeX.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Before you start, you need an installation of OOo where
+\end{styleTextbody}
+
+\begin{listLvileveli}
+\item 
+\begin{stylePxiii}
+You have set up OOo to use Java. If you didn{\textquotesingle}t do that
+during installation, you can run \textstyleSourceText{{\textless}OOo
+install{\textgreater}/program/jvmsetup}. (Of course this requires that
+you have installed Java on your system).
+\end{stylePxiii}
+\item 
+\begin{stylePxiii}
+You must have the \textit{Mobile Device Filters installed}. If you
+didn{\textquotesingle}t install these during installation
+(it{\textquotesingle}s not part of a standard installation!), you can
+run OOo setup, choose Modify and add the filters. This will install a
+framework for Java based filters in OOo (known as xmerge), which is
+also used by Writer2LaTeX (despite the fact that it has nothing to do
+with mobile devices).
+\end{stylePxiii}
+\end{listLvileveli}
+\begin{styleTextbody}
+Then the installation proceeds as follows:
+\end{styleTextbody}
+
+\setcounter{listLviileveli}{0}
+\begin{listLviileveli}
+\item 
+\begin{stylePxiv}
+Copy \textstyleTeletype{writer2latex.jar},
+\textstyleSourceText{xmergefix.jar} and
+\textstyleTeletype{writer2latex.xml} into the classes directory 
+\end{stylePxiv}
+
+\begin{stylePxv}
+{\textless}OOo install{\textgreater}/program/classes/
+\end{stylePxv}
+\item 
+\begin{stylePxiv}
+Rename the existing \textstyleSourceText{xmerge.jar} to
+\textstyleSourceText{oldxmerge.jar} (or whatever you like; this is only
+to have a backup of the old version).
+\end{stylePxiv}
+\item 
+\begin{stylePxiv}
+Rename \textstyleSourceText{xmergefix.jar} to
+\textstyleSourceText{xmerge.jar}.
+\end{stylePxiv}
+\item 
+\begin{stylePxiv}
+Copy \textstyleSourceText{w2lfilter.zip }into the directory
+\end{stylePxiv}
+
+\begin{stylePxv}
+{\textless}OOo install{\textgreater}/share/uno\_packages
+\end{stylePxv}
+\item 
+\begin{stylePxiv}
+Make sure that no OOo processes are running: Close all document windows
+and (under MS Windows) the Quick Starter.
+\end{stylePxiv}
+\item 
+\begin{stylePxiv}
+From a command shell, navigate to the directory
+\end{stylePxiv}
+
+\begin{stylePxv}
+{\textless}OOo install{\textgreater}/program
+\end{stylePxv}
+
+\begin{stylePxiv}
+and type
+\end{stylePxiv}
+
+\begin{stylePxv}
+pkgchk {}-{}-shared
+\end{stylePxv}
+
+\begin{stylePxiv}
+This will register Writer2LaTeX as a filter in OOo. If it works, there
+will be no messages on the screen.
+\end{stylePxiv}
+\item 
+\begin{stylePxiv}
+Now restart OOo.
+\end{stylePxiv}
+\end{listLviileveli}
+\subsubsection{Installation for OOo 1.9.x}
+\begin{styleTextbody}
+\textit{Note:} If you have made a \textstyleTeletype{{}-net} (multiuser)
+installation of OOo, you will normally need to log in as
+root/administrator to install Writer2LaTeX.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Before you start, you need an installation of OOo where
+\end{styleTextbody}
+
+\begin{listLvileveli}
+\item 
+\begin{stylePxiii}
+You have set up OOo to use Java. If you didn{\textquotesingle}t do that
+during installation, you can configure java under \textbf{Tools {--}
+Options}. Of course this requires that you have installed Java on your
+system.
+\end{stylePxiii}
+\item 
+\begin{stylePxiii}
+You must have the \textit{Mobile Device Filters installed}. If you
+didn{\textquotesingle}t install these during installation
+(it{\textquotesingle}s not part of a standard installation!), you can
+run OOo setup, choose Modify and add the filters. This will install a
+framework for Java based filters in OOo (known as xmerge), which is
+also used by Writer2LaTeX (despite the fact that it has nothing to do
+with mobile devices).
+\end{stylePxiii}
+\end{listLvileveli}
+\begin{styleTextbody}
+Then the installation proceeds as follows:
+\end{styleTextbody}
+
+\setcounter{listLviiileveli}{0}
+\begin{listLviiileveli}
+\item 
+\begin{stylePxvi}
+Copy \textstyleTeletype{writer2latex.jar} and
+\textstyleTeletype{writer2latex.xml} into the classes directory 
+\end{stylePxvi}
+
+\begin{stylePxvii}
+{\textless}OOo install{\textgreater}/program/classes/
+\end{stylePxvii}
+\item 
+\begin{stylePxvi}
+Make sure that no OOo processes are running: Close all document windows
+and (under MS Windows) the Quick Starter.
+\end{stylePxvi}
+\item 
+\begin{stylePxvi}
+From a command shell, navigate to the directory
+\end{stylePxvi}
+
+\begin{stylePxvii}
+{\textless}OOo install{\textgreater}/program
+\end{stylePxvii}
+\item 
+\begin{stylePxvi}
+and type
+\end{stylePxvi}
+
+\begin{stylePxvii}
+unopkg gui
+\end{stylePxvii}
+\item 
+\begin{stylePxvi}
+Select \textbf{OpenOffice.org packages} and select
+\textstyleSourceText{w2lfilters20.zip} using the \textbf{Browse}
+button.
+\end{stylePxvi}
+\item 
+\begin{stylePxvi}
+Now restart OOo.
+\end{stylePxvi}
+\end{listLviiileveli}
+\begin{styleTextbody}
+If you only want to install for a single user, select \textbf{My
+packages} instead {--} this is also possible from inside OOo, using the
+\textbf{Tools {--} Packages} menu.
+\end{styleTextbody}
+
+\subsection{Uninstall Writer2LaTeX}
+\begin{styleTextbody}
+To remove the Writer2LaTeX filters from your OOo installation, you
+should proceed as follows for OOo 1.1.x:
+\end{styleTextbody}
+
+\setcounter{listLviileveli}{0}
+\begin{listLviileveli}
+\item 
+\begin{stylePxiv}
+Delete \textstyleSourceText{w2lfilter.zip from} the directory
+\end{stylePxiv}
+
+\begin{stylePxv}
+{\textless}OOo install{\textgreater}/share/uno\_packages
+\end{stylePxv}
+\item 
+\begin{stylePxiv}
+Make sure that no OOo processes are running: Close all document windows
+and (under MS Windows) the Quick Starter.
+\end{stylePxiv}
+\item 
+\begin{stylePxiv}
+From a command shell navigate to the directory
+\end{stylePxiv}
+
+\begin{stylePxv}
+{\textless}OOo install{\textgreater}/program
+\end{stylePxv}
+
+\begin{stylePxiv}
+and type
+\end{stylePxiv}
+
+\begin{stylePxv}
+pkgchk {}-{}-shared
+\end{stylePxv}
+
+\begin{stylePxiv}
+This will remove the registration of Writer2LaTeX from OOo. If it works,
+there will be no messages on the screen.
+\end{stylePxiv}
+\item 
+\begin{stylePxiv}
+Now restart OOo.
+\end{stylePxiv}
+\end{listLviileveli}
+\begin{styleTextbody}
+For OOo 1.9.x, use the \textstyleSourceText{unopkg gui} command as
+described above to remove \textstyleSourceText{w2lfilters20.zip}.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+You may also undo the changes you have made to OOo{\textquotesingle}s
+\textstyleSourceText{classes} directory, but this is not required.
+\end{styleTextbody}
+
+\section{Using Writer2LaTeX and Writer2BibTeX}
+\begin{styleTextbody}
+Writer2LaTeX is quite flexible: It can take advantage of several LaTeX
+packages, such as \textstyleSourceText{hyperref},
+\textstyleSourceText{pifont}, \textstyleUserEntry{ulem}. It can create
+customized LaTeX code based on the styles used in the document. Also it
+supports 25 different languages, latin, greek and cyrillic scripts and
+7 inputencodings.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+The flexibility makes it possible to use Writer2LaTeX from several
+philosophies:
+\end{styleTextbody}
+
+\begin{listLixleveli}
+\item 
+\begin{stylePxviii}
+You can use LaTeX as a typesetting engine for your OOo documents:
+Writer2LaTeX can be configured to create a LaTeX document with as much
+formatting as possible preserved. Note that the resulting LaTeX source
+will be readable, but not very clean.
+\end{stylePxviii}
+
+\begin{stylePxviii}
+Be aware that even though Writer2LaTeX tries hard to cope with any
+document, you will only get good results for well structured documents,
+ie. documents that are fomatted using \textit{styles}.
+\end{stylePxviii}
+\item 
+\begin{stylePxviii}
+If you need to continue the work on your document in LaTeX your primary
+interest may be the content rather than the formatting. Writer2LaTeX
+can be configured to produce a LaTeX document which strips most of the
+formatting and hence produces a clean LaTeX source from \textit{any}
+source document.
+\end{stylePxviii}
+\item 
+\begin{stylePxviii}
+If  you don{\textquotesingle}t like to write LaTeX code by hand, you may
+use OOo as a simple graphical front{}-end for LaTeX. Using a special
+OOo Writer template and a special configuration file for Writer2LaTeX,
+you can create well{}-structured LaTeX documents that resembles
+``hand{}-written'' LaTeX documents. You can compare this to the way
+\href{http://www.lyx.org/}{LyX} works.
+\end{stylePxviii}
+
+\begin{stylePxviii}
+Writer2LaTeX does not provide an input filter for LaTeX. It is
+recommended to use Eitan M. Gurari{\textquotesingle}s
+\href{http://www.cse.ohio-state.edu/~gurari/TeX4ht/mn.html}{TeX4ht} to
+convert LaTeX documents into OOo Writer format. Roundtrip editing OOo
+Writer \ding{214} LaTeX is not possible in general, but
+Writer2LaTeX+TeX4ht does provide some basic support for this, see
+section 3.6.
+\end{stylePxviii}
+\end{listLixleveli}
+\subsection[The LaTeX package ooomath.sty]{\label{ref:writersty}The
+LaTeX package \textstyleSourceText{ooomath.sty}}
+\begin{styleTextbody}
+OOo Math has a few features that are not available in standard LaTeX
+packages. Hence Writer2LaTeX uses an optional package
+\textstyleSourceText{ooomath.sty}\footnote{This pakcage replaces
+\textstyleSourceText{writer.sty} used by older versions of
+Writer2LaTeX.} which implements these constructions. This packages is
+only needed for documents containing formulas.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+It is sufficient to place \textstyleSourceText{ooomath.sty} in the same
+directory as the converted LaTeX document. It will however be more
+convenient if you install it in your TeX distribution. The proper place
+will usually be the ``local texmf tree'', please see the documentation
+of your TeX distribution. Below are specific instructions for teTeX and
+MikTeX:
+\end{styleTextbody}
+
+\subsubsection{Instructions for teTeX (unix)}
+\begin{styleTextbody}
+If you use teTeX you can install \textstyleSourceText{ooomath.sty} as
+follows:
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Open a shell and type
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+texconfig conf
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+This will list the configuration details for teTeX. Under the heading
+``Kpathsea'' you will see a list of directories searched by TeX. You
+can put \textstyleSourceText{ooomath.sty} in the subdirectory
+\textstyleSourceText{tex} of any of these directories. Usually the
+directory
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+/home/{\textless}user name{\textgreater}/texmf/tex
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+can be used (you can create it if it doesn{\textquotesingle}t exist).
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Next you should type
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+texconfig rehash
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+to make teTeX refresh it{\textquotesingle}s filename database.
+\end{styleTextbody}
+
+\subsubsection{Instructions for MikTeX (Windows)}
+\begin{styleTextbody}
+If you use MikTeX you can install \textstyleSourceText{ooomath.sty} as
+follows:
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Copy \textstyleSourceText{ooomath.sty} to the \textstyleSourceText{tex}
+subdirectory in the local texmf tree. With a standard installation this
+will be the directory
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+c:{\textbackslash}localtexmf{\textbackslash}tex
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+If this directory does not exist you should start ``MikTeX Options''
+(you can find this in the Start Menu). On the tab page \textbf{Roots}
+you can see the location of the local texmf tree.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Next you should start ``MikTeX Options''. On the tab page
+\textbf{General}, click the button \textbf{Refresh Now} to make MikTeX
+refresh it{\textquotesingle}s filename database.
+\end{styleTextbody}
+
+\subsection{Converting to LaTeX from the command line}
+\begin{styleTextbody}
+To convert a file to LaTeX use the command line
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l [{}-latex] [{}-config {\textless}configfile{\textgreater}]
+{\textless}writer document to convert{\textgreater} [{\textless}output
+path and/or file name{\textgreater}]
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+The parts in square brackets are optional.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+This will produce a LaTeX file with the specified name. If no output
+file is specified, Writer2LaTeX will use the same name as the original
+document, but change the extension to \textstyleTeletype{.tex}.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Examples:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l mydocument.sxw mypath/myoutputdocument.tex
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+or
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l {}-config clean.xml mydocument.sxw
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+If you specify the \textstyleTeletype{{}-config} option, Writer2LaTeX
+will load this configuration file before converting your document. You
+can read more about configuration in section 3.5.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+The script \textstyleSourceText{w2l} also provides a shorthand notation
+to use the sample configuration files included in
+\textstyleSourceText{writer2latex04.zip}. The command line is
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l
+[{}-ultraclean{\textbar}{}-clean{\textbar}{}-pdfscreen{\textbar}{}-pdfprint{\textbar}{}-article]
+{\textless}writer document to convert{\textgreater} [{\textless}output
+path and/or file name{\textgreater}]
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+For example to produce a clean LaTeX file (ie. ignoring most of the
+formatting from the source document):
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l {}-clean mydocument.sxw
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+It is recommended that you extend \textstyleSourceText{w2l} /
+\textstyleSourceText{w2l.bat} to support your own configuration files.
+\end{styleTextbody}
+
+\subsection{Converting to BibTeX from the command line}
+\begin{styleTextbody}
+Writer2BibTeX extracts bibliography data to a BibTeX file. To do this
+use the commandline
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l {}-bibtex {\textless}writer document to convert{\textgreater}
+[{\textless}output path and/or file name{\textgreater}]
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+You can also extract the data as part of the conversion to LaTeX, see
+section 3.5.
+\end{styleTextbody}
+
+\subsection{Using Writer2LaTeX and Writer2BibTeX as export filters}
+\begin{styleTextbody}
+If you choose \textbf{File {--} Export} in Writer you should be able to
+choose \textbf{LaTeX 2e}, \textbf{BibTeX data file} as file type. 
+\end{styleTextbody}
+
+\begin{styleTextbody}
+\textbf{Note:} You have to use the export menu because there is no
+import filter for LaTeX/BibTeX. You should always save in the native
+format of OOo as well!
+\end{styleTextbody}
+
+\begin{styleTextbody}
+\textbf{Note}: Currently embedded graphics are not converted when
+Writer2LaTeX is used as an export filter. Also using Writer2BibTeX in
+conjunction with Writer2LaTeX is currently only possible from the
+command line. This is because of an issue with xmerge. A fix for this
+is planned for a later version of Writer2LaTeX.
+\end{styleTextbody}
+
+\subsection{\label{ref:latexconfig}Configuration}
+\begin{styleTextbody}
+LaTeX export can be configured with a configuration file. The
+configuration is read from several sources:
+\end{styleTextbody}
+
+\begin{listLxleveli}
+\item 
+\begin{stylePxix}
+First Writer2LaTeX reads the file \textstyleTeletype{writer2latex.xml}
+in the same directory as \textstyleTeletype{writer2latex.jar}. This
+file is supposed to contain installation{}-wide configuration.
+\end{stylePxix}
+\item 
+\begin{stylePxix}
+Then it reads the file \textstyleSourceText{writer2latex.xml} in your
+home directory (unix, eg. \textstyleSourceText{/home/username}) or user
+profile (windows, eg. \textstyleSourceText{c:{\textbackslash}documents
+and settings{\textbackslash}username}). This file is supposed to
+contain user{}-specific configuration. The installation{}-wide
+configuration may specify, that this file should be generated
+automatically.
+\end{stylePxix}
+\item 
+\begin{stylePxix}
+Finally, the documentation file you specify on the command line will be
+read.
+\end{stylePxix}
+\end{listLxleveli}
+\begin{styleTextbody}
+The configuration file is an xml file; these are the default contents:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}?xml version={\textquotedbl}1.0{\textquotedbl}
+encoding={\textquotedbl}UTF{}-8{\textquotedbl} ?{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}config{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}create\_user\_config{\textquotedbl}
+value={\textquotedbl}true{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}backend{\textquotedbl}
+value={\textquotedbl}generic{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}no\_preamble{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}documentclass{\textquotedbl}
+value={\textquotedbl}article{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}global\_options{\textquotedbl}
+value={\textquotedbl}{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}inputencoding{\textquotedbl}
+value={\textquotedbl}ascii{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}multilingual{\textquotedbl}
+value={\textquotedbl}true{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}greek\_math{\textquotedbl}
+value={\textquotedbl}true{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_ooomath{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_pifont{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_ifsym{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_wasysym{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_bbding{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_eurosym{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_tipa{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_color{\textquotedbl}
+value={\textquotedbl}true{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_hyperref{\textquotedbl}
+value={\textquotedbl}true{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_endnotes{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_ulem{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_lastpage{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}use\_bibtex{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}bibtex\_style{\textquotedbl}
+value={\textquotedbl}plain{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}formatting{\textquotedbl}
+value={\textquotedbl}convert\_basic{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}page\_formatting{\textquotedbl}
+value={\textquotedbl}convert\_all{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}ignore\_hard\_page\_breaks{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}ignore\_hard\_line\_breaks{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}ignore\_empty\_paragraphs{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}ignore\_double\_spaces{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}debug{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}heading{}-map
+max{}-level={\textquotedbl}5{\textquotedbl}{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}heading{}-level{}-map
+writer{}-level={\textquotedbl}1{\textquotedbl}
+name={\textquotedbl}section{\textquotedbl}
+level={\textquotedbl}1{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}heading{}-level{}-map
+writer{}-level={\textquotedbl}2{\textquotedbl}
+name={\textquotedbl}subsection{\textquotedbl}
+level={\textquotedbl}2{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}heading{}-level{}-map
+writer{}-level={\textquotedbl}3{\textquotedbl}
+name={\textquotedbl}subsubsection{\textquotedbl}
+level={\textquotedbl}3{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}heading{}-level{}-map
+writer{}-level={\textquotedbl}4{\textquotedbl}
+name={\textquotedbl}paragraph{\textquotedbl}
+level={\textquotedbl}4{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}heading{}-level{}-map
+writer{}-level={\textquotedbl}5{\textquotedbl}
+name={\textquotedbl}subparagraph{\textquotedbl}
+level={\textquotedbl}5{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}/heading{}-map{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}custom{}-preamble /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}/config{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+The meaning of each part is explained in the following sections.
+Writer2LaTeX comes with five sample configuration files:
+\end{styleTextbody}
+
+\begin{listLxileveli}
+\item 
+\begin{stylePxx}
+\textstyleSourceText{ultraclean.xml} to produce a \textit{clean} LaTeX
+file, ie. almost all the formatting is ignored.
+\end{stylePxx}
+\item 
+\begin{stylePxx}
+\textstyleSourceText{clean.xml} is a less radical version; preserves
+hyperlinks, color and most character formatting.
+\end{stylePxx}
+\item 
+\begin{stylePxx}
+\textstyleSourceText{pdfscreen.xml} to produce a LaTeX file which is
+optimized for screen viewing using the package
+\textstyleSourceText{pdfscreen.sty}.
+\end{stylePxx}
+\item 
+\begin{stylePxx}
+\textstyleSourceText{pdfprint.xml} to produce a LaTeX file which is
+optimized for printing with pdfTeX.
+\end{stylePxx}
+\item 
+\begin{stylePxx}
+\textstyleSourceText{article.xml} to produce a LaTeX article, see
+section 3.6.
+\end{stylePxx}
+\end{listLxileveli}
+\subsubsection{Basic options}
+\begin{listLxiileveli}
+\item 
+\begin{stylePxxi}
+If the option\textstyleUserEntry{ create\_user\_config }if set to
+\textstyleUserEntry{true}, the user specific configuration file
+mentioned above will be created if it does not exist.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option \textstyleSourceText{backend} can have any of the values
+\textstyleTeletype{generic} (default), \textstyleTeletype{dvips} or
+\textstyleTeletype{pdftex}. This will create LaTeX files suitable for
+any backend/dvi driver, dvips or pdfTeX respectively.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+If the option \textstyleTeletype{no\_preamble} is set to
+\textstyleTeletype{false}, Writer2LaTeX will not create the a LaTeX
+preamble, nor include
+\textstyleTeletype{{\textbackslash}begin\{document\}} and
+\textstyleTeletype{{\textbackslash}end\{document\}}. This is useful if
+the document is to be included in another LaTeX document. Note that in
+this case you will have to make sure that all packages/definitions
+needed are available in the master LaTeX document.
+\end{stylePxxi}
+\end{listLxiileveli}
+\begin{listLxiiileveli}
+\item 
+\begin{stylePxxii}
+The option \textstyleTeletype{inputencoding} can have any of the values
+\textstyleTeletype{ascii} (default), \textstyleTeletype{latin1},
+\textstyleTeletype{latin2}, \textstyleTeletype{iso{}-8859{}-7},
+\textstyleTeletype{cp1250}, \textstyleTeletype{cp1251},
+\textstyleTeletype{koi8{}-r }or \textstyleTeletype{utf8}. The latter
+requires Dominique Unruh{\textquotesingle}s
+\textstyleTeletype{ucs.sty}. 
+\end{stylePxxii}
+\item 
+\begin{stylePxxii}
+If the option \textstyleSourceText{multilingual} is set to false,
+Writer2LaTeX will assume that the document is written in one language
+only {--} otherwise all the language information contained in the
+document will be used.
+\end{stylePxxii}
+\end{listLxiiileveli}
+\subsubsection{Options for document structure}
+\begin{listLxiileveli}
+\item 
+\begin{stylePxxi}
+The option \textstyleSourceText{documentclass} is the name of the
+documentclass to use (default is \textstyleSourceText{article}).
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option \textstyleSourceText{global\_options} is a list of global
+options to add to the documentclass (the default value is an empty
+string).
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The \textstyleSourceText{heading\_map} section specifies how headings in
+OOo should map to LaTeX. Eg. the first line specifies that
+\textbf{Heading 1} should map to
+\textstyleSourceText{{\textbackslash}section}, which is of level 1 in
+LaTeX. Up to 10~levels are supported (the same number as in OOo).
+\end{stylePxxi}
+\end{listLxiileveli}
+\subsubsection{Font and symbol options}
+\begin{listLxivleveli}
+\item 
+\begin{stylePxxiii}
+The option \textstyleTeletype{greek\_math} can have the values
+\textstyleTeletype{true} (default) or \textstyleTeletype{false}. This
+means that greek letters in latin or cyrillic text are rendered in math
+mode. This behaviour assumes that greek letters are used as symbols in
+this context, and has the advantage that greek text fonts are not
+required. It is \textit{not} used in greek text, where it would be
+awful.
+\end{stylePxxiii}
+\item 
+\begin{stylePxxiii}
+The option \textstyleTeletype{use\_ooomath} can  have the values
+\textstyleTeletype{true} or \textstyleTeletype{false} (default). This
+enables the use of the LaTeX package \textstyleTeletype{ooomath.sty}.
+If this package is not used, the necessary definitions will be included
+in the LaTeX preamble, which may become quite long {--} so using
+\textstyleTeletype{ooomath.sty} is recommended.
+\end{stylePxxiii}
+\item 
+\begin{stylePxxiii}
+The option \textstyleTeletype{use\_pifont} can have the values
+\textstyleTeletype{true} or \textstyleTeletype{false} (default). This
+enables the use of \textit{Zapf Dingbats} using the LaTeX package
+\textstyleTeletype{pifont.sty}.
+\end{stylePxxiii}
+\item 
+\begin{stylePxxiii}
+The option \textstyleTeletype{use\_wasysym} can have the values
+\textstyleTeletype{true} or \textstyleTeletype{false} (default). This
+enables the use of the \textit{wasy} symbol font using the LaTeX
+package \textstyleTeletype{wasysym.sty}.
+\end{stylePxxiii}
+\item 
+\begin{stylePxxiii}
+The option \textstyleTeletype{use\_ifsym} can have the values
+\textstyleTeletype{true} or \textstyleTeletype{false} (default). This
+enables the use of  the \textit{ifsym} symbol font using the LaTeX
+package \textstyleTeletype{ifsym.sty}.
+\end{stylePxxiii}
+\item 
+\begin{stylePxxiii}
+The option \textstyleTeletype{use\_bbding} can have the values
+\textstyleTeletype{true} or \textstyleTeletype{false} (default). This
+enables the use of the \textit{bbding} symbol font (a clone of Zapf
+Dingbats) using the LaTeX package \textstyleTeletype{bbding.sty}.
+\end{stylePxxiii}
+\item 
+\begin{stylePxxiii}
+The option \textstyleTeletype{use\_eurosym} can have the values
+\textstyleTeletype{true} or \textstyleTeletype{false} (default). This
+enables the use of the \textit{eurosym} symbol font using the LaTeX
+package \textstyleTeletype{eurosym.sty}.
+\end{stylePxxiii}
+\item 
+\begin{stylePxxiii}
+The option \textstyleTeletype{use\_tipa} can have the values
+\textstyleTeletype{true} or \textstyleTeletype{false} (default). This
+enables the use of phonetic symbols using the LaTeX package
+\textstyleTeletype{tipa.sty}.
+\end{stylePxxiii}
+\end{listLxivleveli}
+\subsubsection{Options for other packages}
+\begin{listLxvleveli}
+\item 
+\begin{stylePxxiv}
+The option \textstyleSourceText{use\_hyperref} can have the values
+\textstyleSourceText{true} (default) or \textstyleSourceText{false}.
+This enables use of the package \textstyleSourceText{hyperref.sty} to
+include hyperlinks in the LaTeX document.
+\end{stylePxxiv}
+\item 
+\begin{stylePxxiv}
+The option \textstyleSourceText{use\_color} can have the values
+\textstyleSourceText{true} (default) or \textstyleSourceText{false}.
+This enables use of the package \textstyleSourceText{hyperref.sty} to
+apply color in the LaTeX document.
+\end{stylePxxiv}
+\item 
+\begin{stylePxxiv}
+The option \textstyleSourceText{use\_endnotes} can have the values
+\textstyleSourceText{true} or \textstyleSourceText{false} (default).
+This enables use of the package \textstyleSourceText{endnotes.sty} to
+include endnotes in the LaTeX document. If set to
+\textstyleSourceText{false}, endnotes will be converted to footnotes.
+\end{stylePxxiv}
+\item 
+\begin{stylePxxiv}
+The option \textstyleSourceText{use\_ulem} can have the values
+\textstyleSourceText{true} or \textstyleSourceText{false} (default).
+This enables use of the package \textstyleSourceText{ulem.sty} to
+support underlining and crossing out in the LaTeX document.
+\end{stylePxxiv}
+\item 
+\begin{stylePxxiv}
+The option \textstyleSourceText{use\_lastpage} can have the values
+\textstyleSourceText{true} or \textstyleSourceText{false} (default).
+This enables use of the package \textstyleSourceText{lastpage.sty} to
+represent the page count.
+\end{stylePxxiv}
+\end{listLxvleveli}
+\subsubsection{Options for BibTeX}
+\begin{listLxvileveli}
+\item 
+\begin{stylePxxv}
+The option \textstyleTeletype{use\_bibtex} can have the values 
+\textstyleTeletype{true} or \textstyleTeletype{false} (default). This
+enables the use of BibTeX for bibliography generation. If it is set to
+\textstyleSourceText{false}, the bibliography is included as text.
+\end{stylePxxv}
+\item 
+\begin{stylePxxv}
+The option \textstyleTeletype{bibtex\_style} can have any BibTeX style
+as value (default is \textstyleTeletype{plain}). This is the BibTeX
+style to be used in the LaTeX document.
+\end{stylePxxv}
+\end{listLxvileveli}
+\subsubsection{Options to control export of formatting}
+\begin{styleTextbody}
+In Writer, formatting is controlled by styles. You can control how much
+formatting is exported using the following options\footnote{Note that
+these options have changed a lot since version 0.3.2.}. Note that these
+options has a major impact on the structure of the LaTeX document
+created.
+\end{styleTextbody}
+
+\begin{listLxviileveli}
+\item 
+\begin{stylePxxvi}
+The option \textstyleTeletype{formatting}\footnote{This option replaces
+the options \textstyleTeletype{character\_formatting},
+\textstyleTeletype{paragraph\_formatting},
+\textstyleTeletype{list\_formatting},
+\textstyleTeletype{heading\_formatting} and
+\textstyleTeletype{ignore\_footnotes\_configuration} used in previous
+versions of Writer2LaTeX.} can have any of these values:
+\end{stylePxxvi}
+
+\begin{listLxviilevelii}
+\item 
+\begin{stylePxxvi}
+\textstyleTeletype{ignore\_all} will instruct Writer2LaTeX to ignore
+\textit{all} character, paragraph, heading, list and footnote
+formatting contained in the document.
+\end{stylePxxvi}
+\item 
+\begin{stylePxxvi}
+\textstyleTeletype{ignore\_most} will preserve basic character
+formatting.
+\end{stylePxxvi}
+\item 
+\begin{stylePxxvi}
+\textstyleTeletype{convert\_basic} (default) will preserve basic
+character formatting as well as all numberings (lists, headings,
+footnotes).
+\end{stylePxxvi}
+\item 
+\begin{stylePxxvi}
+\textstyleTeletype{convert\_most} will convert all supported formatting,
+except that paragraph formatting and font size is only converted if it
+is set by a style. To be able to preserve formatting, an environment is
+created for all paragraph styles, custom lists is used for listings,
+headings is reformatted using the
+\textstyleSourceText{{\textbackslash}@startsection} command etc.
+\end{stylePxxvi}
+\item 
+\begin{stylePxxvi}
+\textstyleTeletype{convert\_all} will preserve \textit{all} supported
+formatting.
+\end{stylePxxvi}
+\end{listLxviilevelii}
+\item 
+\begin{stylePxxvi}
+The option \textstyleSourceText{page\_formatting} can have any of the
+values \textstyleSourceText{ignore\_all},
+\textstyleSourceText{convert\_header\_footer},
+\textstyleSourceText{convert\_all}. This will ignore all page
+formatting, convert the header and footer (using custom page styles) or
+convert all supported formatting (using more elaborate custom page
+styles).
+\end{stylePxxvi}
+\item 
+\begin{stylePxxvi}
+The option \textstyleSourceText{ignore\_empty\_paragraphs} can have the
+values \textstyleSourceText{true} (default) or
+\textstyleSourceText{false}. Setting the option to
+\textstyleSourceText{true} will instruct Writer2LaTeX to ignore empty
+paragraphs; otherwise they are converted to
+\textstyleSourceText{{\textbackslash}bigskip}.
+\end{stylePxxvi}
+\item 
+\begin{stylePxxvi}
+The option \textstyleSourceText{ignore\_double\_spaces} can have the
+values \textstyleSourceText{true} (default) or
+\textstyleSourceText{false}. Setting the option to
+\textstyleSourceText{true} will instruct Writer2LaTeX to ignore double
+spaces, otherwise they are converted to
+(\textstyleSourceText{{\textbackslash} }).
+\end{stylePxxvi}
+\item 
+\begin{stylePxxvi}
+The option \textstyleSourceText{ignore\_hard\_page\_breaks} can have the
+values \textstyleSourceText{true} or \textstyleSourceText{false}
+(default).  Setting the option to \textstyleSourceText{true} will
+instruct Writer2LaTeX to ignore hard page breaks (but not soft page
+breaks specified in paragraph styles).
+\end{stylePxxvi}
+\item 
+\begin{stylePxxvi}
+The option \textstyleSourceText{ignore\_hard\_line\_breaks} can have the
+values \textstyleSourceText{true} or \textstyleSourceText{false}
+(default).  Setting the option to \textstyleSourceText{true} will
+instruct Writer2LaTeX to ignore hard line breaks (shift{}-Enter).
+\end{stylePxxvi}
+\end{listLxviileveli}
+\subsubsection{Style maps}
+\begin{styleTextbody}
+In addition you can specify maps from styles in Writer to your own LaTeX
+styles in the configuration. Currently this is possible for text
+styles, paragraph styles and list styles. The following examples are
+from the sample configuration file \textstyleSourceText{article.xml}.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+This is a simple rule, that maps text formatted with the text style
+\textbf{Emphasis} to the LaTeX code
+\textstyleSourceText{{\textbackslash}emph\{...\}}:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+ {\textless}style{}-map name={\textquotedbl}Emphasis{\textquotedbl}
+class={\textquotedbl}text{\textquotedbl}
+before={\textquotedbl}{\textbackslash}emph\{{\textquotedbl}
+after={\textquotedbl}\}{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+This is another simple rule, that maps paragraphs formatted with the
+paragraph style \textbf{part} to the LaTeX code
+\textstyleSourceText{{\textbackslash}part\{...\}}. The attribute
+\textstyleSourceText{line{}-break} ensures that no line breaks are
+inserted between the code and the text.
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}style{}-map name={\textquotedbl}part{\textquotedbl}
+class={\textquotedbl}paragraph{\textquotedbl}
+before={\textquotedbl}{\textbackslash}part\{{\textquotedbl}
+after={\textquotedbl}\}{\textquotedbl}
+line{}-break={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+This is a rule, that maps paragraph formatted with style
+\textbf{Preformatted Text} to the LaTeX environment
+\textstyleSourceText{verbatim}. The attribute
+\textstyleSourceText{verbatim} ensures that the content of the
+paragraph is exported verbatim (this implies that characters not
+available in the \textstyleSourceText{inputenc} are converted to
+question marks and that other content is discarded, eg. footnotes). The
+\textstyleSourceText{paragraph{}-block} entry specifies code to go
+before and after an entire block of paragraphs. The
+\textstyleSourceText{name} attribute specifies the style of the first
+paragraph; the \textstyleSourceText{next} attribute specifies the
+style(s) of subsequent paragraphs in the block.
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+ {\textless}style{}-map name={\textquotedbl}Preformatted
+Text{\textquotedbl}
+class={\textquotedbl}paragraph{}-block{\textquotedbl}
+next={\textquotedbl}Preformatted Text{\textquotedbl}
+before={\textquotedbl}{\textbackslash}begin\{verbatim\}{\textquotedbl}
+after={\textquotedbl}{\textbackslash}end\{verbatim\}{\textquotedbl}
+/{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}style{}-map name={\textquotedbl}Preformatted
+Text{\textquotedbl} class={\textquotedbl}paragraph{\textquotedbl}
+before={\textquotedbl}{\textquotedbl}
+after={\textquotedbl}{\textquotedbl}
+verbatim={\textquotedbl}true{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+This is a more elaborate set of rules, that maps paragraphs formatted
+with styles \textbf{Title}, \textbf{author} and \textbf{date} (in any
+order) to \textstyleSourceText{{\textbackslash}maketitle} in LaTeX.
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}style{}-map name={\textquotedbl}Title{\textquotedbl}
+class={\textquotedbl}paragraph{\textquotedbl}
+before={\textquotedbl}{\textbackslash}title\{{\textquotedbl}
+after={\textquotedbl}\}{\textquotedbl}
+line{}-break={\textquotedbl}false{\textquotedbl}
+/{\textgreater}\newline
+  {\textless}style{}-map name={\textquotedbl}author{\textquotedbl}
+class={\textquotedbl}paragraph{\textquotedbl}
+before={\textquotedbl}{\textbackslash}author\{{\textquotedbl}
+after={\textquotedbl}\}{\textquotedbl}
+line{}-break={\textquotedbl}false{\textquotedbl}
+/{\textgreater}\newline
+  {\textless}style{}-map name={\textquotedbl}date{\textquotedbl}
+class={\textquotedbl}paragraph{\textquotedbl}
+before={\textquotedbl}{\textbackslash}date\{{\textquotedbl}
+after={\textquotedbl}\}{\textquotedbl}
+line{}-break={\textquotedbl}false{\textquotedbl}
+/{\textgreater}\newline
+  {\textless}style{}-map name={\textquotedbl}Title{\textquotedbl}
+class={\textquotedbl}paragraph{}-block{\textquotedbl}
+next={\textquotedbl}author;date{\textquotedbl}
+before={\textquotedbl}{\textquotedbl}
+after={\textquotedbl}{\textbackslash}maketitle{\textquotedbl}
+/{\textgreater}\newline
+  {\textless}style{}-map name={\textquotedbl}author{\textquotedbl}
+class={\textquotedbl}paragraph{}-block{\textquotedbl}
+next={\textquotedbl}Title;date{\textquotedbl}
+before={\textquotedbl}{\textquotedbl}
+after={\textquotedbl}{\textbackslash}maketitle{\textquotedbl}
+/{\textgreater}\newline
+  {\textless}style{}-map name={\textquotedbl}date{\textquotedbl}
+class={\textquotedbl}paragraph{}-block{\textquotedbl}
+next={\textquotedbl}Title;author{\textquotedbl}
+before={\textquotedbl}{\textquotedbl}
+after={\textquotedbl}{\textbackslash}maketitle{\textquotedbl}
+/{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+This will produce code like this:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textbackslash}title\{Configuration\}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textbackslash}author\{Henrik Just\}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textbackslash}date\{2004\}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textbackslash}maketitle
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+The last example maps a paragraph formatted with the \textbf{theorem}
+list style to a LaTeX environment named \textstyleSourceText{theorem}.
+Note that there are two entries for a list style: The first one to
+specify the LaTeX code to put before and after the entire list. The
+second one to specify the LaTeX code to put before and after each list
+item.
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}style{}-map name={\textquotedbl}theorem{\textquotedbl}
+class={\textquotedbl}paragraph{\textquotedbl}
+before={\textquotedbl}{\textquotedbl}
+after={\textquotedbl}{\textquotedbl} /{\textgreater}\newline
+ {\textless}style{}-map name={\textquotedbl}theorem{\textquotedbl}
+class={\textquotedbl}list{\textquotedbl}
+before={\textquotedbl}{\textquotedbl}
+after={\textquotedbl}{\textquotedbl} /{\textgreater}\newline
+ {\textless}style{}-map name={\textquotedbl}theorem{\textquotedbl}
+class={\textquotedbl}listitem{\textquotedbl}
+before={\textquotedbl}{\textbackslash}begin\{theorem\}{\textquotedbl}
+after={\textquotedbl}{\textbackslash}end\{theorem\}{\textquotedbl}
+/{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+When you override a style, all formatting specified in the original
+document will be igored.
+\end{styleTextbody}
+
+\subsubsection{Math symbols}
+\begin{styleTextbody}
+In OOo Math you can add user{}-defined symbols. Writer2LaTeX already
+understands the predefined symbols such as
+\textstyleSourceText{\%alpha}. If you define your own symbols, you can
+add an entry in the confguration that specifies LaTeX code to use. The
+\textstyleSourceText{math{}-symbol{}-map} element is used for this:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}math{}-symbol{}-map name=''ddarrow''
+latex=''{\textbackslash}Downarrow'' /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+This example will map the symbol\textstyleSourceText{ \%ddarrow} to the
+LaTeX code \textstyleSourceText{{\textbackslash}Downarrow}.
+\end{styleTextbody}
+
+\subsubsection{Custom preamble}
+\begin{styleTextbody}
+The text you specify in the element
+\textstyleSourceText{custom{}-preamble} will be copied verbatim into
+the LaTeX preamble. For example:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}custom{}-preamble{\textgreater}{\textbackslash}usepackage\{palatino\}{\textless}/custom{}-preamble{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+to typeset your document using the postscript font palatino.
+\end{styleTextbody}
+
+\subsection{\label{ref:latexfrontend}Using OpenOffice.org as a frontend
+for LaTeX}
+\begin{styleTextbody}
+Writer2LaTeX has some simple support for using OOo as a frontend for
+LaTeX. The long term goal of this is to turn Writer into a
+near{}-wysiwyg LaTeX editor somewhat like LyX.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Here is a short description:
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Create a new document based on the template LaTeX{}-article.stw.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+This template contains a number of styles that corresponds to LaTeX
+code:
+\end{styleTextbody}
+
+\begin{longtable}[c]{|p{5.467cm}|p{5.467cm}|p{5.467cm}|}
+\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableHeading}
+OOo Writer style
+\end{styleTableHeading}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableHeading}
+OOo Writer class
+\end{styleTableHeading}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableHeading}
+LaTeX code
+\end{styleTableHeading}
+\end{minipage}\\\hline
+\endhead
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textit{Title}\footnotemark{}
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}title\{...\}}\footnotemark{}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+author
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}author\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+date
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}date\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+abstract title
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+renews \textstyleSourceText{{\textbackslash}abstractname}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+abstract
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{abstract} environment
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+part
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}part\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{stylePxxvii}
+Heading 2
+\end{stylePxxvii}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}section\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{stylePxxvii}
+Heading 3
+\end{stylePxxvii}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}subsection\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{stylePxxvii}
+Heading 4
+\end{stylePxxvii}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}subsubsection\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{stylePxxvii}
+Heading 5
+\end{stylePxxvii}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}paragraph\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{stylePxxvii}
+Heading 6
+\end{stylePxxvii}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}subparagraph\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+flushleft
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{flushleft} environment
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+flushright
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{flushright} environment
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+center
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{center} environment
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+verse
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{verse} environment
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+quote
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{quote} environment
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+quotation
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{quotation} environment
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{stylePxxvii}
+Preformatted text
+\end{stylePxxvii}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{verbatim} environment\footnotemark{}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+theorem
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{theorem} environment
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+itemize
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{itemize} list
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+enumerate
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{enurerate} list
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+List Heading
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{description} list (item label)
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+List Contents
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+paragraph
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{description} list (item text)
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+verb
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}verb{\textbar}...{\textbar}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{stylePxxvii}
+Emphasis
+\end{stylePxxvii}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}emph\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{stylePxxvii}
+Strong Emphasis
+\end{stylePxxvii}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}textbf\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+textrm
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}textrm\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+textsf
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}textsf\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+texttt
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}texttt\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+textup
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}textup\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+textsl
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}textsl\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+textit
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}textit\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+textsc
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}textsc\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+textmd
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}textmd\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+textbf
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{{\textbackslash}textbf\{...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+tiny
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{\{{\textbackslash}tiny ...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+scriptsize
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{\{{\textbackslash}sciptsize ...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+footnotesize
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{\{{\textbackslash}footnotesize ...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+small
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{\{{\textbackslash}small ...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+normalsize
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{\{{\textbackslash}normalsize ...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+large
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{\{{\textbackslash}large ...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+Large
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{\{{\textbackslash}Large ...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+LARGE
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{\{{\textbackslash}LARGE ...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+huge
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{\{{\textbackslash}huge ...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+Huge
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{\{{\textbackslash}Huge ...\}}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\end{longtable}
+\addtocounter{footnote}{-3}
+\stepcounter{footnote}\footnotetext{The use of italics in this table
+indicates styles that are predefined in OOo. The names of these styles
+will be localized if you use a non{}-english version of OOo.}
+\stepcounter{footnote}\footnotetext{Also
+\textstyleSourceText{{\textbackslash}maketitle} is added at the end of
+a sequence of Title, author and date.}
+\stepcounter{footnote}\footnotetext{Only characters available in the
+inputenc are accepted. Other characters are converted to question marks
+and other content is discarded, eg. footnotes.}
+\begin{styleTextbody}
+If you use these styles and uses the configuration file
+\textstyleSourceText{article.xml} when you convert your document with
+Writer2LaTeX, you will get a result that resembles a handwritten LaTeX
+file. Note that hard formatting and any other styles will be ignored.
+\end{styleTextbody}
+
+\subsubsection{Roundtrip editing}
+\begin{styleTextbody}
+Writer2LaTeX does not provide a filter, that converts LaTeX files back
+into OOo Writer format. This is however possible with Eitan M.
+Gurari{\textquotesingle}s TeX4ht system
+(\href{http://www.cse.ohio-state.edu/~gurari/TeX4ht/mn.html}{http://www.cse.ohio{}-state.edu/\~{}gurari/TeX4ht/mn.html}).
+If you use Writer2LaTeX (with \textstyleSourceText{article.xml})
+together with TeX4ht{\textquotesingle}s OOo mode
+(\textstyleSourceText{oolatex}), simple roundtrip edition LaTeX
+\ding{214} OOo Writer is supported. Beware of information loss if you
+do this {--} do not use this roundtrip for existing LaTeX or Writer
+documents!
+\end{styleTextbody}
+
+\begin{styleTextbody}
+As a genereal rule, you should save your document in the native OOo
+Writer format and convert to LaTeX when you are finished (or want to
+see the result).
+\end{styleTextbody}
+
+\section{Using Writer2xhtml and Calc2xhtml}
+\begin{styleTextbody}
+Writer2xhtml is producing standards compliant XHTML files, in particular
+it can be used to put math on the web using the XHTML + MathML
+combination. Thus Writer2xhtml can convert into any of these XHTML
+variants:
+\end{styleTextbody}
+
+\begin{listLxviiileveli}
+\item 
+\begin{stylePxxviii}
+XHTML 1.0 strict, which follows the guidelines for HTML compatibility,
+so that the output should be viewable with any browser that supports
+HTML 4.
+\end{stylePxxviii}
+\item 
+\begin{stylePxxviii}
+XHTML 1.1 + MathML 2.0, which currently is viewable with the Mozilla and
+Amaya browsers only.
+\end{stylePxxviii}
+\item 
+\begin{stylePxxviii}
+XHTML 1.1 + MathML 2.0 using \href{http://www.w3.org/Math/XSL/}{XSL
+transformations from the W3C Math Working Group} to make the file
+viewable also in some browsers that needs a plugin to display MathML,
+eg. Internet Explorer with MathPlayer plugin.
+\end{stylePxxviii}
+
+\begin{stylePxxviii}
+This is how W3C{\textquotesingle}s Math Working Group recommends to put
+''math on the web''.
+\end{stylePxxviii}
+\end{listLxviiileveli}
+\begin{styleTextbody}
+Note that the default file extension and the recommended MIME types
+varies with the output format:
+\end{styleTextbody}
+
+\begin{longtable}[c]{|p{5.467cm}|p{5.467cm}|p{5.467cm}|}
+\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableHeading}
+Output format
+\end{styleTableHeading}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableHeading}
+Default file extenstion
+\end{styleTableHeading}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableHeading}
+MIME type
+\end{styleTableHeading}
+\end{minipage}\\\hline
+\endhead
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+XHTML 1.0
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{.html}
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{text/html}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+XHTML 1.1 + MathML 2.0
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{.xhtml}
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{application/xhtml+xml}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+XHTML 1.1 + MathML 2.0 (with xsl transformation)
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{.xml}
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{application/xml}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\end{longtable}
+\begin{styleTextbody}
+Writer2xhtml is quite flexible; in particular with respect to the
+handling of formatting:
+\end{styleTextbody}
+
+\begin{listLxixleveli}
+\item 
+\begin{stylePxxix}
+You can let Writer2xhtml convert the style information in the source
+document and thus get an xhtml document that has the same general
+appearance as the original, but with an online look and feel.
+\end{stylePxxix}
+\item 
+\begin{stylePxxix}
+You can use your own style sheet and let Writer2xhtml convert the
+content only. You can map styles in OOo to xhtml elements and css
+classes, see sections 4.3 and 4.4
+\end{stylePxxix}
+\end{listLxixleveli}
+\begin{styleTextbody}
+Calc2xhtml is a companion to Writer2xhtml that produces XHTML 1.0 strict
+from your Calc documents.
+\end{styleTextbody}
+
+\subsection{Converting to XHTML from the command line}
+\begin{styleTextbody}
+To convert a file to XHTML use the command line
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l {}-xhtml{\textbar}{}-xhtml+mathml{\textbar}{}-xhtml+mathml+xsl
+[{}-config {\textless}configfile{\textgreater}] {\textless}document to
+convert{\textgreater} [{\textless}output path and/or file
+name{\textgreater}]
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+The parts in square brackets are optional.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+This will produce an XHTML file with the specified name. If no output
+file is specified, Writer2xhtml will use the same name as the original
+document, but a different file extension.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+The option \textstyleUserEntry{{}-xhtml+mathml} is used to produce XHTML
+1.1 + MathML 2.0, the option \textstyleUserEntry{{}-xhtml+mathml+xsl}
+produces the variant using XSL transformations.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Examples:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l {}-xhtml+mathml+xsl mydocument.sxw
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+or
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l {}-xhtml {}-config myconfig.xml mydocument.sxw
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+If you specify the \textstyleTeletype{{}-config} option, Writer2xhtml
+will load this configuration file before converting your document. You
+can read more about configuration in section 4.3.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+The script \textstyleSourceText{w2l} also provides a shorthand notation
+to use the sample configuration file included in
+\textstyleSourceText{writer2latex04.zip}. The command line is
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l {}-cleanxhtml {\textless}writer document to convert{\textgreater}
+[{\textless}output path and/or file name{\textgreater}]
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+This configuration file produces a ''clean'' xhtml file (see section
+4.4), for example:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+w2l {}-cleanxhtml mydocument.sxw mypath/myoutputdoc.html
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+It is recommended that you extend \textstyleSourceText{w2l} /
+\textstyleSourceText{w2l.bat} to support your own configuration files.
+\end{styleTextbody}
+
+\subsection{Using Writer2xhtml as an export filter}
+\begin{styleTextbody}
+If you choose \textbf{File {--} Export} in Writer you should be able to
+choose \textbf{XHTML 1.0 strict}, \textbf{XHTML 1.1 + MathML 2.0} or
+\textbf{XHTML 1.1 + MathML 2.0 (xsl)} as file type. Using Calc2xhtml as
+an export filter is not yet supported.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+\textbf{Note:} You have to use the export menu because Writer2xhtml does
+not provide an import filter for XHTML. You should always save in the
+native format of OOo as well!
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Note: Currently embedded graphics are not converted when Writer2xhtml is
+used as an export filter. Also splitting at headings/sheets only works
+from the command line. This is because of an issue with the xmerge
+framework. A fix for this is planned for a later version of
+Writer2xhtml.
+\end{styleTextbody}
+
+\subsection{\label{ref:xhtmlconfig}Configuration}
+\begin{styleTextbody}
+XHTML export can be configured with a configuration file. The
+configuration is read from several sources:
+\end{styleTextbody}
+
+\begin{listLxleveli}
+\item 
+\begin{stylePxix}
+First Writer2xhtml/Calc2xhtml reads the file
+\textstyleTeletype{writer2latex.xml} in the same directory as
+\textstyleTeletype{writer2latex.jar}. This file is supposed to contain
+installation{}-wide configuration.
+\end{stylePxix}
+\item 
+\begin{stylePxix}
+Then it reads the file \textstyleSourceText{writer2latex.xml} in your
+home directory (unix, eg. \textstyleSourceText{/home/username}) or user
+profile (windows, eg. \textstyleSourceText{c:{\textbackslash}documents
+and settings{\textbackslash}username}). This file is supposed to
+contain user{}-specific configuration. The installation{}-wide
+configuration may specify, that this file should be generated
+automatically.
+\end{stylePxix}
+\item 
+\begin{stylePxix}
+Finally the configuration file you specify on the command line is read.
+\end{stylePxix}
+\end{listLxleveli}
+\begin{styleTextbody}
+The configuration file is an xml file, here are the default contents:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}?xml version={\textquotedbl}1.0{\textquotedbl}
+encoding={\textquotedbl}UTF{}-8{\textquotedbl}?{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}config{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name=''create\_user\_config'' value=''true''
+/{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}xhtml\_no\_doctype{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}xhtml\_custom\_stylesheet{\textquotedbl}
+value={\textquotedbl}{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}xhtml\_ignore\_styles{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}xhtml\_use\_dublin\_core{\textquotedbl}
+value={\textquotedbl}true{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}xhtml\_convert\_to\_px{\textquotedbl}
+value={\textquotedbl}true{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}xhtml\_scaling{\textquotedbl}
+value={\textquotedbl}100\%{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}xhtml\_column\_scaling{\textquotedbl}
+value={\textquotedbl}100\%{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}xhtml\_split\_level{\textquotedbl}
+value={\textquotedbl}0{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option name={\textquotedbl}xhtml\_calc\_split{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}ignore\_hard\_line\_breaks{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}ignore\_empty\_paragraphs{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}option
+name={\textquotedbl}ignore\_double\_spaces{\textquotedbl}
+value={\textquotedbl}false{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}/config{\textgreater}
+\end{stylePreformattedText}
+
+\subsubsection{Options}
+\begin{listLxiileveli}
+\item 
+\begin{stylePxxi}
+If the option\textstyleUserEntry{ create\_user\_config }if set to
+\textstyleUserEntry{true}, the user specific configuration file
+mentioned above will be created if it does not exist.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option \textstyleTeletype{xhtml\_no\_doctype} can have the values
+\textstyleSourceText{true} or \textstyleSourceText{false} (default).
+When this option is \textstyleSourceText{true}, Writer2xhtml will not
+include the !DOCTYPE declaration in the converted document. The
+!DOCTYPE is required for a valid xhtml document; this option should
+only be used if you need to process the document further.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option \textstyleUserEntry{xhtml\_custom\_stylesheet} is used to
+specify an URL to your own, external stylesheet. If the value is empty
+or the option is not specified, no external stylesheet will be used.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option \textstyleUserEntry{xhtml\_ignore\_styles }is used to specify
+if formatting should be exported. If the value is true, no style
+information will be exported (in this case you should specify a custom
+style sheet!).
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option \textstyleUserEntry{xhtml\_use\_dublin\_core }is used to
+specify if Dublin Core Meta data should be exported (the format will be
+as specified in
+\href{http://dublincore.org/documents/dcq-html/}{http://dublincore.org/documents/dcq{}-html/}).
+If the value is \textstyleUserEntry{false}, it will not be exported.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option \textstyleTeletype{xhtml\_convert\_to\_px} can have the
+values \textstyleSourceText{true} (default) or
+\textstyleSourceText{false}. When this option is
+\textstyleSourceText{true}, Writer2xhtml will convert all units to
+\textstyleTeletype{px}, otherwise the original units are used. The
+resolution is assumed to be 96ppi, you can change this with the
+\textstyleTeletype{xhtml\_scaling} option. Eg. a scaling
+\textstyleTeletype{75\%} will change the resolution to 72ppi.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option  \textstyleUserEntry{xhtml\_scaling }is used to specify a
+scaling of all formatting, ie. to get a different text size than the
+original document. The value must be a percentage.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option  \textstyleUserEntry{xhtml\_column\_scaling }is used to
+specify an additional scaling for table colums. The value must be a
+percentage.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option  \textstyleUserEntry{xhtml\_split\_level }is used to specify
+that the Writer documents should be split in several documents and the
+outline level at which the splitting should happen (the default 0 means
+no split). This is convenient for long documents. Each output document
+will get a simple navigation panel in the header and the footer.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option  \textstyleUserEntry{xhtml\_calc\_split }is used to specify
+that the Calc documents should be split in several documents, one for
+each sheet. This is convenient for large spreadsheets. Each output
+document will get a simple navigation panel in the header and the
+footer.
+\end{stylePxxi}
+\item 
+\begin{stylePxxi}
+The option \textstyleSourceText{ignore\_double\_spaces} can have the
+values \textstyleSourceText{true} (default) or
+\textstyleSourceText{false}. Setting the option to
+\textstyleSourceText{true} will instruct Writer2xhtml to ignore double
+spaces, otherwise they are converted to non{}-breaking spaces.
+\end{stylePxxi}
+\end{listLxiileveli}
+\begin{listLxviileveli}
+\item 
+\begin{stylePxxvi}
+The option \textstyleSourceText{ignore\_empty\_paragraphs} can have the
+values \textstyleSourceText{true} (default) or
+\textstyleSourceText{false}. Setting the option to
+\textstyleSourceText{true} will instruct Writer2xhtml to ignore empty
+paragraphs..
+\end{stylePxxvi}
+\item 
+\begin{stylePxxvi}
+The option \textstyleSourceText{ignore\_hard\_line\_breaks} can have the
+values \textstyleSourceText{true} or \textstyleSourceText{false}
+(default).  Setting the option to \textstyleSourceText{true} will
+instruct Writer2xhtml to ignore hard line breaks (shift{}-Enter).
+\end{stylePxxvi}
+\end{listLxviileveli}
+\subsubsection{Style maps}
+\begin{styleTextbody}
+In addition to the options, you can specify that certain styles in
+Writer should be mapped to specific XHTML elements and CSS style
+classes. Here are some examples showing how to use some of the
+built{}-in Writer styles to create XHTML elements:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}?xml version={\textquotedbl}1.0{\textquotedbl}
+encoding={\textquotedbl}UTF{}-8{\textquotedbl}?{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}config{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}!{}-{}- map OOo paragraph styles to xhtml elements
+{}-{}-{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}xhtml{}-style{}-map name={\textquotedbl}Text
+body{\textquotedbl} class={\textquotedbl}paragraph{\textquotedbl}  
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ element={\textquotedbl}p{\textquotedbl}
+css={\textquotedbl}(none){\textquotedbl} /{\textgreater}  
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}xhtml{}-style{}-map
+name={\textquotedbl}Sender{\textquotedbl}
+class={\textquotedbl}paragraph{\textquotedbl}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ element={\textquotedbl}address{\textquotedbl}
+css={\textquotedbl}(none){\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}xhtml{}-style{}-map
+name={\textquotedbl}Quotations{\textquotedbl}
+class={\textquotedbl}paragraph{\textquotedbl}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ block{}-element={\textquotedbl}blockquote{\textquotedbl}
+block{}-css={\textquotedbl}(none){\textquotedbl}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ element={\textquotedbl}p{\textquotedbl}
+css={\textquotedbl}(none){\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+
+\bigskip
+
+\begin{stylePreformattedText}
+ {\textless}!{}-{}- map OOo text styles to xhtml elements
+{}-{}-{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}xhtml{}-style{}-map
+name={\textquotedbl}Citation{\textquotedbl}
+class={\textquotedbl}text{\textquotedbl}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ element={\textquotedbl}cite{\textquotedbl}
+css={\textquotedbl}(none){\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}xhtml{}-style{}-map
+name={\textquotedbl}Emphasis{\textquotedbl}
+class={\textquotedbl}text{\textquotedbl}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ element={\textquotedbl}em{\textquotedbl}
+css={\textquotedbl}(none){\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ 
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}!{}-{}- map hard formatting attributes to xhtml elements
+{}-{}-{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}xhtml{}-style{}-map name={\textquotedbl}bold{\textquotedbl}
+class={\textquotedbl}attribute{\textquotedbl}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ element={\textquotedbl}b{\textquotedbl}
+css={\textquotedbl}(none){\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}xhtml{}-style{}-map
+name={\textquotedbl}italics{\textquotedbl}
+class={\textquotedbl}attribute{\textquotedbl}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ element={\textquotedbl}i{\textquotedbl}
+css={\textquotedbl}(none){\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}/config{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+An extended version of this is distributed with Writer2LaTeX, please see
+the file \textstyleSourceText{cleanxhtml.xml}.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+The attributes of the \textstyleUserEntry{xhtml{}-style{}-map} element
+are used as follows:
+\end{styleTextbody}
+
+\begin{listLxxleveli}
+\item 
+\begin{stylePxxx}
+\textstyleUserEntry{name} specifies the name of the Writer style.
+\end{stylePxxx}
+\item 
+\begin{stylePxxx}
+\textstyleUserEntry{class} specifies the styles class in Writer; this
+can either be \textstyleUserEntry{text},
+\textstyleUserEntry{paragraph}, \textstyleUserEntry{frame},
+\textstyleUserEntry{list} or \textstyleUserEntry{attribute}. The last
+value does not specify a real style, but refers to hard formatting
+attributes. The possible names in this case are
+\textstyleUserEntry{bold}, \textstyleUserEntry{italics},
+\textstyleUserEntry{fixed} (for fixed pitch fonts),
+\textstyleUserEntry{superscript} and \textstyleUserEntry{subscript}.
+\end{stylePxxx}
+\item 
+\begin{stylePxxx}
+\textstyleUserEntry{element} specifies the XHTML element to use when
+converting this style. This is not used for frame and list styles.
+\end{stylePxxx}
+\item 
+\begin{stylePxxx}
+\textstyleUserEntry{css} specifies the CSS style class to use when
+converting this style. If it is not specified or the value is
+\textstyleUserEntry{``(none)''}, no CSS class will be used.
+\end{stylePxxx}
+\item 
+\begin{stylePxxx}
+\textstyleUserEntry{block{}-element} only has effect for paragraph
+styles. It is used to specify a block XHTML element, that should
+surround several exported paragraphs with this style.
+\end{stylePxxx}
+\item 
+\begin{stylePxxx}
+\textstyleUserEntry{block{}-css} specifies the CSS style class to be
+used for this block element. If it is not specified or the value is
+\textstyleUserEntry{``(none)''}, no CSS class will be used.
+\end{stylePxxx}
+\end{listLxxleveli}
+\begin{styleTextbody}
+For example the rules above produces code like this:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}p{\textgreater}This paragraph is Text
+body{\textless}/p{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}address{\textgreater}This paragraph is
+Sender{\textless}/address{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}blockquote{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}p{\textgreater}This paragraph is
+Quotations{\textless}/p{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}p{\textgreater}This paragraph is also
+Quotations{\textless}/p{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}/blockquote{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}p{\textgreater}This paragraph is also Text body and has some
+{\textless}em{\textgreater}text with emphasis
+style{\textless}/em{\textgreater} and uses some
+{\textless}b{\textgreater}hard
+formatting{\textless}/b{\textgreater}.{\textless}/p{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+You can use your own Writer styles together with your own CSS style
+sheet to create further style mappings, for example:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}xhtml{}-style{}-map name={\textquotedbl}Some OOo
+style{\textquotedbl} class={\textquotedbl}paragraph{\textquotedbl}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ block{}-element={\textquotedbl}div{\textquotedbl}
+block{}-css={\textquotedbl}block\_style{\textquotedbl}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ element={\textquotedbl}p{\textquotedbl}
+css={\textquotedbl}par\_style{\textquotedbl} /{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+to produce output like this:
+\end{styleTextbody}
+
+\begin{stylePreformattedText}
+{\textless}div class=''block\_style''{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}p class=''par\_style''{\textgreater}Paragraph with Some OOo
+style{\textless}/p{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+ {\textless}p class=''par\_style''{\textgreater}Yet
+another{\textless}/p{\textgreater}
+\end{stylePreformattedText}
+
+\begin{stylePreformattedText}
+{\textless}/div{\textgreater}
+\end{stylePreformattedText}
+
+\begin{styleTextbody}
+Note that the rules for hard formatting are only used when
+\textstyleUserEntry{xhtml\_ignore\_styles} is set to
+\textstyleUserEntry{true}. It is not recommended to rely on these
+rules, using real text styles is preferable. They are included because
+the use of hard character formatting is very common even in otherwise
+well{}-structured documents.
+\end{styleTextbody}
+
+\subsection{\label{ref:xhtmlfrontend}Using OpenOffice.org to create
+XHTML documents}
+\begin{styleTextbody}
+The configuration file \textstyleUserEntry{cleanxhtml.xml} that is
+distributed with Writer2LaTeX, can be used to create semantically rich
+XHTML content, which can be formatted with your own stylesheet (you
+should edit the file to add the URL to the stylesheet you want to use).
+\end{styleTextbody}
+
+\begin{styleTextbody}
+A subset of the built{}-in styles in Writer are mapped to XHTML elements
+(note that the style names are localized, so this is for the english
+version of OpenOffice.org):
+\end{styleTextbody}
+
+\begin{longtable}[l]{|p{5.466cm}|p{5.466cm}|p{5.467cm}|}
+\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableHeading}
+OOo Writer style
+\end{styleTableHeading}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableHeading}
+OOo Writer class
+\end{styleTableHeading}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableHeading}
+XHTML element
+\end{styleTableHeading}
+\end{minipage}\\\hline
+\endhead
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Text body
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+paragraph style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{p}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Sender
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+paragraph style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{address}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Quotations
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+paragraph style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{blockquote}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Preformatted Text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+paragraph style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{pre}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+List Heading
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+paragraph style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{dt} (in \textstyleSourceText{dl})
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+List Contents
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+paragraph style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{dd} (in \textstyleSourceText{dl})
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Horizontal Rule
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+paragraph style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{hr}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Citation
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+text style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{cite}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Definition
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+text style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{dfn}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Emphasis
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+text style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{em}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Example
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+text style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{samp}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Source Text
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+text style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{code}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Strong Emphasis
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+text style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{strong}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Teletype
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+text style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{tt}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+User entry
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+text style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{kbd}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+Variable
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+text style
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{var}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+bold
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+hard formatting attribute
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{b}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+italics
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+hard formatting attribute
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{i}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+fixed pitch font
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+hard formatting attribute
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{tt}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+superscript
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+hard formatting attribute
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{sup}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+subscript
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.466cm}\begin{styleTableContents}
+hard formatting attribute
+\end{styleTableContents}
+\end{minipage}&
+\begin{minipage}[c]{5.467cm}\begin{styleTableContents}
+\textstyleSourceText{sub}
+\end{styleTableContents}
+\end{minipage}\\\hline
+\end{longtable}
+\begin{styleTextbody}
+So by using these styles only, you will create well{}-structured XHTML
+documents. See the document \textstyleSourceText{sample{}-xhtml.sxw}
+for an example of how to use this.
+\end{styleTextbody}
+
+\begin{styleTextbody}
+Warning: Some elements are not allowed inside \textstyleSourceText{pre},
+so this might in some cases lead to invalid documents. This will be
+fixed in a later version of Writer2xhtml.
+\end{styleTextbody}
+
+\section{Using Writer2LaTeX from another Java application}
+\begin{styleTextbody}
+Writer2LaTeX uses the \textit{xmerge} framework. Please see the
+documentation at
+\href{http://xml.openoffice.org/xmerge}{http://xml.openoffice.org/xmerge}
+for explanation about how to use Writer2LaTeX from Java.
+\end{styleTextbody}
+\end{document}

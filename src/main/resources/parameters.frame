@@ -1,0 +1,13 @@
+# title, lines, columns
+title = parameters
+forEach = parameters
+edit = name,value,min,max
+
+# logic to be called on update
+onUpdate = showFormulaFrame
+
+# status button
+statusBar = br.usp.iterador.gui.ShowFormulaFrame.newParameter
+
+# right side button
+rightSide = br.usp.iterador.gui.ShowFormulaFrame.remove

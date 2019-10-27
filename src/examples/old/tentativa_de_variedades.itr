@@ -1,0 +1,176 @@
+<pulga-file>
+  <string>Compatibility Version</string>
+  <string>4</string>
+  <application>
+    <info>
+      <name>Variedade estavel/instavel</name>
+      <description>teste com rotacao de fi graus de um sistema linear</description>
+      <authors>Guilherme Silveira</authors>
+    </info>
+    <image>
+      <width>800</width>
+      <height>600</height>
+    </image>
+    <backgroundColor>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+      <alpha>255</alpha>
+    </backgroundColor>
+    <clearBeforeDrawing>true</clearBeforeDrawing>
+    <codes>
+      <codes/>
+    </codes>
+    <dimensao>2</dimensao>
+    <grid>
+      <on>false</on>
+      <color>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+        <alpha>255</alpha>
+      </color>
+    </grid>
+    <inicial>
+      <double>0.9950000000000001</double>
+      <double>0.9966666666666666</double>
+    </inicial>
+    <intermediarios>
+      <intermediate>
+        <nome>fi</nome>
+        <valor>Math.PI / 4</valor>
+      </intermediate>
+      <intermediate>
+        <nome>a</nome>
+        <valor>0.5 * Math.cos(fi) * Math.cos(-fi) - 1.3 * Math.sin(fi) * Math.sin(-fi)</valor>
+      </intermediate>
+      <intermediate>
+        <nome>b</nome>
+        <valor>- 0.5 * Math.cos(fi) * Math.sin(-fi) - 1.3 * Math.sin(fi) * Math.cos(-fi)</valor>
+      </intermediate>
+      <intermediate>
+        <nome>c</nome>
+        <valor>0.5 * Math.sin(fi) * Math.cos(-fi) + 1.3 * Math.cos(fi) * Math.sin(-fi)</valor>
+      </intermediate>
+      <intermediate>
+        <nome>d</nome>
+        <valor>- 0.5 * Math.sin(fi) * Math.sin(-fi) + 1.3 * Math.cos(fi) * Math.cos(-fi)</valor>
+      </intermediate>
+    </intermediarios>
+    <parameters>
+      <parameter>
+        <name>e1</name>
+        <value>0.1</value>
+      </parameter>
+      <parameter>
+        <name>e2</name>
+        <value>0.2</value>
+      </parameter>
+    </parameters>
+    <trashPoints>0</trashPoints>
+    <iteratedPoints>100</iteratedPoints>
+    <valores>
+      <string>a * x1 + b * x2</string>
+      <string>c * x1 + d * x2</string>
+    </valores>
+    <xScale>
+      <field>x1</field>
+      <max>1.0</max>
+      <min>-1.0</min>
+    </xScale>
+    <yScale>
+      <field>x2</field>
+      <max>1.0</max>
+      <min>-1.0</min>
+    </yScale>
+  </application>
+  <map>
+    <entry>
+      <string>average-functions</string>
+      <java-class>br.usp.iterador.plugin.bacia.AverageFunctions</java-class>
+    </entry>
+    <entry>
+      <string>basin</string>
+      <java-class>br.usp.iterador.plugin.bacia.Basin</java-class>
+    </entry>
+    <entry>
+      <string>initial-condition-plugin</string>
+      <java-class>br.usp.iterador.plugin.initialcondition.InitialConditionData</java-class>
+    </entry>
+    <entry>
+      <string>cloud</string>
+      <java-class>br.usp.iterador.plugin.bacia.model.Cloud</java-class>
+    </entry>
+  </map>
+  <list>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.bacia.BasinPlugin</first>
+      <second class="basin">
+        <attractors>
+          <cloud>
+            <color>
+              <red>255</red>
+              <green>255</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </color>
+            <name>Cloud #1</name>
+            <polygon>
+              <points>
+                <double-array>
+                  <double>-4.186046511627907</double>
+                  <double>4.029304029304029</double>
+                </double-array>
+                <double-array>
+                  <double>3.779069767441861</double>
+                  <double>3.736263736263737</double>
+                </double-array>
+                <double-array>
+                  <double>4.147286821705427</double>
+                  <double>-3.8644688644688645</double>
+                </double-array>
+                <double-array>
+                  <double>-3.565891472868217</double>
+                  <double>-3.644688644688645</double>
+                </double-array>
+              </points>
+            </polygon>
+            <reverse>true</reverse>
+          </cloud>
+        </attractors>
+        <averageFunctions>
+          <x>x1</x>
+          <y>x2</y>
+        </averageFunctions>
+        <sampleAverageColor>
+          <red>255</red>
+          <green>255</green>
+          <blue>0</blue>
+          <alpha>255</alpha>
+        </sampleAverageColor>
+        <earlyQuit>1000</earlyQuit>
+        <averageScales>
+          <scale>
+            <field>x1</field>
+            <max>10.0</max>
+            <min>-10.0</min>
+          </scale>
+          <scale>
+            <field>x2</field>
+            <max>10.0</max>
+            <min>-10.0</min>
+          </scale>
+        </averageScales>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.initialcondition.InitialConditionPlugin</first>
+      <second class="initial-condition-plugin">
+        <clear>false</clear>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.mandelbrot.MandelbrotPlugin</first>
+    </pair>
+  </list>
+</pulga-file>

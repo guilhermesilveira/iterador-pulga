@@ -1,0 +1,3 @@
+Main-Class: writer2latex.Application
+Class-Path: xmergefix.jar
+

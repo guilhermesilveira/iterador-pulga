@@ -1,0 +1,14 @@
+Henon: 2 attractors for showing the basin of attraction plugin
+
+Dimension: 2
+Initial Values: (0.3,0.1)
+Fixed Parameters: (a=1.2, b=0.2)
+Intermediate Expressions:
+1. c
+	1 - a * x1 * x1 + b * x2
+2. d
+	x1
+Final Expressions: (1 - a * c * c + b * d, c)
+Points count: (100, 20000)
+
+Activate the initial condition plugin and play around!

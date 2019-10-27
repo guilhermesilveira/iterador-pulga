@@ -1,0 +1,1 @@
+VERSION	5	br.usp.iterador.io.CompatibilityVersion5

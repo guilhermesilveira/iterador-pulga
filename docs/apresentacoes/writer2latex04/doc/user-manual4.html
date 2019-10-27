@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+  <!-- This file was converted to xhtml by Writer2xhtml ver. 0.4. See http://www.hj-gym.dk/~hj/writer2latex for more info. -->
+  <head>
+    <title>user-manual4.html</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style media="all" type="text/css">
+      body {font-family:Thorndale,serif;font-size:19.2px;color:#000000}
+      h1 {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;font-family:Albany,sans-serif;font-weight:bold;font-size:25.76px;clear:left}
+      h2 {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;font-family:Albany,sans-serif;font-weight:bold;font-size:22.4px;clear:left}
+      h3 {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;font-family:Albany,sans-serif;font-weight:bold;font-size:19.2px;clear:left}
+      p.TableContents {margin-left:0;margin-right:0;margin-top:4.580788px;margin-bottom:9.524408px;border:none;text-align:justify;font-size:19.2px}
+      p.Standard {margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;border:none;font-size:19.2px}
+      p.Contents1 {margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;border:none;text-indent:0;font-size:19.2px}
+      p.ContentsHeading {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;text-indent:0;font-family:Albany,sans-serif;font-weight:bold;font-size:25.600002px}
+      p.TableHeading {margin-left:0;margin-right:0;margin-top:4.580788px;margin-bottom:9.524408px;border:none;text-align:center;font-style:italic;font-weight:bold;font-size:19.2px}
+      p.Textbody {margin-left:0;margin-right:0;margin-top:4.580788px;margin-bottom:9.524408px;border:none;text-align:justify;font-size:19.2px}
+      p.Footnote {margin-left:22.631811px;margin-right:0;margin-top:0;margin-bottom:0;border:none;text-indent:-22.631811px;font-size:16.0px}
+      p.PreformattedText {margin-left:45.354332px;margin-right:0;margin-top:0;margin-bottom:4.580788px;border:none;background-color:#e6e6e6;text-indent:0;font-family:Cumberland,monospace;font-size:19.2px}
+      span.SourceText {font-family:Cumberland,monospace}
+      span.Footnoteanchor {font-size:58%;vertical-align:super}
+      span.FootnoteSymbol {}
+      span.UserEntry {font-family:Cumberland,monospace}
+      span.Teletype {font-family:Cumberland,monospace}
+    </style>
+  </head>
+  <body dir="ltr">
+    <div id="header">[<a href="user-manual.html">First</a>] [<a href="user-manual3.html">Previous</a>] [<a href="user-manual5.html">Next</a>] [<a href="user-manual6.html">Last</a>] [<a href="user-manual1.html">Contents</a>] <hr /></div>
+    <div id="content">
+      <h1 id="heading12">3 Using Writer2LaTeX and Writer2BibTeX</h1>
+      <p class="Textbody">Writer2LaTeX is quite flexible: It can take advantage of several LaTeX packages, such as <span class="SourceText">hyperref</span>, <span class="SourceText">pifont</span>, <span class="UserEntry">ulem</span>. It can create customized LaTeX code based on the styles used in the document. Also it supports 25 different languages, latin, greek and cyrillic scripts and 7 inputencodings.</p>
+      <p class="Textbody">The flexibility makes it possible to use Writer2LaTeX from several philosophies:</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">You can use LaTeX as a typesetting engine for your OOo documents: Writer2LaTeX can be configured to create a LaTeX document with as much formatting as possible preserved. Note that the resulting LaTeX source will be readable, but not very clean.</p>
+          <p class="Textbody">Be aware that even though Writer2LaTeX tries hard to cope with any document, you will only get good results for well structured documents, ie. documents that are fomatted using <span style="font-style:italic">styles</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody">If you need to continue the work on your document in LaTeX your primary interest may be the content rather than the formatting. Writer2LaTeX can be configured to produce a LaTeX document which strips most of the formatting and hence produces a clean LaTeX source from <span style="font-style:italic">any</span> source document.</p>
+        </li>
+        <li>
+          <p class="Textbody">If  you don&#39;t like to write LaTeX code by hand, you may use OOo as a simple graphical front-end for LaTeX. Using a special OOo Writer template and a special configuration file for Writer2LaTeX, you can create well-structured LaTeX documents that resembles “hand-written” LaTeX documents. You can compare this to the way <a href="http://www.lyx.org/">LyX</a> works.</p>
+          <p class="Textbody">Writer2LaTeX does not provide an input filter for LaTeX. It is recommended to use Eitan M. Gurari&#39;s <a href="http://www.cse.ohio-state.edu/~gurari/TeX4ht/mn.html">TeX4ht</a> to convert LaTeX documents into OOo Writer format. Roundtrip editing OOo Writer ↔ LaTeX is not possible in general, but Writer2LaTeX+TeX4ht does provide some basic support for this, see section <a href="#reflatexfrontend">3.6</a>.</p>
+        </li>
+      </ul>
+      <h2 id="heading13">3.1 <a id="refwritersty"></a>The LaTeX package <span class="SourceText">ooomath.sty</span></h2>
+      <p class="Textbody">OOo Math has a few features that are not available in standard LaTeX packages. Hence Writer2LaTeX uses an optional package <span class="SourceText">ooomath.sty</span><span class="Footnoteanchor"><a id="bodyftn2" href="#ftn2">2</a></span> which implements these constructions. This packages is only needed for documents containing formulas.</p>
+      <p class="Textbody">It is sufficient to place <span class="SourceText">ooomath.sty</span> in the same directory as the converted LaTeX document. It will however be more convenient if you install it in your TeX distribution. The proper place will usually be the “local texmf tree”, please see the documentation of your TeX distribution. Below are specific instructions for teTeX and MikTeX:</p>
+      <h3 id="heading14">Instructions for teTeX (unix)</h3>
+      <p class="Textbody">If you use teTeX you can install <span class="SourceText">ooomath.sty</span> as follows:</p>
+      <p class="Textbody">Open a shell and type</p>
+      <p class="PreformattedText">texconfig conf</p>
+      <p class="Textbody">This will list the configuration details for teTeX. Under the heading “Kpathsea” you will see a list of directories searched by TeX. You can put <span class="SourceText">ooomath.sty</span> in the subdirectory <span class="SourceText">tex</span> of any of these directories. Usually the directory</p>
+      <p class="PreformattedText">/home/&lt;user name&gt;/texmf/tex</p>
+      <p class="Textbody">can be used (you can create it if it doesn&#39;t exist).</p>
+      <p class="Textbody">Next you should type</p>
+      <p class="PreformattedText">texconfig rehash</p>
+      <p class="Textbody">to make teTeX refresh it&#39;s filename database.</p>
+      <h3 id="heading15">Instructions for MikTeX (Windows)</h3>
+      <p class="Textbody">If you use MikTeX you can install <span class="SourceText">ooomath.sty</span> as follows:</p>
+      <p class="Textbody">Copy <span class="SourceText">ooomath.sty</span> to the <span class="SourceText">tex</span> subdirectory in the local texmf tree. With a standard installation this will be the directory</p>
+      <p class="PreformattedText">c:\localtexmf\tex</p>
+      <p class="Textbody">If this directory does not exist you should start “MikTeX Options” (you can find this in the Start Menu). On the tab page <span style="font-weight:bold">Roots</span> you can see the location of the local texmf tree.</p>
+      <p class="Textbody">Next you should start “MikTeX Options”. On the tab page <span style="font-weight:bold">General</span>, click the button <span style="font-weight:bold">Refresh Now</span> to make MikTeX refresh it&#39;s filename database.</p>
+      <h2 id="heading16">3.2 Converting to LaTeX from the command line</h2>
+      <p class="Textbody">To convert a file to LaTeX use the command line</p>
+      <p class="PreformattedText">w2l [-latex] [-config &lt;configfile&gt;] &lt;writer document to convert&gt; [&lt;output path and/or file name&gt;]</p>
+      <p class="Textbody">The parts in square brackets are optional.</p>
+      <p class="Textbody">This will produce a LaTeX file with the specified name. If no output file is specified, Writer2LaTeX will use the same name as the original document, but change the extension to <span class="Teletype">.tex</span>.</p>
+      <p class="Textbody">Examples:</p>
+      <p class="PreformattedText">w2l mydocument.sxw mypath/myoutputdocument.tex</p>
+      <p class="Textbody">or</p>
+      <p class="PreformattedText">w2l -config clean.xml mydocument.sxw</p>
+      <p class="Textbody">If you specify the <span class="Teletype">-config</span> option, Writer2LaTeX will load this configuration file before converting your document. You can read more about configuration in section <a href="#reflatexconfig">3.5</a>.</p>
+      <p class="Textbody">The script <span class="SourceText">w2l</span> also provides a shorthand notation to use the sample configuration files included in <span class="SourceText">writer2latex04.zip</span>. The command line is</p>
+      <p class="PreformattedText">w2l [-ultraclean|-clean|-pdfscreen|-pdfprint|-article] &lt;writer document to convert&gt; [&lt;output path and/or file name&gt;]</p>
+      <p class="Textbody">For example to produce a clean LaTeX file (ie. ignoring most of the formatting from the source document):</p>
+      <p class="PreformattedText">w2l -clean mydocument.sxw</p>
+      <p class="Textbody">It is recommended that you extend <span class="SourceText">w2l</span> / <span class="SourceText">w2l.bat</span> to support your own configuration files.</p>
+      <h2 id="heading17">3.3 Converting to BibTeX from the command line</h2>
+      <p class="Textbody">Writer2BibTeX extracts bibliography data to a BibTeX file. To do this use the commandline</p>
+      <p class="PreformattedText">w2l -bibtex &lt;writer document to convert&gt; [&lt;output path and/or file name&gt;]</p>
+      <p class="Textbody">You can also extract the data as part of the conversion to LaTeX, see section <a href="#reflatexconfig">3.5</a>.</p>
+      <h2 id="heading18">3.4 Using Writer2LaTeX and Writer2BibTeX as export filters</h2>
+      <p class="Textbody">If you choose <span style="font-weight:bold">File – Export</span> in Writer you should be able to choose <span style="font-weight:bold">LaTeX 2e</span>, <span style="font-weight:bold">BibTeX data file</span> as file type. </p>
+      <p class="Textbody"><span style="font-weight:bold">Note:</span> You have to use the export menu because there is no import filter for LaTeX/BibTeX. You should always save in the native format of OOo as well!</p>
+      <p class="Textbody"><span style="font-weight:bold">Note</span>: Currently embedded graphics are not converted when Writer2LaTeX is used as an export filter. Also using Writer2BibTeX in conjunction with Writer2LaTeX is currently only possible from the command line. This is because of an issue with xmerge. A fix for this is planned for a later version of Writer2LaTeX.</p>
+      <h2 id="heading19">3.5 <a id="reflatexconfig"></a>Configuration</h2>
+      <p class="Textbody">LaTeX export can be configured with a configuration file. The configuration is read from several sources:</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">First Writer2LaTeX reads the file <span class="Teletype">writer2latex.xml</span> in the same directory as <span class="Teletype">writer2latex.jar</span>. This file is supposed to contain installation-wide configuration.</p>
+        </li>
+        <li>
+          <p class="Textbody">Then it reads the file <span class="SourceText">writer2latex.xml</span> in your home directory (unix, eg. <span class="SourceText">/home/username</span>) or user profile (windows, eg. <span class="SourceText">c:\documents and settings\username</span>). This file is supposed to contain user-specific configuration. The installation-wide configuration may specify, that this file should be generated automatically.</p>
+        </li>
+        <li>
+          <p class="Textbody">Finally, the documentation file you specify on the command line will be read.</p>
+        </li>
+      </ul>
+      <p class="Textbody">The configuration file is an xml file; these are the default contents:</p>
+      <p class="PreformattedText">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</p>
+      <p class="PreformattedText">&lt;config&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;create_user_config&quot; value=&quot;true&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;backend&quot; value=&quot;generic&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;no_preamble&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;documentclass&quot; value=&quot;article&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;global_options&quot; value=&quot;&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;inputencoding&quot; value=&quot;ascii&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;multilingual&quot; value=&quot;true&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;greek_math&quot; value=&quot;true&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_ooomath&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_pifont&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_ifsym&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_wasysym&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_bbding&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_eurosym&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_tipa&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_color&quot; value=&quot;true&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_hyperref&quot; value=&quot;true&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_endnotes&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_ulem&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_lastpage&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;use_bibtex&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;bibtex_style&quot; value=&quot;plain&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;formatting&quot; value=&quot;convert_basic&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;page_formatting&quot; value=&quot;convert_all&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;ignore_hard_page_breaks&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;ignore_hard_line_breaks&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;ignore_empty_paragraphs&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;ignore_double_spaces&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;option name=&quot;debug&quot; value=&quot;false&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;heading-map max-level=&quot;5&quot;&gt;</p>
+      <p class="PreformattedText">    &lt;heading-level-map writer-level=&quot;1&quot; name=&quot;section&quot; level=&quot;1&quot; /&gt;</p>
+      <p class="PreformattedText">    &lt;heading-level-map writer-level=&quot;2&quot; name=&quot;subsection&quot; level=&quot;2&quot; /&gt;</p>
+      <p class="PreformattedText">    &lt;heading-level-map writer-level=&quot;3&quot; name=&quot;subsubsection&quot; level=&quot;3&quot; /&gt;</p>
+      <p class="PreformattedText">    &lt;heading-level-map writer-level=&quot;4&quot; name=&quot;paragraph&quot; level=&quot;4&quot; /&gt;</p>
+      <p class="PreformattedText">    &lt;heading-level-map writer-level=&quot;5&quot; name=&quot;subparagraph&quot; level=&quot;5&quot; /&gt;</p>
+      <p class="PreformattedText">  &lt;/heading-map&gt;</p>
+      <p class="PreformattedText">  &lt;custom-preamble /&gt;</p>
+      <p class="PreformattedText">&lt;/config&gt;</p>
+      <p class="Textbody">The meaning of each part is explained in the following sections. Writer2LaTeX comes with five sample configuration files:</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody"><span class="SourceText">ultraclean.xml</span> to produce a <span style="font-style:italic">clean</span> LaTeX file, ie. almost all the formatting is ignored.</p>
+        </li>
+        <li>
+          <p class="Textbody"><span class="SourceText">clean.xml</span> is a less radical version; preserves hyperlinks, color and most character formatting.</p>
+        </li>
+        <li>
+          <p class="Textbody"><span class="SourceText">pdfscreen.xml</span> to produce a LaTeX file which is optimized for screen viewing using the package <span class="SourceText">pdfscreen.sty</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody"><span class="SourceText">pdfprint.xml</span> to produce a LaTeX file which is optimized for printing with pdfTeX.</p>
+        </li>
+        <li>
+          <p class="Textbody"><span class="SourceText">article.xml</span> to produce a LaTeX article, see section <a href="#reflatexfrontend">3.6</a>.</p>
+        </li>
+      </ul>
+      <h3 id="heading20">Basic options</h3>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">If the option<span class="UserEntry"> create_user_config </span>if set to <span class="UserEntry">true</span>, the user specific configuration file mentioned above will be created if it does not exist.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">backend</span> can have any of the values <span class="Teletype">generic</span> (default), <span class="Teletype">dvips</span> or <span class="Teletype">pdftex</span>. This will create LaTeX files suitable for any backend/dvi driver, dvips or pdfTeX respectively.</p>
+        </li>
+        <li>
+          <p class="Textbody">If the option <span class="Teletype">no_preamble</span> is set to <span class="Teletype">false</span>, Writer2LaTeX will not create the a LaTeX preamble, nor include <span class="Teletype">\begin{document}</span> and <span class="Teletype">\end{document}</span>. This is useful if the document is to be included in another LaTeX document. Note that in this case you will have to make sure that all packages/definitions needed are available in the master LaTeX document.</p>
+        </li>
+      </ul>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">The option <span class="Teletype">inputencoding</span> can have any of the values <span class="Teletype">ascii</span> (default), <span class="Teletype">latin1</span>, <span class="Teletype">latin2</span>, <span class="Teletype">iso-8859-7</span>, <span class="Teletype">cp1250</span>, <span class="Teletype">cp1251</span>, <span class="Teletype">koi8-r </span>or <span class="Teletype">utf8</span>. The latter requires Dominique Unruh&#39;s <span class="Teletype">ucs.sty</span>. </p>
+        </li>
+        <li>
+          <p class="Textbody">If the option <span class="SourceText">multilingual</span> is set to false, Writer2LaTeX will assume that the document is written in one language only – otherwise all the language information contained in the document will be used.</p>
+        </li>
+      </ul>
+      <h3 id="heading21">Options for document structure</h3>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">The option <span class="SourceText">documentclass</span> is the name of the documentclass to use (default is <span class="SourceText">article</span>).</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">global_options</span> is a list of global options to add to the documentclass (the default value is an empty string).</p>
+        </li>
+        <li>
+          <p class="Textbody">The <span class="SourceText">heading_map</span> section specifies how headings in OOo should map to LaTeX. Eg. the first line specifies that <span style="font-weight:bold">Heading 1</span> should map to <span class="SourceText">\section</span>, which is of level 1 in LaTeX. Up to 10 levels are supported (the same number as in OOo).</p>
+        </li>
+      </ul>
+      <h3 id="heading22">Font and symbol options</h3>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">The option <span class="Teletype">greek_math</span> can have the values <span class="Teletype">true</span> (default) or <span class="Teletype">false</span>. This means that greek letters in latin or cyrillic text are rendered in math mode. This behaviour assumes that greek letters are used as symbols in this context, and has the advantage that greek text fonts are not required. It is <span style="font-style:italic">not</span> used in greek text, where it would be awful.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="Teletype">use_ooomath</span> can  have the values <span class="Teletype">true</span> or <span class="Teletype">false</span> (default). This enables the use of the LaTeX package <span class="Teletype">ooomath.sty</span>. If this package is not used, the necessary definitions will be included in the LaTeX preamble, which may become quite long – so using <span class="Teletype">ooomath.sty</span> is recommended.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="Teletype">use_pifont</span> can have the values <span class="Teletype">true</span> or <span class="Teletype">false</span> (default). This enables the use of <span style="font-style:italic">Zapf Dingbats</span> using the LaTeX package <span class="Teletype">pifont.sty</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="Teletype">use_wasysym</span> can have the values <span class="Teletype">true</span> or <span class="Teletype">false</span> (default). This enables the use of the <span style="font-style:italic">wasy</span> symbol font using the LaTeX package <span class="Teletype">wasysym.sty</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="Teletype">use_ifsym</span> can have the values <span class="Teletype">true</span> or <span class="Teletype">false</span> (default). This enables the use of  the <span style="font-style:italic">ifsym</span> symbol font using the LaTeX package <span class="Teletype">ifsym.sty</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="Teletype">use_bbding</span> can have the values <span class="Teletype">true</span> or <span class="Teletype">false</span> (default). This enables the use of the <span style="font-style:italic">bbding</span> symbol font (a clone of Zapf Dingbats) using the LaTeX package <span class="Teletype">bbding.sty</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="Teletype">use_eurosym</span> can have the values <span class="Teletype">true</span> or <span class="Teletype">false</span> (default). This enables the use of the <span style="font-style:italic">eurosym</span> symbol font using the LaTeX package <span class="Teletype">eurosym.sty</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="Teletype">use_tipa</span> can have the values <span class="Teletype">true</span> or <span class="Teletype">false</span> (default). This enables the use of phonetic symbols using the LaTeX package <span class="Teletype">tipa.sty</span>.</p>
+        </li>
+      </ul>
+      <h3 id="heading23">Options for other packages</h3>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">The option <span class="SourceText">use_hyperref</span> can have the values <span class="SourceText">true</span> (default) or <span class="SourceText">false</span>. This enables use of the package <span class="SourceText">hyperref.sty</span> to include hyperlinks in the LaTeX document.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">use_color</span> can have the values <span class="SourceText">true</span> (default) or <span class="SourceText">false</span>. This enables use of the package <span class="SourceText">hyperref.sty</span> to apply color in the LaTeX document.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">use_endnotes</span> can have the values <span class="SourceText">true</span> or <span class="SourceText">false</span> (default). This enables use of the package <span class="SourceText">endnotes.sty</span> to include endnotes in the LaTeX document. If set to <span class="SourceText">false</span>, endnotes will be converted to footnotes.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">use_ulem</span> can have the values <span class="SourceText">true</span> or <span class="SourceText">false</span> (default). This enables use of the package <span class="SourceText">ulem.sty</span> to support underlining and crossing out in the LaTeX document.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">use_lastpage</span> can have the values <span class="SourceText">true</span> or <span class="SourceText">false</span> (default). This enables use of the package <span class="SourceText">lastpage.sty</span> to represent the page count.</p>
+        </li>
+      </ul>
+      <h3 id="heading24">Options for BibTeX</h3>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">The option <span class="Teletype">use_bibtex</span> can have the values  <span class="Teletype">true</span> or <span class="Teletype">false</span> (default). This enables the use of BibTeX for bibliography generation. If it is set to <span class="SourceText">false</span>, the bibliography is included as text.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="Teletype">bibtex_style</span> can have any BibTeX style as value (default is <span class="Teletype">plain</span>). This is the BibTeX style to be used in the LaTeX document.</p>
+        </li>
+      </ul>
+      <h3 id="heading25">Options to control export of formatting</h3>
+      <p class="Textbody">In Writer, formatting is controlled by styles. You can control how much formatting is exported using the following options<span class="Footnoteanchor"><a id="bodyftn3" href="#ftn3">3</a></span>. Note that these options has a major impact on the structure of the LaTeX document created.</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">The option <span class="Teletype">formatting</span><span class="Footnoteanchor"><a id="bodyftn4" href="#ftn4">4</a></span> can have any of these values:</p>
+          <ul style="list-style-type:bullet">
+            <li>
+              <p class="Textbody"><span class="Teletype">ignore_all</span> will instruct Writer2LaTeX to ignore <span style="font-style:italic">all</span> character, paragraph, heading, list and footnote formatting contained in the document.</p>
+            </li>
+            <li>
+              <p class="Textbody"><span class="Teletype">ignore_most</span> will preserve basic character formatting.</p>
+            </li>
+            <li>
+              <p class="Textbody"><span class="Teletype">convert_basic</span> (default) will preserve basic character formatting as well as all numberings (lists, headings, footnotes).</p>
+            </li>
+            <li>
+              <p class="Textbody"><span class="Teletype">convert_most</span> will convert all supported formatting, except that paragraph formatting and font size is only converted if it is set by a style. To be able to preserve formatting, an environment is created for all paragraph styles, custom lists is used for listings, headings is reformatted using the <span class="SourceText">\@startsection</span> command etc.</p>
+            </li>
+            <li>
+              <p class="Textbody"><span class="Teletype">convert_all</span> will preserve <span style="font-style:italic">all</span> supported formatting.</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">page_formatting</span> can have any of the values <span class="SourceText">ignore_all</span>, <span class="SourceText">convert_header_footer</span>, <span class="SourceText">convert_all</span>. This will ignore all page formatting, convert the header and footer (using custom page styles) or convert all supported formatting (using more elaborate custom page styles).</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">ignore_empty_paragraphs</span> can have the values <span class="SourceText">true</span> (default) or <span class="SourceText">false</span>. Setting the option to <span class="SourceText">true</span> will instruct Writer2LaTeX to ignore empty paragraphs; otherwise they are converted to <span class="SourceText">\bigskip</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">ignore_double_spaces</span> can have the values <span class="SourceText">true</span> (default) or <span class="SourceText">false</span>. Setting the option to <span class="SourceText">true</span> will instruct Writer2LaTeX to ignore double spaces, otherwise they are converted to (<span class="SourceText">\ </span>).</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">ignore_hard_page_breaks</span> can have the values <span class="SourceText">true</span> or <span class="SourceText">false</span> (default).  Setting the option to <span class="SourceText">true</span> will instruct Writer2LaTeX to ignore hard page breaks (but not soft page breaks specified in paragraph styles).</p>
+        </li>
+        <li>
+          <p class="Textbody">The option <span class="SourceText">ignore_hard_line_breaks</span> can have the values <span class="SourceText">true</span> or <span class="SourceText">false</span> (default).  Setting the option to <span class="SourceText">true</span> will instruct Writer2LaTeX to ignore hard line breaks (shift-Enter).</p>
+        </li>
+      </ul>
+      <h3 id="heading26">Style maps</h3>
+      <p class="Textbody">In addition you can specify maps from styles in Writer to your own LaTeX styles in the configuration. Currently this is possible for text styles, paragraph styles and list styles. The following examples are from the sample configuration file <span class="SourceText">article.xml</span>.</p>
+      <p class="Textbody">This is a simple rule, that maps text formatted with the text style <span style="font-weight:bold">Emphasis</span> to the LaTeX code <span class="SourceText">\emph{...}</span>:</p>
+      <p class="PreformattedText"> &lt;style-map name=&quot;Emphasis&quot; class=&quot;text&quot; before=&quot;\emph{&quot; after=&quot;}&quot; /&gt;</p>
+      <p class="Textbody">This is another simple rule, that maps paragraphs formatted with the paragraph style <span style="font-weight:bold">part</span> to the LaTeX code <span class="SourceText">\part{...}</span>. The attribute <span class="SourceText">line-break</span> ensures that no line breaks are inserted between the code and the text.</p>
+      <p class="PreformattedText">&lt;style-map name=&quot;part&quot; class=&quot;paragraph&quot; before=&quot;\part{&quot; after=&quot;}&quot; line-break=&quot;false&quot; /&gt;</p>
+      <p class="Textbody">This is a rule, that maps paragraph formatted with style <span style="font-weight:bold">Preformatted Text</span> to the LaTeX environment <span class="SourceText">verbatim</span>. The attribute <span class="SourceText">verbatim</span> ensures that the content of the paragraph is exported verbatim (this implies that characters not available in the <span class="SourceText">inputenc</span> are converted to question marks and that other content is discarded, eg. footnotes). The <span class="SourceText">paragraph-block</span> entry specifies code to go before and after an entire block of paragraphs. The <span class="SourceText">name</span> attribute specifies the style of the first paragraph; the <span class="SourceText">next</span> attribute specifies the style(s) of subsequent paragraphs in the block.</p>
+      <p class="PreformattedText">  &lt;style-map name=&quot;Preformatted Text&quot; class=&quot;paragraph-block&quot; next=&quot;Preformatted Text&quot; before=&quot;\begin{verbatim}&quot; after=&quot;\end{verbatim}&quot; /&gt;</p>
+      <p class="PreformattedText">&lt;style-map name=&quot;Preformatted Text&quot; class=&quot;paragraph&quot; before=&quot;&quot; after=&quot;&quot; verbatim=&quot;true&quot; /&gt;</p>
+      <p class="Textbody">This is a more elaborate set of rules, that maps paragraphs formatted with styles <span style="font-weight:bold">Title</span>, <span style="font-weight:bold">author</span> and <span style="font-weight:bold">date</span> (in any order) to <span class="SourceText">\maketitle</span> in LaTeX.</p>
+      <p class="PreformattedText">&lt;style-map name=&quot;Title&quot; class=&quot;paragraph&quot; before=&quot;\title{&quot; after=&quot;}&quot; line-break=&quot;false&quot; /&gt;<br />  &lt;style-map name=&quot;author&quot; class=&quot;paragraph&quot; before=&quot;\author{&quot; after=&quot;}&quot; line-break=&quot;false&quot; /&gt;<br />  &lt;style-map name=&quot;date&quot; class=&quot;paragraph&quot; before=&quot;\date{&quot; after=&quot;}&quot; line-break=&quot;false&quot; /&gt;<br />  &lt;style-map name=&quot;Title&quot; class=&quot;paragraph-block&quot; next=&quot;author;date&quot; before=&quot;&quot; after=&quot;\maketitle&quot; /&gt;<br />  &lt;style-map name=&quot;author&quot; class=&quot;paragraph-block&quot; next=&quot;Title;date&quot; before=&quot;&quot; after=&quot;\maketitle&quot; /&gt;<br />  &lt;style-map name=&quot;date&quot; class=&quot;paragraph-block&quot; next=&quot;Title;author&quot; before=&quot;&quot; after=&quot;\maketitle&quot; /&gt;</p>
+      <p class="Textbody">This will produce code like this:</p>
+      <p class="PreformattedText">\title{Configuration}</p>
+      <p class="PreformattedText">\author{Henrik Just}</p>
+      <p class="PreformattedText">\date{2004}</p>
+      <p class="PreformattedText">\maketitle</p>
+      <p class="Textbody">The last example maps a paragraph formatted with the <span style="font-weight:bold">theorem</span> list style to a LaTeX environment named <span class="SourceText">theorem</span>. Note that there are two entries for a list style: The first one to specify the LaTeX code to put before and after the entire list. The second one to specify the LaTeX code to put before and after each list item.</p>
+      <p class="PreformattedText">&lt;style-map name=&quot;theorem&quot; class=&quot;paragraph&quot; before=&quot;&quot; after=&quot;&quot; /&gt;<br /> &lt;style-map name=&quot;theorem&quot; class=&quot;list&quot; before=&quot;&quot; after=&quot;&quot; /&gt;<br /> &lt;style-map name=&quot;theorem&quot; class=&quot;listitem&quot; before=&quot;\begin{theorem}&quot; after=&quot;\end{theorem}&quot; /&gt;</p>
+      <p class="Textbody">When you override a style, all formatting specified in the original document will be igored.</p>
+      <h3 id="heading27">Math symbols</h3>
+      <p class="Textbody">In OOo Math you can add user-defined symbols. Writer2LaTeX already understands the predefined symbols such as <span class="SourceText">%alpha</span>. If you define your own symbols, you can add an entry in the confguration that specifies LaTeX code to use. The <span class="SourceText">math-symbol-map</span> element is used for this:</p>
+      <p class="PreformattedText">&lt;math-symbol-map name=”ddarrow” latex=”\Downarrow” /&gt;</p>
+      <p class="Textbody">This example will map the symbol<span class="SourceText"> %ddarrow</span> to the LaTeX code <span class="SourceText">\Downarrow</span>.</p>
+      <h3 id="heading28">Custom preamble</h3>
+      <p class="Textbody">The text you specify in the element <span class="SourceText">custom-preamble</span> will be copied verbatim into the LaTeX preamble. For example:</p>
+      <p class="PreformattedText">&lt;custom-preamble&gt;\usepackage{palatino}&lt;/custom-preamble&gt;</p>
+      <p class="Textbody">to typeset your document using the postscript font palatino.</p>
+      <h2 id="heading29">3.6 <a id="reflatexfrontend"></a>Using OpenOffice.org as a frontend for LaTeX</h2>
+      <p class="Textbody">Writer2LaTeX has some simple support for using OOo as a frontend for LaTeX. The long term goal of this is to turn Writer into a near-wysiwyg LaTeX editor somewhat like LyX.</p>
+      <p class="Textbody">Here is a short description:</p>
+      <p class="Textbody">Create a new document based on the template LaTeX-article.stw.</p>
+      <p class="Textbody">This template contains a number of styles that corresponds to LaTeX code:</p>
+      <table id="Tabel27Ctable" cellspacing="0" style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;border:none;border-collapse:separate;border-spacing:0">
+        <col style="width:257.02298px" />
+        <col style="width:257.02298px" />
+        <col style="width:257.02298px" />
+        <thead>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:1.0px solid #000000;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableHeading">OOo Writer style</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:1.0px solid #000000;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableHeading">OOo Writer class</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableHeading">LaTeX code</p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span style="font-style:italic">Title</span>
+                <span style="font-style:italic">
+                  <span class="Footnoteanchor">
+                    <a id="bodyftn5" href="#ftn5">5</a>
+                  </span>
+                </span>
+              </p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\title{...}</span>
+                <span class="Footnoteanchor">
+                  <a id="bodyftn6" href="#ftn6">6</a>
+                </span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">author</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\author{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">date</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\date{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">abstract title</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">renews <span class="SourceText">\abstractname</span></p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">abstract</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">abstract</span> environment</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">part</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\part{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents" style="font-style:italic">Heading 2</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\section{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents" style="font-style:italic">Heading 3</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\subsection{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents" style="font-style:italic">Heading 4</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\subsubsection{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents" style="font-style:italic">Heading 5</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\paragraph{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents" style="font-style:italic">Heading 6</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\subparagraph{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">flushleft</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">flushleft</span> environment</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">flushright</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">flushright</span> environment</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">center</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">center</span> environment</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">verse</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">verse</span> environment</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">quote</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">quote</span> environment</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">quotation</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">quotation</span> environment</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents" style="font-style:italic">Preformatted text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">verbatim</span> environment<span class="Footnoteanchor"><a id="bodyftn7" href="#ftn7">7</a></span></p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">theorem</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">theorem</span> environment</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">itemize</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">itemize</span> list</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">enumerate</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">enurerate</span> list</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">List Heading</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">description</span> list (item label)</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">List Contents</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">paragraph</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents"><span class="SourceText">description</span> list (item text)</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">verb</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\verb|...|</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents" style="font-style:italic">Emphasis</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\emph{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents" style="font-style:italic">Strong Emphasis</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\textbf{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">textrm</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\textrm{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">textsf</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\textsf{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">texttt</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\texttt{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">textup</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\textup{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">textsl</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\textsl{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">textit</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\textit{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">textsc</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\textsc{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">textmd</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\textmd{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">textbf</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">\textbf{...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">tiny</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">{\tiny ...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">scriptsize</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">{\sciptsize ...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">footnotesize</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">{\footnotesize ...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">small</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">{\small ...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">normalsize</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">{\normalsize ...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">large</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">{\large ...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Large</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">{\Large ...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">LARGE</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">{\LARGE ...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">huge</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">{\huge ...}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">Huge</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:none;vertical-align:top;text-align:left">
+              <p class="TableContents">text</p>
+            </td>
+            <td style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding:4.39937px;border-top:none;border-bottom:1.0px solid #000000;border-left:1.0px solid #000000;border-right:1.0px solid #000000;vertical-align:top;text-align:left">
+              <p class="TableContents">
+                <span class="SourceText">{\Huge ...}</span>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="Textbody">If you use these styles and uses the configuration file <span class="SourceText">article.xml</span> when you convert your document with Writer2LaTeX, you will get a result that resembles a handwritten LaTeX file. Note that hard formatting and any other styles will be ignored.</p>
+      <h3 id="heading30">Roundtrip editing</h3>
+      <p class="Textbody">Writer2LaTeX does not provide a filter, that converts LaTeX files back into OOo Writer format. This is however possible with Eitan M. Gurari&#39;s TeX4ht system (<a href="http://www.cse.ohio-state.edu/~gurari/TeX4ht/mn.html">http://www.cse.ohio-state.edu/~gurari/TeX4ht/mn.html</a>). If you use Writer2LaTeX (with <span class="SourceText">article.xml</span>) together with TeX4ht&#39;s OOo mode (<span class="SourceText">oolatex</span>), simple roundtrip edition LaTeX ↔ OOo Writer is supported. Beware of information loss if you do this – do not use this roundtrip for existing LaTeX or Writer documents!</p>
+      <p class="Textbody">As a genereal rule, you should save your document in the native OOo Writer format and convert to LaTeX when you are finished (or want to see the result).</p>
+      <p class="Footnote"><span><a id="ftn2" class="FootnoteSymbol" href="#bodyftn2">2</a> </span>This pakcage replaces <span class="SourceText">writer.sty</span> used by older versions of Writer2LaTeX.</p>
+      <p class="Footnote"><span><a id="ftn3" class="FootnoteSymbol" href="#bodyftn3">3</a> </span>Note that these options have changed a lot since version 0.3.2.</p>
+      <p class="Footnote"><span><a id="ftn4" class="FootnoteSymbol" href="#bodyftn4">4</a> </span>This option replaces the options <span class="Teletype">character_formatting</span>, <span class="Teletype">paragraph_formatting</span>, <span class="Teletype">list_formatting</span>, <span class="Teletype">heading_formatting</span> and <span class="Teletype">ignore_footnotes_configuration</span> used in previous versions of Writer2LaTeX.</p>
+      <p class="Footnote"><span><a id="ftn5" class="FootnoteSymbol" href="#bodyftn5">5</a> </span>The use of italics in this table indicates styles that are predefined in OOo. The names of these styles will be localized if you use a non-english version of OOo.</p>
+      <p class="Footnote"><span><a id="ftn6" class="FootnoteSymbol" href="#bodyftn6">6</a> </span>Also <span class="SourceText">\maketitle</span> is added at the end of a sequence of Title, author and date.</p>
+      <p class="Footnote"><span><a id="ftn7" class="FootnoteSymbol" href="#bodyftn7">7</a> </span>Only characters available in the inputenc are accepted. Other characters are converted to question marks and other content is discarded, eg. footnotes.</p>
+    </div>
+    <div id="footer"><hr />[<a href="user-manual.html">First</a>] [<a href="user-manual3.html">Previous</a>] [<a href="user-manual5.html">Next</a>] [<a href="user-manual6.html">Last</a>] [<a href="user-manual1.html">Contents</a>] </div>
+  </body>
+</html>

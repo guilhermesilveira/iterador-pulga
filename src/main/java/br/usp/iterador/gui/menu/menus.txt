@@ -1,0 +1,24 @@
+menu menu.file
+	menuitem menu.new new
+	menuitem menu.load load
+	divisor
+	menuitem menu.save save
+	menuitem menu.save_as save_as
+	divisor
+	menuitem menu.exportpoints exportpoints
+	divisor
+	menuitem menu.exit exit
+/menu
+menu menu.edit
+	menuitem menu.information showInformation
+	menuitem menu.formula_parameter_and_starting_conditions showFormulaFrame
+	menuitem menu.pieces_of_code showPieceOfCode
+	menuitem menu.iterations_axes showIterations
+	menuitem menu.proportional_plot image/proportionalPlot
+/menu
+menu menu.options
+	menuitem menu.log changeLogState
+/menu
+menu menu.help
+	menuitem menu.about about
+/menu

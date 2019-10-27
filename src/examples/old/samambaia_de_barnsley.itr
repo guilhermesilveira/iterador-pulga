@@ -1,0 +1,169 @@
+<pulga-file>
+  <string>Compatibility Version</string>
+  <string>4</string>
+  <application>
+    <info>
+      <name>Unknown</name>
+      <description></description>
+      <authors></authors>
+    </info>
+    <image>
+      <width>800</width>
+      <height>600</height>
+    </image>
+    <backgroundColor>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+      <alpha>255</alpha>
+    </backgroundColor>
+    <clearBeforeDrawing>true</clearBeforeDrawing>
+    <codes>
+      <codes/>
+    </codes>
+    <dimensao>2</dimensao>
+    <grid>
+      <on>false</on>
+      <color>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+        <alpha>255</alpha>
+      </color>
+    </grid>
+    <inicial>
+      <double>0.3425</double>
+      <double>0.355</double>
+    </inicial>
+    <intermediarios>
+      <intermediate>
+        <nome>r</nome>
+        <valor>(int) (Math.random() * 4)</valor>
+      </intermediate>
+      <intermediate>
+        <nome>a</nome>
+        <valor>if(r==0)
+	a = 0.2 * x1 - 0.26 * x2 + 0.4;
+else if(r==1)
+	a = 0.85 * x1 + 0.04 * x2 + 0.075;
+else if(r==2)
+	a = 0.5;
+else
+	a = - 0.15 * x1 + 0.28 * x2 + 0.575;
+</valor>
+      </intermediate>
+      <intermediate>
+        <nome>b</nome>
+        <valor>if(r==0)
+	b = 0.23 * x1 + 0.22 * x2 + 0.045;
+else if(r==1)
+	b = - 0.04 * x1 + 0.85 * x2 + 0.18;
+else if(r==2)
+	b = 0.16 * x2;
+else
+	b = 0.26 * x1 + 0.24 * x2 - 0.086;
+</valor>
+      </intermediate>
+    </intermediarios>
+    <parameters/>
+    <trashPoints>100</trashPoints>
+    <iteratedPoints>1000000</iteratedPoints>
+    <valores>
+      <string>a</string>
+      <string>b</string>
+    </valores>
+    <xScale>
+      <field>x1</field>
+      <max>1.0</max>
+      <min>0.0</min>
+    </xScale>
+    <yScale>
+      <field>x2</field>
+      <max>1.0</max>
+      <min>0.0</min>
+    </yScale>
+  </application>
+  <map>
+    <entry>
+      <string>average-functions</string>
+      <java-class>br.usp.iterador.plugin.bacia.AverageFunctions</java-class>
+    </entry>
+    <entry>
+      <string>basin</string>
+      <java-class>br.usp.iterador.plugin.bacia.Basin</java-class>
+    </entry>
+    <entry>
+      <string>initial-condition-plugin</string>
+      <java-class>br.usp.iterador.plugin.initialcondition.InitialConditionData</java-class>
+    </entry>
+    <entry>
+      <string>export-image-plugin</string>
+      <java-class>br.usp.iterador.plugin.export.ExportImageData</java-class>
+    </entry>
+    <entry>
+      <string>color-plugin</string>
+      <java-class>br.usp.iterador.plugin.cor.ColorData</java-class>
+    </entry>
+    <entry>
+      <string>cloud</string>
+      <java-class>br.usp.iterador.plugin.bacia.model.Cloud</java-class>
+    </entry>
+  </map>
+  <list>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.cor.ColorPlugin</first>
+      <second class="color-plugin">
+        <nIterations>1</nIterations>
+        <colors>
+          <awt-color>
+            <red>255</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </awt-color>
+        </colors>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.bacia.BasinPlugin</first>
+      <second class="basin">
+        <attractors/>
+        <averageFunctions>
+          <x>Math.abs(x1) * Math.abs(x2)</x>
+          <y>x1 * x1 + x2 * x2</y>
+        </averageFunctions>
+        <sampleAverageColor>
+          <red>255</red>
+          <green>255</green>
+          <blue>0</blue>
+          <alpha>255</alpha>
+        </sampleAverageColor>
+        <earlyQuit>0</earlyQuit>
+        <averageScales>
+          <scale>
+            <field>x1</field>
+            <max>2.0</max>
+            <min>0.0</min>
+          </scale>
+          <scale>
+            <field>x2</field>
+            <max>2.0</max>
+            <min>0.0</min>
+          </scale>
+        </averageScales>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.initialcondition.InitialConditionPlugin</first>
+      <second class="initial-condition-plugin">
+        <clear>false</clear>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.export.ExportImagePlugin</first>
+      <second class="export-image-plugin">
+        <filename>\export.png</filename>
+      </second>
+    </pair>
+  </list>
+</pulga-file>

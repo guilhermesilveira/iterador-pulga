@@ -1,0 +1,81 @@
+\usepackage[ascii]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,textcomp}
+\usepackage{color}
+\usepackage{calc}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=blue, pagecolor=blue, urlcolor=blue}
+\usepackage{graphicx}
+\newcommand\textsubscript[1]{\ensuremath{{}_{\text{#1}}}}
+% Pages styles (master pages)
+\makeatletter
+\newcommand\ps@Standard{%
+\renewcommand\@oddhead{}%
+\renewcommand\@evenhead{}%
+\renewcommand\@oddfoot{}%
+\renewcommand\@evenfoot{}%
+\setlength\paperwidth{21.001cm}\setlength\paperheight{29.7cm}\setlength\voffset{-1in}\setlength\hoffset{-1in}\setlength\topmargin{3cm}\setlength\headheight{12pt}\setlength\headsep{0cm}\setlength\footskip{12pt+0cm}\setlength\textheight{29.7cm-3cm-2.499cm-0cm-12pt-0cm-12pt}\setlength\oddsidemargin{2.499cm}\setlength\evensidemargin{2.499cm}\setlength\textwidth{21.001cm-2.499cm-2.499cm}
+\renewcommand\thepage{\arabic{page}}
+\setlength{\skip\footins}{0.101cm}\renewcommand\footnoterule{\vspace*{-0.018cm}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.018cm}}\vspace*{0.101cm}}
+}
+\makeatother
+\pagestyle{Standard}
+\everymath{\displaystyle}
+
+
+
+
+
+{\selectlanguage{english}\bfseries
+7. Conclus\~ao}
+
+{\selectlanguage{english}
+Existe uma necessidade em universidades para ferramentas que permitam
+aos alunos focar no lado matem\'atico da mat\'eria sem obrigar, mas
+possibilitando, aprender programa\c{c}\~ao para resolver seus
+problemas. }
+
+{\selectlanguage{english}
+ Existe sempre a esperan\c{c}a de que professores se adaptem a esse
+mundo novo e utilizem tais ferramentas n\~ao s\'o para manter os alunos
+acordados durante a aula mas tamb\'em para incentivar o aprendizado e
+facilitar a compreens\~ao de determinados assuntos.}
+
+{\selectlanguage{english}\bfseries
+8. Refer\^encias}
+
+{\selectlanguage{english}
+H\'enon, M. (1976) ``A two{}-dimensional map with a strange attractor'',
+Comm. Math. Phys. 50, p. 69{}-77.}
+
+{\selectlanguage{english}
+Silveira, G. ``Iterador'',
+\href{http://www.linux.ime.usp.br/~gas/iniciacao/iterador.html}{http://www.linux.ime.usp.br/\~{}gas/iniciacao/iterador.html}}
+
+{\selectlanguage{english}
+Silveira, G. \& Colli, E. (2005) ``An open source program for studying
+iterated dynamical systems'', Anais do VI Workshop de Software Livre, p
+108{}-190.}
+
+{\selectlanguage{english}
+Colli, E \& Piassi, V. \& Tufaile, A. \& Sartorelli, J. C. \ (2004)
+``Bistability in bubble formation, Physical Review E, 70''}
+
+{\selectlanguage{english}
+Niemeyer P., Beanshell,
+\href{http://www.beanshell.org/}{http://www.beanshell.org}}
+
+{\selectlanguage{english}
+Unkrig, A., Janino,
+\href{http://www.janino.net/}{http://www.janino.net/}}
+
+{\selectlanguage{english}
+Gamma, E., Helm, R., Johnson, R., Vlissides J. (1994) ``Design Patterns,
+Elements of Reusable Object{}-Oriented Software'', Addison{}-Wesley}
+
+{\selectlanguage{english}
+Suganuma, T., Ogasawara, T., Takeuchi, M., Yasue, T., Kawahito, M.,
+Ishizaki, K., Komatsu, H. et al (2000) ``Overview of the IBM Java
+Just{}-In{}-Time Compiler'', IBM Systems Journal Volume 39, Number 1,
+\href{http://www.research.ibm.com/journal/sj/391/suganuma}{http://www.research.ibm.com/journal/sj/391/suganuma}}
+\end{document}

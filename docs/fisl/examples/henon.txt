@@ -1,0 +1,8 @@
+Henon:
+
+Dimension: 2
+Initial Values: (0.3,0.1)
+Fixed Parameters: (a=1.4, b=0.3)
+Intermediate Expressions:
+Final Expressions: (1 - a * x1 * x1 + b * x2, x1)
+Points count: (100, 20000)

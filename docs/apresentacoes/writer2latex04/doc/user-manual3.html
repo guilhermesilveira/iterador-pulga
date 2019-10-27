@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+  <!-- This file was converted to xhtml by Writer2xhtml ver. 0.4. See http://www.hj-gym.dk/~hj/writer2latex for more info. -->
+  <head>
+    <title>user-manual3.html</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style media="all" type="text/css">
+      body {font-family:Thorndale,serif;font-size:19.2px;color:#000000}
+      h1 {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;font-family:Albany,sans-serif;font-weight:bold;font-size:25.76px;clear:left}
+      h2 {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;font-family:Albany,sans-serif;font-weight:bold;font-size:22.4px;clear:left}
+      h3 {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;font-family:Albany,sans-serif;font-weight:bold;font-size:19.2px;clear:left}
+      p.TableContents {margin-left:0;margin-right:0;margin-top:4.580788px;margin-bottom:9.524408px;border:none;text-align:justify;font-size:19.2px}
+      p.Standard {margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;border:none;font-size:19.2px}
+      p.Contents1 {margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;border:none;text-indent:0;font-size:19.2px}
+      p.ContentsHeading {margin-left:0;margin-right:0;margin-top:19.184883px;margin-bottom:9.615119px;border:none;text-indent:0;font-family:Albany,sans-serif;font-weight:bold;font-size:25.600002px}
+      p.TableHeading {margin-left:0;margin-right:0;margin-top:4.580788px;margin-bottom:9.524408px;border:none;text-align:center;font-style:italic;font-weight:bold;font-size:19.2px}
+      p.Textbody {margin-left:0;margin-right:0;margin-top:4.580788px;margin-bottom:9.524408px;border:none;text-align:justify;font-size:19.2px}
+      p.Footnote {margin-left:22.631811px;margin-right:0;margin-top:0;margin-bottom:0;border:none;text-indent:-22.631811px;font-size:16.0px}
+      p.PreformattedText {margin-left:45.354332px;margin-right:0;margin-top:0;margin-bottom:4.580788px;border:none;background-color:#e6e6e6;text-indent:0;font-family:Cumberland,monospace;font-size:19.2px}
+      span.SourceText {font-family:Cumberland,monospace}
+      span.Footnoteanchor {font-size:58%;vertical-align:super}
+      span.FootnoteSymbol {}
+      span.UserEntry {font-family:Cumberland,monospace}
+      span.Teletype {font-family:Cumberland,monospace}
+    </style>
+  </head>
+  <body dir="ltr">
+    <div id="header">[<a href="user-manual.html">First</a>] [<a href="user-manual2.html">Previous</a>] [<a href="user-manual4.html">Next</a>] [<a href="user-manual6.html">Last</a>] [<a href="user-manual1.html">Contents</a>] <hr /></div>
+    <div id="content">
+      <h1 id="heading3">2 Installation</h1>
+      <h2 id="heading4">2.1 How to install Writer2LaTeX for command line usage</h2>
+      <p class="Textbody">Writer2LaTeX can work as a standalone command line utility (that is without OOo).</p>
+      <h3 id="heading5">Installation for Microsoft Windows</h3>
+      <p class="Textbody">To install Writer2LaTeX under Microsoft Windows follow these instructions:</p>
+      <ol style="list-style-type:decimal">
+        <li>
+          <p class="Textbody">Unzip <span class="SourceText">writer2latex04.zip</span> into some directory. This will create a subdirectory <span class="SourceText">writer2latex04</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody">Add this directory to your PATH environment variable.</p>
+        </li>
+        <li>
+          <p class="Textbody">Open the file <span class="SourceText">w2l.bat</span> with a text editor and replace the path at the top of the file with the full path to Writer2LaTeX, for example</p>
+          <p class="PreformattedText">
+            <span class="SourceText">set W2LPATH=&quot;c:\writer2latex04&quot;</span>
+          </p>
+          <p class="Textbody">(If you have extracted to the root of drive C, you don&#39;t have to edit this line.)</p>
+          <p class="Textbody">At a command line type <span class="UserEntry">java -version</span> to verify that the Java executable is in your path. If this is not the case or you have several Java versions installed you should edit the next line to contain the full path to the Java executable, eg.</p>
+          <p class="PreformattedText">set JAVAEXE=&quot;C:\j2sdk1.4.0_01\bin\java”</p>
+        </li>
+      </ol>
+      <h3 id="heading6">Installation for Unix and friends</h3>
+      <ol style="list-style-type:decimal">
+        <li>
+          <p class="Textbody">Unzip <span class="SourceText">writer2latex04.zip</span> into some directory. This will create a subdirectory <span class="SourceText">writer2latex04</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody">Add this directory to your PATH environment variable or create a symbolic link to the file <span class="SourceText">w2l</span> from some directory in yout PATH.</p>
+        </li>
+        <li>
+          <p class="Textbody">Open the fle <span class="SourceText">w2l</span> with a text editor and replace the path at the top of the file with the full path to Writer2LaTeX, eg.</p>
+        </li>
+      </ol>
+      <ol style="list-style-type:decimal">
+        <li style="list-style-type:none">
+          <p class="PreformattedText">
+            <span class="SourceText">W2LPATH=&quot;/home/username/writer2latex04&quot;</span>
+          </p>
+          <p class="Textbody">(If you have extracted into your home directory, you don&#39;t have to edit this line.)</p>
+          <p class="Textbody">Open a command shell and type <span class="UserEntry">java -version</span> to verify that the Java executable is in your path. If this is not the case or you have several Java versions installed you should edit the next line to contain the full path to the Java executable, ie.</p>
+          <p class="PreformattedText">
+            <span class="SourceText">set JAVAEXE=&quot;/path/to/java/executable/”</span>
+          </p>
+        </li>
+        <li>
+          <p class="Textbody">Add execute permissions to <span class="SourceText">w2l</span> as follows:</p>
+          <p class="PreformattedText">chmod +x w2l</p>
+        </li>
+      </ol>
+      <h2 id="heading7">2.2 How to install Writer2LaTeX as an export filter</h2>
+      <p class="Textbody">Writer2LaTeX can work as an export filter for OOo Writer. This requires OpenOffice.org 1.1 or StarOffice 7. It does <span style="font-style:italic">not</span> work with OpenOffice.org 1.0 or StarOffice 6.0.</p>
+      <p class="Textbody">You can also use Writer2LaTeX as an export filter in OOo 1.9.x (should work with recent versions).</p>
+      <p class="Textbody">The following instructions covers all operating systems.</p>
+      <h3 id="heading8">Uninstalling previous versions of Writer2LaTeX</h3>
+      <p class="Textbody">If you have installed a version of Writer2LaTeX <span style="font-style:italic">prior to</span> 0.3.2, you will have to undo the changes you made to the file <span class="SourceText">TypeDetection.xcu</span>:</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">If you <span style="font-style:italic">copied</span> <span class="SourceText">TypeDetection.xcu</span> into your user settings you can delete or (to be safe) rename the file.</p>
+        </li>
+        <li>
+          <p class="Textbody">If you <span style="font-style:italic">edited</span> an existing version of <span class="SourceText">TypeDetection.xcu</span> you should restore the backup copy of the file. If you forgot to take a backup, you will have to delete the additions by hand (take a backup copy this time!).</p>
+        </li>
+      </ul>
+      <p class="Textbody">When you restart OOo, the filters should have disappeared from the <span style="font-weight:bold">File – Export</span> menu.</p>
+      <p class="Textbody">See the section below for information on how to uninstall Writer2LaTeX 0.3.2 and later.</p>
+      <h3 id="heading9">Installation for OOo 1.1.x</h3>
+      <p class="Textbody"><span style="font-style:italic">Note:</span> If you have made a <span class="Teletype">-net</span> (multiuser) installation of OOo, you will normally need to log in as root/administrator to install Writer2LaTeX.</p>
+      <p class="Textbody">Before you start, you need an installation of OOo where</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">You have set up OOo to use Java. If you didn&#39;t do that during installation, you can run <span class="SourceText">&lt;OOo install&gt;/program/jvmsetup</span>. (Of course this requires that you have installed Java on your system).</p>
+        </li>
+        <li>
+          <p class="Textbody">You must have the <span style="font-style:italic">Mobile Device Filters installed</span>. If you didn&#39;t install these during installation (it&#39;s not part of a standard installation!), you can run OOo setup, choose Modify and add the filters. This will install a framework for Java based filters in OOo (known as xmerge), which is also used by Writer2LaTeX (despite the fact that it has nothing to do with mobile devices).</p>
+        </li>
+      </ul>
+      <p class="Textbody">Then the installation proceeds as follows:</p>
+      <ol style="list-style-type:decimal">
+        <li>
+          <p class="Textbody">Copy <span class="Teletype">writer2latex.jar</span>, <span class="SourceText">xmergefix.jar</span> and <span class="Teletype">writer2latex.xml</span> into the classes directory </p>
+          <p class="PreformattedText">&lt;OOo install&gt;/program/classes/</p>
+        </li>
+        <li>
+          <p class="Textbody">Rename the existing <span class="SourceText">xmerge.jar</span> to <span class="SourceText">oldxmerge.jar</span> (or whatever you like; this is only to have a backup of the old version).</p>
+        </li>
+        <li>
+          <p class="Textbody">Rename <span class="SourceText">xmergefix.jar</span> to <span class="SourceText">xmerge.jar</span>.</p>
+        </li>
+        <li>
+          <p class="Textbody">Copy <span class="SourceText">w2lfilter.zip </span>into the directory</p>
+          <p class="PreformattedText">&lt;OOo install&gt;/share/uno_packages</p>
+        </li>
+        <li>
+          <p class="Textbody">Make sure that no OOo processes are running: Close all document windows and (under MS Windows) the Quick Starter.</p>
+        </li>
+        <li>
+          <p class="Textbody">From a command shell, navigate to the directory</p>
+          <p class="PreformattedText">&lt;OOo install&gt;/program</p>
+          <p class="Textbody">and type</p>
+          <p class="PreformattedText">pkgchk --shared</p>
+          <p class="Textbody">This will register Writer2LaTeX as a filter in OOo. If it works, there will be no messages on the screen.</p>
+        </li>
+        <li>
+          <p class="Textbody">Now restart OOo.</p>
+        </li>
+      </ol>
+      <h3 id="heading10">Installation for OOo 1.9.x</h3>
+      <p class="Textbody"><span style="font-style:italic">Note:</span> If you have made a <span class="Teletype">-net</span> (multiuser) installation of OOo, you will normally need to log in as root/administrator to install Writer2LaTeX.</p>
+      <p class="Textbody">Before you start, you need an installation of OOo where</p>
+      <ul style="list-style-type:disc">
+        <li>
+          <p class="Textbody">You have set up OOo to use Java. If you didn&#39;t do that during installation, you can configure java under <span style="font-weight:bold">Tools – Options</span>. Of course this requires that you have installed Java on your system.</p>
+        </li>
+        <li>
+          <p class="Textbody">You must have the <span style="font-style:italic">Mobile Device Filters installed</span>. If you didn&#39;t install these during installation (it&#39;s not part of a standard installation!), you can run OOo setup, choose Modify and add the filters. This will install a framework for Java based filters in OOo (known as xmerge), which is also used by Writer2LaTeX (despite the fact that it has nothing to do with mobile devices).</p>
+        </li>
+      </ul>
+      <p class="Textbody">Then the installation proceeds as follows:</p>
+      <ol style="list-style-type:decimal">
+        <li>
+          <p class="Textbody">Copy <span class="Teletype">writer2latex.jar</span> and <span class="Teletype">writer2latex.xml</span> into the classes directory </p>
+          <p class="PreformattedText">&lt;OOo install&gt;/program/classes/</p>
+        </li>
+        <li>
+          <p class="Textbody">Make sure that no OOo processes are running: Close all document windows and (under MS Windows) the Quick Starter.</p>
+        </li>
+        <li>
+          <p class="Textbody">From a command shell, navigate to the directory</p>
+          <p class="PreformattedText">&lt;OOo install&gt;/program</p>
+        </li>
+        <li>
+          <p class="Textbody">and type</p>
+          <p class="PreformattedText">unopkg gui</p>
+        </li>
+        <li>
+          <p class="Textbody">Select <span style="font-weight:bold">OpenOffice.org packages</span> and select <span class="SourceText">w2lfilters20.zip</span> using the <span style="font-weight:bold">Browse</span> button.</p>
+        </li>
+        <li>
+          <p class="Textbody">Now restart OOo.</p>
+        </li>
+      </ol>
+      <p class="Textbody">If you only want to install for a single user, select <span style="font-weight:bold">My packages</span> instead – this is also possible from inside OOo, using the <span style="font-weight:bold">Tools – Packages</span> menu.</p>
+      <h2 id="heading11">2.3 Uninstall Writer2LaTeX</h2>
+      <p class="Textbody">To remove the Writer2LaTeX filters from your OOo installation, you should proceed as follows for OOo 1.1.x:</p>
+      <ol style="list-style-type:decimal">
+        <li>
+          <p class="Textbody">Delete <span class="SourceText">w2lfilter.zip from</span> the directory</p>
+          <p class="PreformattedText">&lt;OOo install&gt;/share/uno_packages</p>
+        </li>
+        <li>
+          <p class="Textbody">Make sure that no OOo processes are running: Close all document windows and (under MS Windows) the Quick Starter.</p>
+        </li>
+        <li>
+          <p class="Textbody">From a command shell navigate to the directory</p>
+          <p class="PreformattedText">&lt;OOo install&gt;/program</p>
+          <p class="Textbody">and type</p>
+          <p class="PreformattedText">pkgchk --shared</p>
+          <p class="Textbody">This will remove the registration of Writer2LaTeX from OOo. If it works, there will be no messages on the screen.</p>
+        </li>
+        <li>
+          <p class="Textbody">Now restart OOo.</p>
+        </li>
+      </ol>
+      <p class="Textbody">For OOo 1.9.x, use the <span class="SourceText">unopkg gui</span> command as described above to remove <span class="SourceText">w2lfilters20.zip</span>.</p>
+      <p class="Textbody">You may also undo the changes you have made to OOo&#39;s <span class="SourceText">classes</span> directory, but this is not required.</p>
+    </div>
+    <div id="footer"><hr />[<a href="user-manual.html">First</a>] [<a href="user-manual2.html">Previous</a>] [<a href="user-manual4.html">Next</a>] [<a href="user-manual6.html">Last</a>] [<a href="user-manual1.html">Contents</a>] </div>
+  </body>
+</html>

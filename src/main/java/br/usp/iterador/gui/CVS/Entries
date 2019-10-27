@@ -1,0 +1,25 @@
+/AppearancePaneCreator.java/1.7/Thu Apr 26 13:14:29 2007/-kk/
+/FormulaPane.java/1.1/Wed May 24 12:04:58 2006/-kk/
+/GUIHelper.java/1.2/Wed Aug 16 16:23:41 2006/-kk/
+/ImageHandler.java/1.2/Tue Apr  4 22:42:19 2006/-kk/
+/ImageView.java/1.2/Sun Jun 11 14:07:15 2006/-kk/
+/IteratorCanvas.java/1.4/Mon Jun 11 20:24:40 2007/-kk/
+/IteratorFrame.java/1.11/Thu Apr 26 04:34:20 2007/-kk/
+/LayoutPosition.java/1.3/Sun May 28 23:08:56 2006/-kk/
+/ModelType.java/1.5/Thu Jun  8 18:53:37 2006/-kk/
+/Painter.java/1.1/Tue Mar 28 21:32:49 2006/-kk/
+/PanelBuilder.java/1.17/Thu Apr 26 04:16:01 2007/-kk/
+/PieceOfCodeEditor.java/1.8/Tue Jun 13 00:40:29 2006/-kk/
+/PulgaCanvas.java/1.7/Mon Jun 12 14:17:19 2006/-kk/
+/ReloadListener.java/1.2/Fri May 26 19:51:06 2006/-kk/
+/ShowCodeFrame.java/1.8/Tue Jun 13 00:40:29 2006/-kk/
+/ShowFormulaFrame.java/1.12/Thu Jun 15 16:36:56 2006/-kk/
+/ShowInformationFrame.java/1.5/Thu Apr 26 13:14:29 2007/-kk/
+/ShowIterationsFrame.java/1.9/Thu Apr 26 13:14:29 2007/-kk/
+/SimpleImageView.java/1.2/Sun Jun 11 14:07:15 2006/-kk/
+/SimpleIteratorCanvas.java/1.3/Wed Jun 13 15:18:15 2007/-kk/
+/SimpleIteratorFrame.java/1.5/Mon Jun 11 22:07:03 2007/-kk/
+/SimplePanel.java/1.1/Tue Mar 28 21:32:49 2006/-kk/
+/ToolBarBuilder.java/1.11/Wed Jun 13 15:18:15 2007/-kk/
+/ValueEditDialog.java/1.3/Mon May 29 00:19:08 2006/-kk/
+D

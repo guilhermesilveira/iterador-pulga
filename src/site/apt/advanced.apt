@@ -1,0 +1,13 @@
+Java Server
+
+	Instead of running your program as 
+	
++----------------
+java -jar pulga-VERSION.jar
++----------------
+
+	you can simply try to run java in server mode, which consumes more memory but is much faster:
+	
++----------------
+java -server -jar pulga-VERSION.jar
++----------------

@@ -1,0 +1,277 @@
+<pulga-file>
+  <string>Compatibility Version</string>
+  <string>4</string>
+  <application>
+    <info>
+      <name>Unknown</name>
+      <description></description>
+      <authors></authors>
+    </info>
+    <image>
+      <width>800</width>
+      <height>800</height>
+    </image>
+    <backgroundColor>
+      <red>255</red>
+      <green>255</green>
+      <blue>255</blue>
+      <alpha>255</alpha>
+    </backgroundColor>
+    <clearBeforeDrawing>false</clearBeforeDrawing>
+    <codes>
+      <codes>
+        <br.usp.iterador.model.dynamic.PieceOfCode>
+          <code>varrer=varrer+0.02;
+x2=varrer;
+x1=0.999;
+x3=0.0;	
+x4=500;
+x5=varrer;</code>
+          <iterations>10000</iterations>
+          <level>1</level>
+        </br.usp.iterador.model.dynamic.PieceOfCode>
+      </codes>
+    </codes>
+    <dimensao>5</dimensao>
+    <grid>
+      <on>false</on>
+      <color>
+        <red>51</red>
+        <green>0</green>
+        <blue>0</blue>
+        <alpha>255</alpha>
+      </color>
+    </grid>
+    <inicial>
+      <double>0.0</double>
+      <double>0.1</double>
+      <double>0.0</double>
+      <double>500.0</double>
+      <double>500.0</double>
+    </inicial>
+    <intermediarios>
+      <intermediate>
+        <nome>s</nome>
+        <valor>(2*x2+x3)*fac</valor>
+      </intermediate>
+      <intermediate>
+        <nome>lambda</nome>
+        <valor>Math.atan(s)/Math.PI +0.5</valor>
+      </intermediate>
+      <intermediate>
+        <nome>u1</nome>
+        <valor>c1*(x1-p1) +(x2-p2)</valor>
+      </intermediate>
+      <intermediate>
+        <nome>u2</nome>
+        <valor>c2*(x1-p1)-(x2+p2)</valor>
+      </intermediate>
+      <intermediate>
+        <nome>v1</nome>
+        <valor>-(x1-p1)+c1*(x2-p2)</valor>
+      </intermediate>
+      <intermediate>
+        <nome>v2</nome>
+        <valor>(x1-p1)+c2*(x2+p2)</valor>
+      </intermediate>
+      <intermediate>
+        <nome>x</nome>
+        <valor>if (Math.abs(x1)&lt;1 &amp; Math.abs(x2)&lt;1 &amp; Math.abs(x3)&lt;1){
+x=x1-h*a*x1;
+}
+else{
+x=x1+h*(lambda*u1 +(1-lambda)*u2);
+}</valor>
+      </intermediate>
+      <intermediate>
+        <nome>y</nome>
+        <valor>if (Math.abs(x1)&lt;1 &amp; Math.abs(x2)&lt;1 &amp; Math.abs(x3)&lt;1){
+y=x2+h*b*x2;
+}
+else{
+y=x2+h*(lambda*v1+ (1-lambda)*v2);
+}
+</valor>
+      </intermediate>
+      <intermediate>
+        <nome>z</nome>
+        <valor>if (Math.abs(x1)&lt;1 &amp; Math.abs(x2)&lt;1 &amp; Math.abs(x3)&lt;1){
+z=x3-ro*x3;
+}
+else{
+z=x3+h*r*x2;
+}
+</valor>
+      </intermediate>
+      <intermediate>
+        <nome>yy </nome>
+        <valor>if ( (x-1)*(x1-1) &lt; 0 &amp; Math.abs(x2) &lt; 1 &amp; Math.abs(x3) &lt; 1 )
+    { 
+         yy = yyy;
+    }
+  else
+    {
+         yy = 500;
+    }
+
+</valor>
+      </intermediate>
+      <intermediate>
+        <nome>yyy</nome>
+        <valor>yyy=x5;
+if ( (x-1)*(x1-1) &lt; 0 &amp; Math.abs(x2) &lt; 1 &amp; Math.abs(x3) &lt; 1 ) 
+ {
+yyy = x2;
+}</valor>
+      </intermediate>
+    </intermediarios>
+    <parameters>
+      <parameter>
+        <name>a</name>
+        <value>1.0</value>
+      </parameter>
+      <parameter>
+        <name>b</name>
+        <value>1.0</value>
+      </parameter>
+      <parameter>
+        <name>h</name>
+        <value>6.0E-4</value>
+      </parameter>
+      <parameter>
+        <name>fac</name>
+        <value>1.0</value>
+      </parameter>
+      <parameter>
+        <name>c1</name>
+        <value>0.1</value>
+      </parameter>
+      <parameter>
+        <name>c2</name>
+        <value>0.1</value>
+      </parameter>
+      <parameter>
+        <name>ro</name>
+        <value>0.5</value>
+      </parameter>
+      <parameter>
+        <name>r</name>
+        <value>0.07</value>
+      </parameter>
+      <parameter>
+        <name>p1</name>
+        <value>1.2</value>
+      </parameter>
+      <parameter>
+        <name>p2</name>
+        <value>1.2</value>
+      </parameter>
+      <parameter>
+        <name>varrer</name>
+        <value>-1.0</value>
+      </parameter>
+    </parameters>
+    <trashPoints>0</trashPoints>
+    <iteratedPoints>1000000</iteratedPoints>
+    <valores>
+      <string>x</string>
+      <string>y</string>
+      <string>z</string>
+      <string>yy</string>
+      <string>yyy</string>
+    </valores>
+    <xScale>
+      <field>x4</field>
+      <max>1.0</max>
+      <min>-1.0</min>
+    </xScale>
+    <yScale>
+      <field>x5</field>
+      <max>1.0</max>
+      <min>-1.0</min>
+    </yScale>
+  </application>
+  <map>
+    <entry>
+      <string>average-functions</string>
+      <java-class>br.usp.iterador.plugin.bacia.AverageFunctions</java-class>
+    </entry>
+    <entry>
+      <string>basin</string>
+      <java-class>br.usp.iterador.plugin.bacia.Basin</java-class>
+    </entry>
+    <entry>
+      <string>initial-condition-plugin</string>
+      <java-class>br.usp.iterador.plugin.initialcondition.InitialConditionData</java-class>
+    </entry>
+    <entry>
+      <string>export-image-plugin</string>
+      <java-class>br.usp.iterador.plugin.export.ExportImageData</java-class>
+    </entry>
+    <entry>
+      <string>color-plugin</string>
+      <java-class>br.usp.iterador.plugin.cor.ColorData</java-class>
+    </entry>
+    <entry>
+      <string>cloud</string>
+      <java-class>br.usp.iterador.plugin.bacia.model.Cloud</java-class>
+    </entry>
+  </map>
+  <list>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.cor.ColorPlugin</first>
+      <second class="color-plugin">
+        <nIterations>1</nIterations>
+        <colors>
+          <awt-color>
+            <red>0</red>
+            <green>0</green>
+            <blue>255</blue>
+            <alpha>255</alpha>
+          </awt-color>
+        </colors>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.initialcondition.InitialConditionPlugin</first>
+      <second class="initial-condition-plugin">
+        <clear>false</clear>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.export.ExportImagePlugin</first>
+      <second class="export-image-plugin">
+        <filename>/export.png</filename>
+      </second>
+    </pair>
+    <pair>
+      <first class="java-class">br.usp.iterador.plugin.bacia.BasinPlugin</first>
+      <second class="basin">
+        <attractors/>
+        <averageFunctions>
+          <x>Math.abs(x1) * Math.abs(x2)</x>
+          <y>x1 * x1 + x2 * x2</y>
+        </averageFunctions>
+        <sampleAverageColor>
+          <red>255</red>
+          <green>255</green>
+          <blue>0</blue>
+          <alpha>255</alpha>
+        </sampleAverageColor>
+        <earlyQuit>0</earlyQuit>
+        <averageScales>
+          <scale>
+            <field>x1</field>
+            <max>2.0</max>
+            <min>0.0</min>
+          </scale>
+          <scale>
+            <field>x2</field>
+            <max>2.0</max>
+            <min>0.0</min>
+          </scale>
+        </averageScales>
+      </second>
+    </pair>
+  </list>
+</pulga-file>

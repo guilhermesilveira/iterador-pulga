@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Mon Jun 19 10:22:58 BRT 2006
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=/home/guilherme/pulga-1.1.4.jar
+manifest.mergeall=true
+manifest.mainclass=br.usp.iterador.PulgaMain
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=

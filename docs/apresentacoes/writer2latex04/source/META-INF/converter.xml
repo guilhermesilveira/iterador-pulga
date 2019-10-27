@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ #
+ #  converter.xml
+ #
+ #  This library is free software; you can redistribute it and/or
+ #  modify it under the terms of the GNU Lesser General Public
+ #  License version 2.1, as published by the Free Software Foundation.
+ #
+ #  This library is distributed in the hope that it will be useful,
+ #  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ #  Lesser General Public License for more details.
+ #
+ #  You should have received a copy of the GNU Lesser General Public
+ #  License along with this library; if not, write to the Free Software
+ #  Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ #  MA  02111-1307  USA
+ #
+ #  Copyright: 2001-2004 by Henrik Just
+ #
+ #  All Rights Reserved.
+ #
+-->
+
+<converters>
+    <converter type="staroffice/sxw" version="1.0">
+        <converter-display-name>
+            LaTeX 2e
+        </converter-display-name>
+        <converter-description>
+            OpenOffice Writer XML to LaTeX 2e conversion
+        </converter-description>
+        <converter-vendor>
+            Henrik Just (henrikjust@openoffice.org)
+        </converter-vendor>
+        <converter-class-impl>
+            writer2latex.latex.PluginFactoryImpl
+        </converter-class-impl>
+        <converter-target type="application/x-latex" />
+    </converter>
+
+    <converter type="staroffice/sxw" version="1.0">
+        <converter-display-name>
+            BibTeX data file
+        </converter-display-name>
+        <converter-description>
+            OpenOffice Writer XML to BibTeX conversion
+        </converter-description>
+        <converter-vendor>
+            Henrik Just (henrikjust@openoffice.org)
+        </converter-vendor>
+        <converter-class-impl>
+            writer2latex.bibtex.PluginFactoryImpl
+        </converter-class-impl>
+        <converter-target type="application/x-bibtex" />
+    </converter>
+
+    <converter type="staroffice/sxw" version="1.0">
+        <converter-display-name>
+            XHTML 1.0 strict
+        </converter-display-name>
+        <converter-description>
+            OpenOffice Writer XML to XHTML 1.0 strict conversion
+        </converter-description>
+        <converter-vendor>
+            Henrik Just (henrikjust at openoffice.org)
+        </converter-vendor>
+        <converter-class-impl>
+            writer2latex.xhtml.Xhtml10PluginFactoryImpl
+        </converter-class-impl>
+        <converter-target type="text/html" />
+    </converter>
+
+    <converter type="staroffice/sxc" version="1.0">
+        <converter-display-name>
+            XHTML 1.0 strict (calc)
+        </converter-display-name>
+        <converter-description>
+            OpenOffice Calc XML to XHTML 1.0 strict conversion
+        </converter-description>
+        <converter-vendor>
+            Henrik Just (henrikjust at openoffice.org)
+        </converter-vendor>
+        <converter-class-impl>
+            writer2latex.xhtml.Xhtml10CalcPluginFactoryImpl
+        </converter-class-impl>
+        <converter-target type="text/html" />
+    </converter>
+
+    <converter type="staroffice/sxw" version="1.0">
+        <converter-display-name>
+            XHTML 1.1 + MathML 2.0
+        </converter-display-name>
+        <converter-description>
+            OpenOffice Writer XML to XHTML 1.1 + MathML 2.0 conversion
+        </converter-description>
+        <converter-vendor>
+            Henrik Just (henrikjust at openoffice.org)
+        </converter-vendor>
+        <converter-class-impl>
+            writer2latex.xhtml.PluginFactoryImpl
+        </converter-class-impl>
+        <converter-target type="application/xhtml+xml" />
+    </converter>
+
+    <converter type="staroffice/sxw" version="1.0">
+        <converter-display-name>
+            XHTML 1.1 + MathML 2.0 (xsl)
+        </converter-display-name>
+        <converter-description>
+            OpenOffice Writer XML to XHTML 1.1 + MathML 2.0 (xsl) conversion
+        </converter-description>
+        <converter-vendor>
+            Henrik Just (henrikjust at openoffice.org)
+        </converter-vendor>
+        <converter-class-impl>
+            writer2latex.xhtml.XslPluginFactoryImpl
+        </converter-class-impl>
+        <converter-target type="application/xml" />
+    </converter>
+</converters>
+

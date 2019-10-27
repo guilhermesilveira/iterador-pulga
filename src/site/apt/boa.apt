@@ -1,0 +1,106 @@
+Basin of Attraction example
+
+	Let's go for an advanced example of Pulga's basin of attraction feature.
+
+Twice iterated henon
+
+		First we configure Henon's Map as a twice iterated function:
+
+      	[[*]] The Henon's Map is the following R^2 --> R^2 application:
+
++----------------------------
+      	f(x1, x2) = (1 - 1.2 * x1 * x1 + 0.2 * x2, x1)
++----------------------------
+
+      	[[*]] Which can be translated to a simple iterated function:
+
++----------------------------
+      	x1_k+1 = 1 - 1.2 * x1_k * x1_k + 0.2 * x2_k
+      	
+    	x2_k+1 = x1_k
++----------------------------
+
+		[[*]] So configure the iteration to
+
++----------------------------
+      	x1 = 1 - 1.2 * x1 * x1 + 0.2 * x2
+      	
+    	x2 = x1
++----------------------------
+
+		[[*]] Set the iteration power to <<2>> (twice iterated), this tells Pulga
+		to create iterate a f^2 instead of f.
+
+      	[[*]] Set the number of trash points to 100 and generated points to 20000.
+
+	Different initial conditions (x1,x2) will have different orbits. For example, try studying the starting point (0.3, 0.1).
+      	
+    What happens with this initial condition?
+      	
+    Try looking at x1 and x2 inside [-1.5,1.5]
+
+Basin of Attraction plugin
+
+	Activate the basin of attraction plugin
+	
+Average Functions
+
+	Now we configure the basic plugin options:
+	
+	[[*]] We pick two average functions that will be executed for different random
+	conditions. The average result is placed in R^2 and differente values will be displayed
+	to us later on.
+
++-----------------
+	first_average(x1,x2) := Math.abs(x1)*Math.abs(x2)
+	
+	second_average(x1,x2) := 	x1 * x1 + x2 * x2
++-----------------
+
+	[[*]] Let's configure the escape time: 0 means that it will run the whole iteration
+	before deciding what that average means.
+	
+		Let's change it to 50 so that every 50 iterations it checks what that average means
+		and if there is some significant meaning, it stops.
+		
+		(As we shall see, this speeds up the process of drawing basin of attractions but
+		might lose <<much>> details in the resulting graphic).
+		
+Get the average samples
+
+	[[*]] Now open the average sampler in the basin of attraction menu.
+	
+	[[*]] Start/restart the sampling process.
+	
+	[[*]] You will see four small <'clouds'> forming on the screen.
+	
+	[[*]] Change the scale values so you can see them more clearly.
+	
+	[[*]] Stop the sampling process but do not close the sampling window
+
+Create some clouds
+
+	Now let's define those four clouds as basins.
+	
+	[[*]] Click new and select <<(clockwise)>> four points around one of those clouds.
+	
+	[[*]] Right click to finish defining this cloud.
+	
+	[[*]] Select the created cloud in the cloud selection list (at the left side of the screen) and click edit.
+	
+	[[*]] Change its name to something meaningfull and leave its color as blue.
+	
+	Repeat the above process once for each other 'cloud', picking red, orange and green colors.
+	
+	If the average 'stays' at one of those clouds, it has been 'captured' by this basin and will be painted accordingly.
+	
+	Now let's create an attractor at infinity:
+	
+	[[*]] Create a huge cloud that covers all four clouds...
+	
+	Change it to reverse mode and pick a light blue color: if the average stays outside
+	the delimited area, it is defined to be at this basin.
+
+Executing
+
+	Now close the average sampler and execute the basin of attraction plugin!

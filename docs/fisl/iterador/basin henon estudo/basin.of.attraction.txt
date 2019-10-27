@@ -1,0 +1,14 @@
+INFINITO - vermelho
+-1,500000,-1,500000 --> Infinity,Infinity = 0 0 = color:java.awt.Color[r=255,g=0,b=0]
+
+BLUE - atrator em cima a esquerda bem grande
+-1,282609,-1,500000 --> 0,382290,1,185180 = 50 0 = color:java.awt.Color[r=0,g=0,b=255]
+
+CINZA - atrator em baixo a direita bem grande
+-0,978261,-0,326087 --> 0,326103,1,185541 = 120 270 = color:java.awt.Color[r=192,g=192,b=192]
+
+AMARELO - zoado em cima
+0,021739,-0,326087 --> 0,371983,1,130117 = 350 270 = color:java.awt.Color[r=232,g=221,b=9]
+
+VERDE - zoado a direita
+-0,978261,-0,891304 --> 0,284593,1,130137 = 120 140 = color:java.awt.Color[r=66,g=189,b=72]

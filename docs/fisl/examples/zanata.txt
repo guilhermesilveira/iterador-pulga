@@ -1,0 +1,15 @@
+dimension: 2
+initial  values: use the initial condition plugin
+
+fixed parameters: {a=1.14, b=2}
+
+intermediate expressions:
+j = alpha * alpha * Math.cos(x1) * Math.cos(x1) + Math.pow(alpha, -2) * Math.sin(x1) * Math.sin(x1)
+t = br.usp.iterador.logic.MathNew.modd(x2 + gamma * Math.log(j), Math.PI)
+mi = Math.atan(Math.tan(x1) / (alpha*alpha))
+fi = br.usp.iterador.logic.MathNew.modd(mi + t, Math.PI)
+
+x1 = fi
+x2 = t
+
+scale: {x1=(0,3.15), x2=(0,3.15)}

@@ -1,0 +1,200 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 0.4
+% see http://www.hj-gym.dk/~hj/writer2latex for more info
+\documentclass[12pt]{article}
+\usepackage[ascii]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsfonts,textcomp}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{makeidx}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=blue, pagecolor=blue, urlcolor=blue}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+\makeindex
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{Sample article}
+
+\author{Henrik Just}
+
+\date{July 2004}
+
+\maketitle
+\renewcommand\abstractname{Abstract}
+
+\begin{abstract}
+This sample illustrates how to create a LaTeX article based on the
+template \texttt{LaTeX{}-article.stw}. When you do this, your job is to
+concentrate on the \emph{content}, not on the \emph{formatting}.
+
+\end{abstract}
+\setcounter{tocdepth}{5}
+\renewcommand\contentsname{Table of Contents}
+\tableofcontents
+\part{This article has two parts}
+This part is the first! To insert a new part, choose the style
+\textbf{part}.
+
+\section{\label{ref:example}Various types of block content}
+This is the first section. To insert a new section, choose the style
+\textbf{Heading 2}.
+
+\subsection{Lists}
+This is the first subsection. To insert a new subsection, choose the
+style \textbf{Heading 3}.
+
+\subsubsection{Enumerated lists}
+This is the first subsubsection. To insert a new subsubsection, choose
+the style \textbf{Heading 4}.
+
+\begin{enumerate}
+\item To insert an enumerated list, choose the style \textbf{enumerate}.
+\item An enumerated list can have several items.
+
+\begin{enumerate}
+\item This includes subitems
+
+\begin{enumerate}
+\item in fact
+
+\begin{enumerate}
+\item up to four levels
+\end{enumerate}
+\item is possible
+\end{enumerate}
+\item going back...
+\end{enumerate}
+\item back at top level.
+\end{enumerate}
+\subsubsection{Itemized lists}
+This subsection shows how to create an itemized list.
+
+\begin{itemize}
+\item To insert an itemized list, choose the style \textbf{itemize}.
+
+\begin{itemize}
+\item an itemized list can have subitems as well
+\end{itemize}
+\item but this list is quite short.
+\end{itemize}
+\subsubsection{Description lists}
+\begin{description}
+\item[Item header]
+
+To insert a description list item, choose the style \textbf{List
+Heading}. The header for the description item goes there.
+
+\item[Item content]
+
+The next paragraph will automatically be in the style \textbf{List
+Contents}. The content for the description item goes there. The content
+can span several paragraphs.
+
+\end{description}
+\subsection{Tables}
+You can insert tables as usual:
+
+\begin{longtable}[l]{|p{3.799cm}|p{3.799cm}|p{3.797cm}|}
+\hline
+\textbf{This}
+&
+\textbf{is a}
+&
+\textbf{table}
+\\\hline
+\endhead
+Borders are supported.
+&
+Horizontally merged cells works as you would expect...
+&
+... but try to avoid merging cells vertically, as this will give bad
+results.
+\\\hline
+\multicolumn{1}{p{3.799cm}|}{No borders at this corner!
+}&
+\multicolumn{2}{p{7.7960005cm}|}{This cell spans two columns. Some more
+text to show this is true.
+}\\\cline{2-3}
+\end{longtable}
+\subsection{Multiple columns}
+\begin{multicols}{2}
+This is a section with multiple columns. You can insert such a section
+as usual (\textbf{Insert {--} Section}).
+
+Some more text to illustrate that there are two columns. Some more text
+to illustrate that there are two columns. Some more text to illustrate
+that there are two columns. Some more text to illustrate that there are
+two columns.
+\end{multicols}
+\subsection{Special environments}
+\subsubsection{Flushleft, center and flushright}
+\begin{center}
+These paragraphs are centered. To insert a centered paragraph, select
+the style \textbf{center}. Likewise, you can select the styles
+\textbf{flushleft} and \textbf{flushright} for left justified and right
+justified paragraphs. Some more text to illustrate, that the paragraph
+is centered.
+
+This is another centered paragraph. Some more text to illustrate, that
+the paragraph is centered. Some more text to illustrate, that the
+paragraph is centered.
+
+\end{center}
+\subsubsection{Verse, quote and quotation}
+These are other special types of paragraphs. For example the following
+paragraph is formatted as a quote:
+
+\begin{quote}
+A quote is indented on both sides. Some more text to illustrate the
+effect. Some more text to illustrate the effect. Some more text to
+illustrate the effect. Some more text to illustrate the effect.
+
+\end{quote}
+This is ordinary text body.
+
+\subsubsection{Preformatted text (aka verbatim text)}
+\begin{verbatim}
+The style Preformatted text has a special purpose:
+It is used for text that is formatted using
+     spaces        and
+linebreaks.
+You can compare this to text written on a typewriter
+(and the font used will be a typewriter style font).
+       Fruit    Color
+       ------   -----
+       Banana   Yellow  <--- this formatting will work!
+       Apple    Red
+       Orange   Orange
+No automatic linebreak will occur.
+Footnotes etc. are not allowed in Preformatted text.
+\end{verbatim}
+\section{Various types of inline content}
+Of course footnotes\footnote{\label{fnt:ftn0}This is a footnote} etc.
+are inserted as usual. Some other examples:
+
+A referece to section 1 on page \pageref{ref:example}, another reference
+to footnote number \ref{fnt:ftn0} on page \pageref{fnt:ftn0}.
+
+A hyperlink
+\href{http://www.openoffice.org/}{http://www.openoffice.org}.
+
+The current page number is \thepage{}.
+
+\part{Another part of the article}
+This part contains some final expamples.
+
+\section{Bibliograhy}
+This is a bibliograhic reference to \cite{SAU99}, and this one is for
+\cite{MEA99A}. Another reference to \cite{SAU99}.
+
+\section{Alphabetical index}
+Here are some words for the alphabetical index: \index{banana}banana,
+\index{apple}apple, \index{orange}orange.
+
+\bibliographystyle{plain}
+\bibliography{sample-article}
+\printindex
+\end{document}

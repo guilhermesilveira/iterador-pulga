@@ -1,0 +1,77 @@
+This is pdfeTeXk, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.8.8)  8 AUG 2005 10:56
+entering extended mode
+ file:line:error style messages enabled.
+**/home/guilherme/iterador/apresentacoes/teste.tex
+(/home/guilherme/iterador/apresentacoes/teste.tex{/usr/share/texmf/pdftex/confi
+g/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, catalan, croatian, czech, danish, dutch, finnish, greek, iceland
+ic, irish, italian, latin, magyar, norsk, norsk, portuges, romanian, russian, s
+lovak, slovene, spanish, swedish, turkish, ukrainian, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2001/03/01 v3.7h The Babel package
+
+(/usr/share/texmf/tex/generic/babel/english.ldf
+Language: english 2001/04/15 v3.3l English support from the babel system
+
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2001/03/01 v3.7h Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@english 
+)
+(/usr/share/texmf/tex/generic/babel/portuges.ldf
+Language: portuges 2001/02/16 v1.2o Portuguese support from the babel system
+Package babel Info: Making " an active character on input line 126.
+)) (./teste.aux)
+\openout1 = `teste.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+ [1
+
+{/var/lib/texmf/dvips/config/pdftex.map}] (./teste.aux) ) 
+Here is how much of TeX's memory you used:
+ 521 strings out of 94960
+ 5891 string characters out of 1182471
+ 55910 words of memory out of 1000001
+ 3709 multiletter control sequences out of 10000+50000
+ 4245 words of font info for 16 fonts, out of 500000 for 1000
+ 198 hyphenation exceptions out of 1000
+ 24i,4n,24p,193b,112s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 10 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 0 words of extra memory for PDF output out of 65536
+{/usr/share/texmf/dvip
+s/tetex/f7b6d320.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/s
+hare/texmf/fonts/type1/bluesky/cm/cmbx12.pfb>
+Output written on teste.pdf (1 page, 8976 bytes).

@@ -1,0 +1,88 @@
+what is a roadmap
+
+	Roadmap is a schedule which says when some feature is going to be implemented.
+	
+	Unfortunately this page is not yet finished and is partially in portuguese.
+
+next release
+
+	[[*]] move early quit configuration to execute window
+
+coming soon
+
+	[[*]] initial condition plugin:
+		telinha R2 para escolher os parametros
+
+	[[*]] mandelbrot set is not working
+	
+	[[*]] stable plugin window
+
+	[[*]] initial curve: clear before next tem que voltar ao normal se clicar stop
+
+	[[*]] iteration_count and clear_before_next should be easy to change (put it in the toolbar?)
+	
+	[[*]] connectpoints should be a checkbox somewhere
+	
+	[[*]] longtask on redraw
+
+small changes
+
+	bug de connect lines com cto estavel
+	
+	aceitar parametros na bacia
+	
+	funcionalidade que para quando x pontos estao la...
+
+medium sized features
+
+	plugin de bifurcacao
+		permitir nao zerar a condicao inicial
+		
+	plugin de pintar quadrados/bola em vez de pontos na tela principal
+
+big changes
+
+	BOA: algoritmo algo de quadrado
+		PENSANDO EM CIMA DA MALHA:
+		pega as 4 bordas, se iguais,
+		pega os 9 bordas, calcula neles... se iguais, usa esse valor para todos os internos
+		
+		quando chega em um unico pixel, calcula os 4 da borda, utiliza a media para pintar
+			se ele vai para mais de uma bacia, escolhe a primeira que ele vai
+												e ja prepara pra algoritmo mais inteligente (se 3 em 1, melhor)
+
+	BOA: early quit de um em um
+		com opcao de N para sair se ficar N iteracoes dentro da bacia
+		
+	plugin de desenho infinito
+		vai desenhando o tempo inteiro e a medida que parametros sao mudados, vai alterando de acordo
+		
+	plugin de velocidade
+		tecla para iterar de um em um (e mantem na memoria a iteracao)
+		por velocidade (segundos)
+
+	plugin de leitura de pontos atraves de um arquivo (com velocidade)
+	
+	plugin de 3d (plotar os pontos 3d)
+
+random ideas
+	
+	no export points colocar a opcao do pattern e o nome do arquivo
+	
+	mudar o arquivo padrao do export image
+
+	alterar o field da escala para ITERATION. nao funciona!
+
+	plugin de cor permitir colocar o numero de iteracoes por cor
+
+	mudar de getter para direct field access
+
+	escrever funcao de java na tela e executa ela, opcao para exportar e importar
+
+	iteracao de racional: entra com 2 polinomios e gera as funcoes
+	
+	newton: entra com 1 polinomio e gera as funcoes
+	
+	lembrando que z pode ser um numero complexo
+
+	janelinha de zoom de longe opcional

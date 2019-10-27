@@ -1,0 +1,42 @@
+
+% \bigskip
+
+\par
+
+{\centering\selectlanguage{english}\bfseries
+Guilherme de Azevedo Silveira
+\par}
+
+{\centering\selectlanguage{portuges}
+Instituto de Matem\'atica e Estat\'istica {--} Universidade de S\~ao
+Paulo\newline
+R. do Mat\~ao, 1010 {--} Cidade Universit\'aria {--} CEP 05508{}-090
+{--} S\~ao Paulo
+\par}
+
+{\centering\selectlanguage{english}
+\href{mailto:gas@linux.ime.usp.br}{gas@linux.ime.usp.br}
+\par}
+
+{\centering\selectlanguage{english}\bfseries
+Eduardo Colli
+\par}
+
+{\centering\selectlanguage{portuges}
+Instituto de Matem\'atica e Estat\'istica {--} Universidade de S\~ao
+Paulo\newline
+R. do Mat\~ao, 1010 {--} Cidade Universit\'aria {--} CEP 05508{}-090
+{--} S\~ao Paulo
+\par}
+
+{\centering\selectlanguage{portuges}
+\href{mailto:colli@ime.usp.br}{\foreignlanguage{english}{colli@ime.usp.br}}
+\par}
+
+%\bigskip
+
+\par
+
+
+
+\end{document}

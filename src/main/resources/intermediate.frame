@@ -1,0 +1,13 @@
+# title, lines, columns
+title = intermediateExpressions
+forEach = intermediateExpressions
+edit = type,name,value
+
+# logic to be called on update
+onUpdate = showFormulaFrame
+
+# status button
+statusBar = br.usp.iterador.gui.ShowFormulaFrame.newIntermediate
+
+# right side button
+rightSide = br.usp.iterador.gui.ShowFormulaFrame.removeIntermediate,br.usp.iterador.gui.ShowFormulaFrame.editIntermediate

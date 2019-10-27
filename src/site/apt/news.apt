@@ -1,0 +1,144 @@
+Version 1.1.4
+
++--------------
+** Bug
+
+    [PUL-5] - remove button has invalid caption in piece of code frame
+    [PUL-11] - every window should open only once
+    [PUL-14] - formula frame should show a sliding bar
+    [PUL-15] - Bufferedcolorchange plugin is not working using the menu
+
+** Improvement
+
+    [PUL-3] - intermediate value type might be anything
+
+** New Feature
+
+    [PUL-1] - euler plugin
+    [PUL-8] - more than one window
+    [PUL-10] - allow plugins to add panels
+    [PUL-12] - initial parameter plugin
+    [PUL-13] - allow min and max value for parameters
+    [PUL-16] - remember window position and size
+
+** Task
+
+    [PUL-6] - move pieceofcode class to model package
+    [PUL-17] - create first unitary tests
+    
+** Tests
+
+	36 unitary/acceptance tests added
+    
++--------------
+
+Version 1.1.3
+
++--------------
+** Bug
+
+    [PUL-5] - remove button has invalid caption in piece of code frame
+
+** Improvement
+
+    [PUL-3] - intermediate value type might be anything
+
+** New Feature
+
+    [PUL-1] - euler plugin
+    
++--------------
+
+Version 1.1.2
+
+ 	[[*]] BUG solved: close button doesn't work
+
+	[[*]] BUG solved: basin of attraction bug that stops your iteration with early quit when it shouldn't
+
+	[[*]] resize tool images to 16x16
+	
+	[[*]] boa basic average configuration moved to average window
+
+	[[*]] boa allow early quit and confirmations
+
+Version 1.1
+
+	FEATURE: set iteration plugin
+	
+	FEATURE: stable/unstable manifold plugin
+	
+	FEATURE: function power can be set: i.e., if set to 2 will iterate twice instead of once
+	
+	FEATURE: bifurcation diagram plugin
+	
+	FEATURE: extended toolbar
+	
+	FEATURE: zoom plugin
+	
+	when the long task finishes, update it
+
+	initial values and iteration expression now together in a single window
+	
+	new option to activate debug info on the fly
+	
+	stop button on basin of attraction will act immediately
+	
+	cloud generator doesnt blink
+	
+	closing the program will ask for save
+	
+	clear averages redraws the screen
+	
+	image size is respected during load operation
+	
+	average sample is not started by default any longer
+	
+	when a plugin is removed its tool is also removed
+	
+	if it is unable to load a file, display a message box
+	
+	tutorial on finding searching fixed points
+	
+	fixed parameters allow formulas
+	
+	axes can be set to parameters
+	
+	loading will keep the image size parameters
+	
+	saving and loading problems will be displayed
+	
+	fixed parameters and initial values in the same window
+	
+Version 1.0
+
+	much faster than before: basin of attraction 3 minutes --> 30 seconds
+	
+	basin of attraction gradient color
+	
+	basin of attraction out of memory problem corrected
+	
+	export points was made unavailable for faster processing, maybe in the future?
+
+Version 1.0m2
+
+	new color change plugin
+	
+	bug corrected: scale picking in the basin plugin
+	
+	new basin of attraction system
+	
+	new piece of code editor
+	
+	ask for save when close
+
+Version 1.0m1
+
+  you can pick the image buffer size
+  
+  the image buffer is then in the screen
+  
+  the export image plugin will export the current image buffer
+  
+  the screen can be panned (scrollbars)
+  
+  boa: shows how much time is left
